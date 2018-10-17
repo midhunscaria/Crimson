@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "601638308949",
+    "firebase_url": "https://crimson-ed2b5.firebaseio.com",
+    "project_id": "crimson-ed2b5",
+    "storage_bucket": "crimson-ed2b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601638308949:android:df10f94b034a142c",
+        "android_client_info": {
+          "package_name": "com.example.crimson.crimson"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601638308949-koee6jfam58v5878jn05q5f039rgh1qt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.crimson.crimson",
+            "certificate_hash": "f100979cb0cd2525464155b18dc716f8703e9f42"
+          }
+        },
+        {
+          "client_id": "601638308949-temrieesj2je7mkj7k98ua7n033q71pk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZkLR-1MoZQF5iUdMmRa3sMLsuRzZ6AuM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601638308949-temrieesj2je7mkj7k98ua7n033q71pk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
