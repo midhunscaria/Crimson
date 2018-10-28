@@ -8,4 +8,16 @@
     tools:context=".DashboardActivity"
     tools:showIn="@layout/app_bar_dashboard">
 
+    <FrameLayout
+        android:id="@+id/dashFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+    </FrameLayout>
 </android.support.constraint.ConstraintLayout>

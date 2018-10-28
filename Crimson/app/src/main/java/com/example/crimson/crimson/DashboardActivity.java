@@ -1,9 +1,11 @@
 package com.example.crimson.crimson;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -14,13 +16,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.google.android.gms.common.data.DataBufferObserverSet;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class DashboardActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private FirebaseAuth mAuth;
+    private FirebaseDatabase mDatabase;
+    private DatabaseReference mDbReference;
+
+    private DashFragment dashFragment;
+    private AddFragment addFragment;
+    private AnalysisFragment analysisFragment;
+    private SettingsFragment settingsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +43,10 @@ public class DashboardActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mAuth = FirebaseAuth.getInstance();
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+        DashFragment dashFragment = new DashFragment();
+        AddFragment addFragment = new AddFragment();
+        AnalysisFragment analysisFragment = new AnalysisFragment();
+        SettingsFragment settingsFragment = new SettingsFragment();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -48,6 +56,16 @@ public class DashboardActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    public void addFragment(Fragment f)
+    {
+        getSupportFragmentManager().beginTransaction().add(R.id.dashFrameLayout, f).commit();
+    }
+
+    public void replaceFragment(Fragment f)
+    {
+        getSupportFragmentManager().beginTransaction().replace(R.id.dashFrameLayout, f).commit();
     }
 
     @Override
@@ -93,22 +111,28 @@ public class DashboardActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        Fragment fragmentSelected = new Fragment();
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_dashboard) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            fragmentSelected = dashFragment;
+        } else if (id == R.id.nav_add_expense) {
 
-        } else if (id == R.id.nav_slideshow) {
+            fragmentSelected = addFragment;
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_analysis) {
 
-        } else if (id == R.id.nav_share) {
+            fragmentSelected = analysisFragment;
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_settings) {
+
+            fragmentSelected = settingsFragment;
 
         }
-        
+
+        addFragment(fragmentSelected);
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

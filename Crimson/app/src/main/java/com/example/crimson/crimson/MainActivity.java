@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signIn();
+                finish();
             }
         });
 
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, SignUpActivity.class));
+                finish();
             }
         });
 
@@ -71,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, ResetPasswordActivity.class));
+                finish();
             }
         });
     }
