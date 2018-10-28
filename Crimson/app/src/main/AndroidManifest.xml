@@ -23,10 +23,8 @@
         <activity android:name=".ResetPasswordActivity" />
         <activity
             android:name=".DashboardActivity"
-            android:label="@string/title_activity_dashboard"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Tracking" />
-        <activity android:name=".TrackingActivity"></activity>
+            android:label="Welcome to Crimson!"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

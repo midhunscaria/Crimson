@@ -5,17 +5,22 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_dashboard"
+            android:id="@+id/nav_dash"
             android:title="Dashboard" />
         <item
-            android:id="@+id/nav_add_expense"
-            android:title="Add Expense" />
+            android:id="@+id/nav_expense"
+            android:title="Expenses" />
         <item
             android:id="@+id/nav_analysis"
             android:title="Analysis" />
+
         <item
-            android:id="@+id/nav_settings"
-            android:title="Settings" />
+            android:id="@+id/nav_dues"
+            android:title="Dues" />
+
+        <item
+            android:id="@+id/nav_goals"
+            android:title="Goals" />
     </group>
 
 </menu>

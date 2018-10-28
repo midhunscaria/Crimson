@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signIn();
-                finish();
             }
         });
 
@@ -99,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else if(task.isSuccessful()) {
                         startActivity(new Intent(MainActivity.this, DashboardActivity.class));
+                        finish();
                     }
                 }
             });

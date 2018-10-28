@@ -1,11 +1,8 @@
 package com.example.crimson.crimson;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -14,27 +11,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.content.DialogInterface;
 
-import com.google.android.gms.common.data.DataBufferObserverSet;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class DashboardActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private FirebaseAuth mAuth;
-    private FirebaseDatabase mDatabase;
-    private DatabaseReference mDbReference;
-
-    private DashFragment dashFragment;
-    private AddFragment addFragment;
-    private AnalysisFragment analysisFragment;
-    private SettingsFragment settingsFragment;
+    private Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +32,6 @@ public class DashboardActivity extends AppCompatActivity
         setContentView(R.layout.activity_dashboard);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        DashFragment dashFragment = new DashFragment();
-        AddFragment addFragment = new AddFragment();
-        AnalysisFragment analysisFragment = new AnalysisFragment();
-        SettingsFragment settingsFragment = new SettingsFragment();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -56,16 +41,13 @@ public class DashboardActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
 
-    public void addFragment(Fragment f)
-    {
-        getSupportFragmentManager().beginTransaction().add(R.id.dashFrameLayout, f).commit();
-    }
+        if(savedInstanceState == null)
+        {
+            fragment = new dash_fragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
+        }
 
-    public void replaceFragment(Fragment f)
-    {
-        getSupportFragmentManager().beginTransaction().replace(R.id.dashFrameLayout, f).commit();
     }
 
     @Override
@@ -98,49 +80,44 @@ public class DashboardActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        } else if (id == R.id.action_logout) {
+        if (id == R.id.action_logout) {
             logout();
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        Fragment fragmentSelected = new Fragment();
-        int id = item.getItemId();
-
-        if (id == R.id.nav_dashboard) {
-            // Handle the camera action
-            fragmentSelected = dashFragment;
-        } else if (id == R.id.nav_add_expense) {
-
-            fragmentSelected = addFragment;
-
-        } else if (id == R.id.nav_analysis) {
-
-            fragmentSelected = analysisFragment;
-
-        } else if (id == R.id.nav_settings) {
-
-            fragmentSelected = settingsFragment;
-
-        }
-
-        addFragment(fragmentSelected);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
-
     public void logout()
     {
         mAuth.signOut();
         finish();
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_dash) {
+            fragment = new dash_fragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
+        } else if (id == R.id.nav_expense) {
+            fragment = new expense_fragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
+        } else if (id == R.id.nav_analysis) {
+            fragment = new analysis_fragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
+        } else if (id == R.id.nav_dues) {
+            fragment = new dues_fragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
+        } else if (id == R.id.nav_goals) {
+            fragment = new goals_fragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 }
