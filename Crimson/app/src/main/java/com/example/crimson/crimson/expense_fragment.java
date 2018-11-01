@@ -56,8 +56,12 @@ public class expense_fragment extends Fragment {
                 }
                 else
                 {
-                    Expense expense_object = new Expense.Builder().setAmount(200).setCategory("Drink").setPlace("Bar").create();
+                    Expense expense_object = new Expense.Builder().setAmount(200).setCategory("Drink").create();
 
+                    //Push to firebase
+
+
+                    Toast.makeText(parentHolder.getContext(), "Created Record: "+expense_object.getAmount()+" "+expense_object.getCategory()+" "+expense_object.getPlace(),Toast.LENGTH_LONG).show();
 
                 }
             }
