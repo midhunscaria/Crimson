@@ -6,9 +6,67 @@
     tools:context=".expense_fragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Expense" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Add a new Expense Detail"
+            android:textColor="@color/Information"
+            android:textSize="@dimen/heading_size" />
+
+        <Spinner
+            android:id="@+id/expense_category_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="221dp"
+            android:entries="@array/expense_categories"
+            android:prompt="@string/category_prompt" />
+
+        <EditText
+            android:id="@+id/expense_amount_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="132dp"
+            android:ems="10"
+            android:hint="Amount"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/expense_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/expense_amount_button"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-2dp"
+            android:layout_marginBottom="172dp"
+            android:ems="10"
+            android:hint="Place"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/add_expense_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="68dp"
+            android:layout_marginLeft="68dp"
+            android:layout_marginBottom="73dp"
+            android:text="Add Expense" />
+
+    </RelativeLayout>
 </LinearLayout>

@@ -3,4 +3,16 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
+
+    <!--Add expenses categories-->
+
+    <string name="category_prompt">Chose a category</string>
+
+    <string-array name="expense_categories">
+        <item>Living Expense</item>
+        <item>Leisure</item>
+        <item>Emergency Fund (Inc. Medical)</item>
+        <item>Savings</item>
+    </string-array>
+
 </resources>
