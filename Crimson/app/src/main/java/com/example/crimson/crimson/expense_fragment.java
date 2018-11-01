@@ -26,7 +26,7 @@ public class expense_fragment extends Fragment {
     public EditText expense_place;
     public Button add_expense_button;
 
-    public String amount_str;
+    public double amount_double;
     public String category_spinner_str;
     public String expense_place_str;
 
@@ -46,16 +46,18 @@ public class expense_fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                amount_str = amount.getText().toString();
+                amount_double = Double.parseDouble(amount.getText().toString());
                 category_spinner_str = category_spinner.getSelectedItem().toString();
                 expense_place_str = expense_place.getText().toString();
 
-                if(TextUtils.isEmpty(amount_str) || TextUtils.isEmpty(category_spinner_str) || TextUtils.isEmpty(expense_place_str))
+                if(TextUtils.isEmpty(amount.getText().toString()) || TextUtils.isEmpty(category_spinner_str) || TextUtils.isEmpty(expense_place_str))
                 {
                     Toast.makeText(parentHolder.getContext(), "Please Enter All Information!", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
+                    Expense expense_object = new Expense.Builder().setAmount(200).setCategory("Drink").setPlace("Bar").create();
+
 
                 }
             }
