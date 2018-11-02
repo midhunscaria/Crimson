@@ -9,11 +9,15 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.content.Context;
+
+
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -31,10 +35,10 @@ public class SignUpActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        usernameField = (EditText)findViewById(R.id.editSignUpUsername);
-        passwordField = (EditText)findViewById(R.id.editSignUpPassword);
-        confrimPasswordField = (EditText)findViewById(R.id.editSignUpConfirmPassword);
-        signUpButton = (Button)findViewById(R.id.buttonSignUp);
+        usernameField = (EditText) findViewById(R.id.editSignUpUsername);
+        passwordField = (EditText) findViewById(R.id.editSignUpPassword);
+        confrimPasswordField = (EditText) findViewById(R.id.editSignUpConfirmPassword);
+        signUpButton = (Button) findViewById(R.id.buttonSignUp);
 
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override

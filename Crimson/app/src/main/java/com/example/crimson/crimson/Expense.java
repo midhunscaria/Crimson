@@ -6,18 +6,6 @@ public class Expense {
     private String category;
     private String place;
 
-    public double getAmount() {
-        return amount;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public String getPlace() {
-        return place;
-    }
-
     static class Builder
     {
         private double amount;

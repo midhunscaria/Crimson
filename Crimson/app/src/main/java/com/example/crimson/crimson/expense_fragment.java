@@ -3,6 +3,7 @@ package com.example.crimson.crimson;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -13,6 +14,12 @@ import android.widget.Spinner;
 import android.widget.Button;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -29,6 +36,9 @@ public class expense_fragment extends Fragment {
     public double amount_double;
     public String category_spinner_str;
     public String expense_place_str;
+
+    public FirebaseAuth mAuth;
+    public DatabaseReference mDbRef;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,13 +66,25 @@ public class expense_fragment extends Fragment {
                 }
                 else
                 {
-                    Expense expense_object = new Expense.Builder().setAmount(200).setCategory("Drink").create();
+                    final Expense expense_object = new Expense.Builder().setAmount(amount_double).setCategory(category_spinner_str).setPlace(expense_place_str).create();
 
-                    //Push to firebase
+                    mDbRef = FirebaseDatabase.getInstance().getReference();
 
+                    mDbRef.child("Expenses").setValue(expense_object).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
 
-                    Toast.makeText(parentHolder.getContext(), "Created Record: "+expense_object.getAmount()+" "+expense_object.getCategory()+" "+expense_object.getPlace(),Toast.LENGTH_LONG).show();
+                            if(task.isSuccessful())
+                            {
+                                Toast.makeText(parentHolder.getContext(), "Created Record", Toast.LENGTH_LONG).show();
+                            }
+                            else
+                            {
+                                Toast.makeText(parentHolder.getContext(), "Error in record creation!", Toast.LENGTH_LONG).show();
 
+                            }
+                        }
+                    });
                 }
             }
         });
