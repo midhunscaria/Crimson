@@ -5,12 +5,30 @@ public class Expense {
     private double amount;
     private String category;
     private String place;
+    private String user_identifier;
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public String getUser_identifier() {
+        return user_identifier;
+    }
 
     static class Builder
     {
         private double amount;
         private String category;
         private String place;
+        private String user_identifier;
 
         public Builder setAmount(final double amount)
         {
@@ -30,6 +48,12 @@ public class Expense {
             return this;
         }
 
+        public Builder setUserIdentifier(final String user_identifier)
+        {
+            this.user_identifier = user_identifier;
+            return this;
+        }
+
         public Expense create()
         {
             return new Expense(this);
@@ -41,5 +65,6 @@ public class Expense {
         amount = builder.amount;
         category = builder.category;
         place = builder.place;
+        user_identifier = builder.user_identifier;
     }
 }

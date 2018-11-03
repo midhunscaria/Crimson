@@ -1,5 +1,6 @@
 package com.example.crimson.crimson;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -36,8 +37,8 @@ public class expense_fragment extends Fragment {
     public double amount_double;
     public String category_spinner_str;
     public String expense_place_str;
+    private String user_identifier;
 
-    public FirebaseAuth mAuth;
     public DatabaseReference mDbRef;
 
     @Override
@@ -59,6 +60,7 @@ public class expense_fragment extends Fragment {
                 amount_double = Double.parseDouble(amount.getText().toString());
                 category_spinner_str = category_spinner.getSelectedItem().toString();
                 expense_place_str = expense_place.getText().toString();
+                user_identifier = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
 
                 if(TextUtils.isEmpty(amount.getText().toString()) || TextUtils.isEmpty(category_spinner_str) || TextUtils.isEmpty(expense_place_str))
                 {
@@ -66,17 +68,23 @@ public class expense_fragment extends Fragment {
                 }
                 else
                 {
-                    final Expense expense_object = new Expense.Builder().setAmount(amount_double).setCategory(category_spinner_str).setPlace(expense_place_str).create();
+                    Expense expense_object = new Expense.Builder().setAmount(amount_double).setCategory(category_spinner_str).setPlace(expense_place_str).setUserIdentifier(user_identifier).create();
+
+                    Toast.makeText(parentHolder.getContext(), ""+expense_object.getCategory()+expense_object.getAmount()+expense_object.getPlace(), Toast.LENGTH_LONG).show();
 
                     mDbRef = FirebaseDatabase.getInstance().getReference();
 
-                    mDbRef.child("Expenses").setValue(expense_object).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    mDbRef.child("Expenses").push().setValue(expense_object).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
 
                             if(task.isSuccessful())
                             {
                                 Toast.makeText(parentHolder.getContext(), "Created Record", Toast.LENGTH_LONG).show();
+
+                                amount.setText("");
+                                category_spinner.setSelection(0);
+                                expense_place.setText("");
                             }
                             else
                             {
