@@ -7,5 +7,8 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-
+    <ListView
+        android:id="@+id/dashboard_expense_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

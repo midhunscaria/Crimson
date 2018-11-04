@@ -67,4 +67,9 @@ public class Expense {
         place = builder.place;
         user_identifier = builder.user_identifier;
     }
+
+    public Expense()
+    {
+
+    }
 }

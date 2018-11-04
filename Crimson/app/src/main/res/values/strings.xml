@@ -15,4 +15,9 @@
         <item>Savings</item>
     </string-array>
 
+    <string-array name="dues_categories">
+        <item>One Time</item>
+        <item>Periodic</item>
+    </string-array>
+
 </resources>

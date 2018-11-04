@@ -70,8 +70,6 @@ public class expense_fragment extends Fragment {
                 {
                     Expense expense_object = new Expense.Builder().setAmount(amount_double).setCategory(category_spinner_str).setPlace(expense_place_str).setUserIdentifier(user_identifier).create();
 
-                    Toast.makeText(parentHolder.getContext(), ""+expense_object.getCategory()+expense_object.getAmount()+expense_object.getPlace(), Toast.LENGTH_LONG).show();
-
                     mDbRef = FirebaseDatabase.getInstance().getReference();
 
                     mDbRef.child("Expenses").push().setValue(expense_object).addOnCompleteListener(new OnCompleteListener<Void>() {
