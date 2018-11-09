@@ -28,7 +28,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class dash_fragment extends Fragment {
+public class dash_fragment extends Fragment implements Observer{
 
     public ArrayList<String> expenses;
     public ArrayAdapter<String> adapter;
@@ -46,37 +46,13 @@ public class dash_fragment extends Fragment {
 
         parentHolder = inflater.inflate(R.layout.fragment_dash_fragment, container, false);
 
-        dashboardExpenseList = (ListView)parentHolder.findViewById(R.id.dashboard_expense_list);
 
-        mDbRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                showData(dataSnapshot);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
         return parentHolder;
     }
 
-    public void showData(DataSnapshot dataSnapshot)
+    public void update(Goals goal)
     {
-        expenses = new ArrayList<String>();
-
-        for(DataSnapshot snap : dataSnapshot.getChildren())
-        {
-//            Expense expense_object = new Expense.Builder().setAmount(snap.child("Expenses").getValue(Expense.class).getAmount()).setCategory(snap.child("Expenses").getValue(Expense.class).getCategory()).setPlace(snap.child("Expenses").getValue(Expense.class).getPlace()).setUserIdentifier(snap.child("Expenses").getValue(Expense.class).getUser_identifier()).create();
-//            expenses.add(Double.toString(expense_object.getAmount()));
-//            expenses.add(expense_object.getCategory());
-//            expenses.add(expense_object.getPlace());
-//            expenses.add(expense_object.getUser_identifier());
-//
-//            Toast.makeText(parentHolder.getContext(),""+ Arrays.toString(expenses.toArray()), Toast.LENGTH_LONG).show();
-        }
+        Toast.makeText(parentHolder.getContext(), "Updated", Toast.LENGTH_LONG).show();
     }
-
 }

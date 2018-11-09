@@ -25,6 +25,8 @@ public class DashboardActivity extends AppCompatActivity
 
     private FirebaseAuth mAuth;
     private Fragment fragment;
+    goals_fragment goals_fragment;
+    dash_fragment dash_fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +48,12 @@ public class DashboardActivity extends AppCompatActivity
         {
             fragment = new dash_fragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
+            goals_fragment.register(dash_fragment);
         }
 
+
     }
+
 
     @Override
     public void onBackPressed() {
@@ -120,4 +125,6 @@ public class DashboardActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }
