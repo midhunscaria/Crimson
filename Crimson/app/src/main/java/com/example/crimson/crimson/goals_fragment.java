@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.os.Handler;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,6 +39,9 @@ public class goals_fragment extends Fragment implements Subject {
     public String goalAmountString;
     public String goalPeriodString;
 
+    public Handler handler;
+    public Task<Void> push_task;
+
     public goals_fragment(){
      observers= new ArrayList<>();
     }
@@ -45,6 +49,8 @@ public class goals_fragment extends Fragment implements Subject {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        final Handler handler = new Handler();
 
         parentHolder = inflater.inflate(R.layout.fragment_goals_fragment, container, false);
         goalTarget = (EditText) parentHolder.findViewById(R.id.goalsTarget);
@@ -65,30 +71,27 @@ public class goals_fragment extends Fragment implements Subject {
                 } else {
                     goal = new Goals.Builder().setTarget(goalTargetString).setAmount(Double.parseDouble(goalAmountString)).setPeriod(Integer.parseInt(goalPeriodString)).create();
 
-                    Toast.makeText(parentHolder.getContext(), ""+goal.g, Toast.LENGTH_LONG).show();
-//                    mDbRef.child("Goals").push().setValue(goal).addOnCompleteListener(new OnCompleteListener<Void>() {
-//
-//                        @Override
-//                        public void onComplete(@NonNull Task<Void> task) {
-//
-//                            if (task.isSuccessful()) {
-//                                Toast.makeText(parentHolder.getContext(), "Goal Record Created Successfully", Toast.LENGTH_LONG).show();
-//                                task_successful = true;
-//                            }
-//                        }
-//                    });
+                    push_task = mDbRef.child("Goals").push().setValue(goal);
 
 
-                    if (task_successful == true) {
-                        Toast.makeText(parentHolder.getContext(), "Goal Record Created Successfully", Toast.LENGTH_LONG).show();
-                        notifyObservers();
-                        getFragmentManager().beginTransaction()
-                                .replace(((ViewGroup) getView().getParent()).getId(), dash_fragment)
-                                .addToBackStack(null)
-                                .commit();
-                    } else if (task_successful == false) {
-                        Toast.makeText(parentHolder.getContext(), "Error creating goal record", Toast.LENGTH_LONG).show();
-                    }
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                                if (push_task.isSuccessful()) {
+                                      Toast.makeText(parentHolder.getContext(), "Goal Record Created Successfully", Toast.LENGTH_LONG).show();
+//                                      notifyObservers();
+//                                      getFragmentManager().beginTransaction()
+//                                              .replace(((ViewGroup) getView().getParent()).getId(), dash_fragment)
+//                                              .addToBackStack(null)
+//                                              .commit();
+                                }
+                                else  {
+                                        Toast.makeText(parentHolder.getContext(), "Error creating goal record", Toast.LENGTH_LONG).show();
+                                    }
+
+                        }
+                    }, 3000);
 
                 }
 

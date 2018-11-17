@@ -4,25 +4,27 @@ public class Goals {
 
     private String goalTarget;
     private double goalAmount;
-    private int goalperiod;
+    private int goalPeriod;
+
+    public String getGoalTarget() {
+        return goalTarget;
+    }
+
+    public double getGoalAmount() {
+        return goalAmount;
+    }
+
+    public int getGoalPeriod() {
+        return goalPeriod;
+    }
 
     static class Builder {
 
         private String goalTarget;
         private double goalAmount;
-        private int goalperiod;
+        private int goalPeriod;
 
-        public String getGoalTarget() {
-            return goalTarget;
-        }
 
-        public double getGoalAmount() {
-            return goalAmount;
-        }
-
-        public int getGoalperiod() {
-            return goalperiod;
-        }
 
 
 
@@ -37,7 +39,7 @@ public class Goals {
             return this;
         }
         public Builder setPeriod(final int period){
-            this.goalperiod=period;
+            this.goalPeriod=period;
             return this;
         }
         public Goals create(){
@@ -48,7 +50,7 @@ public class Goals {
     }
     private Goals(Builder builder){
         goalAmount=builder.goalAmount;
-        goalperiod=builder.goalperiod;
+        goalPeriod=builder.goalPeriod;
         goalTarget=builder.goalTarget;
     }
 }
