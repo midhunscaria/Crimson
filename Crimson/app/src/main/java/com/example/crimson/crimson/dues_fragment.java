@@ -13,15 +13,20 @@ import android.widget.Spinner;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.w3c.dom.Text;
+
 public class dues_fragment extends Fragment
 {
-
     public View parentHolder;
     public Spinner duesCategorySpinner;
     public EditText dueAmount;
@@ -44,6 +49,8 @@ public class dues_fragment extends Fragment
 
     public Task<Void> db_push_task;
     public Dues due;
+    public DueBridge generated_due_csv;
+    public List<String> due_information_from_csv = new ArrayList<>();
     public Handler handler;
 
     @Override
@@ -53,6 +60,8 @@ public class dues_fragment extends Fragment
         // Inflate the layout for this fragment
 
         parentHolder = inflater.inflate(R.layout.fragment_dues_fragment, container, false);
+
+        handler = new Handler();
 
         mDbRef = FirebaseDatabase.getInstance().getReference();
 
@@ -74,14 +83,59 @@ public class dues_fragment extends Fragment
                 duePeriodString = duePeriod.getText().toString();
                 dueReceiverEmailString = duesReceiverEmail.getText().toString();
 
-//                due = new Dues.Builder().setName(dueReceiverString).setAmount(Double.parseDouble(dueAmountString)).setEmailID(dueReceiverEmailString).setUserIdentifier(user_identifier).create();
-//                db_push_task = mDbRef.child("Dues").child("OneTime").push().setValue(due);
-//
-//                Toast.makeText(parentHolder.getContext(),"Done",Toast.LENGTH_LONG).show();
+                task_successful = false;
 
-//                handler = new Handler();
-//
-//                task_successful = false;
+                if(TextUtils.isEmpty(dueReceiverString) || TextUtils.isEmpty(dueAmountString))
+                {
+                    Toast.makeText(parentHolder.getContext(), "Receiver Name and Amount are compulsory!", Toast.LENGTH_LONG).show();
+                }
+                else {
+
+                    if (duesCategorySpinnerString.equals("One Time")) {
+                        generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DueOneTime(dueReceiverEmailString));
+
+                        due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().toString().split(","));
+
+                        due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(Double.parseDouble(due_information_from_csv.get(1))).setEmailID(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
+
+                        db_push_task = mDbRef.child("Dues").child("OneTime").push().setValue(due);
+
+                        task_successful = true;
+                    }
+
+                    else if (duesCategorySpinnerString.equals("Periodic")) {
+
+                        if (TextUtils.isEmpty(duePeriodString)) {
+                            Toast.makeText(parentHolder.getContext(), "Period is compulsory for a periodic due!", Toast.LENGTH_LONG).show();
+                        } else {
+                            generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DuePeriodic(duePeriodString));
+
+                            due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().toString().split(","));
+
+                            due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(Double.parseDouble(due_information_from_csv.get(1))).setPeriod(Integer.parseInt(due_information_from_csv.get(2))).setUserIdentifier(user_identifier).create();
+
+                            db_push_task = mDbRef.child("Dues").child("Periodic").push().setValue(due);
+
+                            task_successful = true;
+                        }
+                    }
+
+                    handler.postDelayed(new Runnable() {
+
+                        @Override
+                        public void run() {
+
+                            if(task_successful) {
+                                Toast.makeText(parentHolder.getContext(), "Due Record created Successfully!", Toast.LENGTH_LONG).show();
+                            }
+                            else
+                            {
+                                Toast.makeText(parentHolder.getContext(), "Error in Due Creation", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    }, 2000);
+                }
+
 
 //               if(TextUtils.isEmpty(dueReceiverString)|| TextUtils.isEmpty(dueAmountString)|| !TextUtils.isDigitsOnly(dueAmountString))
 //               {

@@ -73,7 +73,6 @@ public class goals_fragment extends Fragment implements Subject {
 
                     push_task = mDbRef.child("Goals").push().setValue(goal);
 
-
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -91,7 +90,7 @@ public class goals_fragment extends Fragment implements Subject {
                                     }
 
                         }
-                    }, 3000);
+                    }, 1000);
 
                 }
 

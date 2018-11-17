@@ -12,7 +12,7 @@ public class Dues {
     }
 
     public String getEmail_id() {
-        return email_id;
+        return "Email - "+email_id;
     }
 
     public double getAmount() {
