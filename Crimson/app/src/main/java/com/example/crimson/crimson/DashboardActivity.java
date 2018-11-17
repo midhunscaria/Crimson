@@ -114,6 +114,9 @@ public class DashboardActivity extends AppCompatActivity
         } else if (id == R.id.nav_goals) {
             fragment = new goals_fragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
+        } else if (id == R.id.nav_benefits) {
+            fragment = new benefit_fragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
