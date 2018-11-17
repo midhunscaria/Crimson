@@ -10,8 +10,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,6 +34,9 @@ public class goals_fragment extends Fragment implements Subject {
     public FirebaseAuth mAuth;
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
     dash_fragment dash_fragment;
+    public String goalTargetString;
+    public String goalAmountString;
+    public String goalPeriodString;
 
     public goals_fragment(){
      observers= new ArrayList<>();
@@ -45,7 +46,7 @@ public class goals_fragment extends Fragment implements Subject {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        parentHolder = inflater.inflate(R.layout.fragment_dues_fragment, container, false);
+        parentHolder = inflater.inflate(R.layout.fragment_goals_fragment, container, false);
         goalTarget = (EditText) parentHolder.findViewById(R.id.goalsTarget);
         goalAmount = (EditText) parentHolder.findViewById(R.id.goalsAmount);
         goalPeriod = (EditText) parentHolder.findViewById(R.id.goalsPeriod);
@@ -55,21 +56,27 @@ public class goals_fragment extends Fragment implements Subject {
             @Override
             public void onClick(View view) {
                 task_successful = false;
+                goalTargetString= goalTarget.getText().toString();
+                goalAmountString=goalAmount.getText().toString();
+                goalPeriodString=goalPeriod.getText().toString();
 
-                if (TextUtils.isEmpty(goalTarget.toString()) || TextUtils.isEmpty(goalAmount.toString()) || TextUtils.isEmpty(goalPeriod.toString())) {
+                if ((TextUtils.isEmpty(goalTargetString)) || (TextUtils.isEmpty(goalAmountString)|| !TextUtils.isDigitsOnly(goalAmountString)) || (TextUtils.isEmpty(goalPeriodString)|| !TextUtils.isDigitsOnly(goalPeriodString))) {
                     Toast.makeText(parentHolder.getContext(), "Enter All Details", Toast.LENGTH_LONG).show();
                 } else {
-                    goal = new Goals.Builder().setTarget(goalTarget.toString()).setAmount(Double.parseDouble(goalAmount.toString())).setPeriod(Integer.parseInt(goalPeriod.toString())).create();
+                    goal = new Goals.Builder().setTarget(goalTargetString).setAmount(Double.parseDouble(goalAmountString)).setPeriod(Integer.parseInt(goalPeriodString)).create();
 
-                    mDbRef.child("goals").push().setValue(goal).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-
-                            if (task.isSuccessful()) {
-                                task_successful = true;
-                            }
-                        }
-                    });
+                    Toast.makeText(parentHolder.getContext(), ""+goal.g, Toast.LENGTH_LONG).show();
+//                    mDbRef.child("Goals").push().setValue(goal).addOnCompleteListener(new OnCompleteListener<Void>() {
+//
+//                        @Override
+//                        public void onComplete(@NonNull Task<Void> task) {
+//
+//                            if (task.isSuccessful()) {
+//                                Toast.makeText(parentHolder.getContext(), "Goal Record Created Successfully", Toast.LENGTH_LONG).show();
+//                                task_successful = true;
+//                            }
+//                        }
+//                    });
 
 
                     if (task_successful == true) {

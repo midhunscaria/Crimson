@@ -1,8 +1,5 @@
 package com.example.crimson.crimson;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -13,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Button;
-import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,9 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Observer;
+import org.w3c.dom.Text;
+
 
 public class expense_fragment extends Fragment {
 
@@ -35,7 +30,7 @@ public class expense_fragment extends Fragment {
     public EditText expense_place;
     public Button add_expense_button;
 
-    public double amount_double;
+    public String amount_double_str;
     public String category_spinner_str;
     public String expense_place_str;
     private String user_identifier;
@@ -58,18 +53,18 @@ public class expense_fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                amount_double = Double.parseDouble(amount.getText().toString());
+                amount_double_str = amount.getText().toString();
                 category_spinner_str = category_spinner.getSelectedItem().toString();
                 expense_place_str = expense_place.getText().toString();
                 user_identifier = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
 
-                if(TextUtils.isEmpty(amount.getText().toString()) || TextUtils.isEmpty(category_spinner_str) || TextUtils.isEmpty(expense_place_str))
+                if(TextUtils.isEmpty(amount_double_str) || !TextUtils.isDigitsOnly(amount_double_str) || TextUtils.isEmpty(category_spinner_str) || TextUtils.isEmpty(expense_place_str))
                 {
                     Toast.makeText(parentHolder.getContext(), "Please Enter All Information!", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
-                    Expense expense_object = new Expense.Builder().setAmount(amount_double).setCategory(category_spinner_str).setPlace(expense_place_str).setUserIdentifier(user_identifier).create();
+                    Expense expense_object = new Expense.Builder().setAmount(Double.parseDouble(amount_double_str)).setCategory(category_spinner_str).setPlace(expense_place_str).setUserIdentifier(user_identifier).create();
 
                     mDbRef = FirebaseDatabase.getInstance().getReference();
 

@@ -6,6 +6,27 @@ public class Dues {
     private String email_id;
     private double amount;
     private int period;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail_id() {
+        return email_id;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public int getPeriod() {
+        return period;
+    }
+
+    public String getUser_identifier() {
+        return user_identifier;
+    }
+
     private String user_identifier;
 
     static class Builder

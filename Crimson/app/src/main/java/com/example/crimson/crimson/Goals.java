@@ -11,6 +11,23 @@ public class Goals {
         private String goalTarget;
         private double goalAmount;
         private int goalperiod;
+
+        public String getGoalTarget() {
+            return goalTarget;
+        }
+
+        public double getGoalAmount() {
+            return goalAmount;
+        }
+
+        public int getGoalperiod() {
+            return goalperiod;
+        }
+
+
+
+
+
         public Builder setTarget(final String target){
             this.goalTarget=target;
             return this;
