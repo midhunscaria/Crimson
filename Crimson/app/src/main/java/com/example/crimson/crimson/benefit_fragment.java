@@ -12,6 +12,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Button;
 import android.widget.Toast;
+import android.os.Handler;
+import com.google.android.gms.tasks.Task;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Calendar;
+import java.util.Date;
 
 public class benefit_fragment extends Fragment {
 
@@ -23,6 +32,14 @@ public class benefit_fragment extends Fragment {
     public String benefit_subs_type_Str;
 
     public generateCouponAPI coupon;
+
+    public Handler handler;
+    public Task<Void> push_task;
+
+    public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
+
+    public Date date_redeemed;
+    public String user_identifier = FirebaseAuth.getInstance().getUid().toString();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,7 +79,30 @@ public class benefit_fragment extends Fragment {
                 {
                     Toast.makeText(parentHolder.getContext(), "This feature is for Subscription Members Only!", Toast.LENGTH_LONG).show();
                 }
+
                 Toast.makeText(parentHolder.getContext(),coupon.generateCoupon(), Toast.LENGTH_LONG).show();
+
+                handler = new Handler();
+
+                push_task = mDbRef.child("Benefit").push().setValue(coupon.toString()+"|"+user_identifier+"|");
+
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        if(push_task.isSuccessful())
+                        {
+                            Toast.makeText(parentHolder.getContext(), "Redeemed!", Toast.LENGTH_SHORT).show();
+
+                            benefit_redeem_button.setEnabled(false);
+                        }
+                        else
+                        {
+                            Toast.makeText(parentHolder.getContext(), "Error in redeeming benefits", Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+                }, 1000);
 
             }
         });
