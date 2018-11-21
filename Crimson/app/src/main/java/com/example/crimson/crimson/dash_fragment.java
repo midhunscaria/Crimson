@@ -1,5 +1,6 @@
 package com.example.crimson.crimson;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -28,8 +29,16 @@ public class dash_fragment extends Fragment implements Observer{
         return parentHolder;
     }
 
-    public void update(Goals goal)
-    {
-        Toast.makeText(parentHolder.getContext(), "Updated", Toast.LENGTH_LONG).show();
+    @Override
+    public void update(String status, String receiver_email) {
+        if(receiver_email != null)
+        {
+            //send email to receiver email
+            //add amount as new record in db
+        }
+        else
+        {
+            new AlertDialog.Builder(parentHolder.getContext()).setTitle("Reminder").setMessage("This Email ID is not registered with Crimson. An Email Notification will not be sent to this Email ID").create().show();
+        }
     }
 }

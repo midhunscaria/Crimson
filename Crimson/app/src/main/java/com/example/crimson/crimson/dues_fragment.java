@@ -25,8 +25,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
-public class dues_fragment extends Fragment
+public class dues_fragment extends Fragment implements Subject
 {
+    public List<Observer> observers;
     public View parentHolder;
     public Spinner duesCategorySpinner;
     public EditText dueAmount;
@@ -52,6 +53,12 @@ public class dues_fragment extends Fragment
     public DueBridge generated_due_csv;
     public List<String> due_information_from_csv = new ArrayList<>();
     public Handler handler;
+
+    public dues_fragment()
+    {
+        observers = new ArrayList<>();
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -100,6 +107,8 @@ public class dues_fragment extends Fragment
 
                         db_push_task = mDbRef.child("Dues").child("OneTime").push().setValue(due);
 
+                        notifyObservers();
+
                         task_successful = true;
                     }
 
@@ -141,4 +150,29 @@ public class dues_fragment extends Fragment
         return parentHolder;
     }
 
+    @Override
+    public void register(Observer observer) {
+        if(!observers.contains(observer))
+        {
+            observers.add(observer);
+        }
+    }
+
+    @Override
+    public void unregister(Observer observer) {
+        if(observers.contains(observer))
+        {
+            observers.remove(observer);
+        }
+    }
+
+    @Override
+    public void notifyObservers() {
+
+        for(Observer observer : observers)
+        {
+            observer.update(duesCategorySpinnerString, dueReceiverEmailString);
+        }
+
+    }
 }

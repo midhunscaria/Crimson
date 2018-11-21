@@ -43,7 +43,6 @@ public class DashboardActivity extends AppCompatActivity
         {
             fragment = new dash_fragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
-//            goals_fragment.register(dash_fragment);
         }
 
 
@@ -99,24 +98,35 @@ public class DashboardActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_dash) {
+        if (id == R.id.nav_dash)
+        {
             fragment = new dash_fragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
-        } else if (id == R.id.nav_expense) {
+            
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Dash").commit();
+        }
+        else if (id == R.id.nav_expense)
+        {
             fragment = new expense_fragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
-        } else if (id == R.id.nav_analysis) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Exp").commit();
+        }
+        else if (id == R.id.nav_analysis)
+        {
             fragment = new analysis_fragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
-        } else if (id == R.id.nav_dues) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Analysis").commit();
+        }
+        else if (id == R.id.nav_dues)
+        {
             fragment = new dues_fragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
-        } else if (id == R.id.nav_goals) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Dues").commit();
+        }
+        else if (id == R.id.nav_goals)
+        {
             fragment = new goals_fragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
-        } else if (id == R.id.nav_benefits) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Goals").commit();
+        }
+        else if (id == R.id.nav_benefits) {
             fragment = new benefit_fragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Benefit").commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

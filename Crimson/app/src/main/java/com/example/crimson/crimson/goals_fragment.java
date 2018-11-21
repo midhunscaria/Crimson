@@ -22,9 +22,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class goals_fragment extends Fragment implements Subject {
+public class goals_fragment extends Fragment {
 
-    private List<Observer> observers;
     public View parentHolder;
     public EditText goalTarget;
     public EditText goalAmount;
@@ -34,7 +33,7 @@ public class goals_fragment extends Fragment implements Subject {
     public Goals goal;
     public FirebaseAuth mAuth;
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
-    dash_fragment dash_fragment;
+    dash_fragment dash_fragment_object;
     public String goalTargetString;
     public String goalAmountString;
     public String goalPeriodString;
@@ -43,7 +42,7 @@ public class goals_fragment extends Fragment implements Subject {
     public Task<Void> push_task;
 
     public goals_fragment(){
-     observers= new ArrayList<>();
+
     }
 
     @Override
@@ -79,11 +78,6 @@ public class goals_fragment extends Fragment implements Subject {
 
                                 if (push_task.isSuccessful()) {
                                       Toast.makeText(parentHolder.getContext(), "Goal Record Created Successfully", Toast.LENGTH_LONG).show();
-//                                      notifyObservers();
-//                                      getFragmentManager().beginTransaction()
-//                                              .replace(((ViewGroup) getView().getParent()).getId(), dash_fragment)
-//                                              .addToBackStack(null)
-//                                              .commit();
                                 }
                                 else  {
                                         Toast.makeText(parentHolder.getContext(), "Error creating goal record", Toast.LENGTH_LONG).show();
@@ -98,25 +92,5 @@ public class goals_fragment extends Fragment implements Subject {
         });
 
         return parentHolder;
-    }
-
-    @Override
-    public void register(Observer observer) {
-     if(!observers.contains(observer)){
-         observers.add(observer);
-     }
-    }
-
-    @Override
-    public void unregister(Observer observer) {
-        observers.remove(observer);
-
-    }
-
-    @Override
-    public void notifyObservers() {
-        for(Observer observer: observers ){
-            observer.update(goal);
-        }
     }
 }
