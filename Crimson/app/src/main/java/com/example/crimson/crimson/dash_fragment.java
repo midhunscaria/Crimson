@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 
 
-public class dash_fragment extends Fragment implements Observer{
+public class dash_fragment extends Fragment{
 
     public View parentHolder;
 
@@ -29,16 +29,4 @@ public class dash_fragment extends Fragment implements Observer{
         return parentHolder;
     }
 
-    @Override
-    public void update(String status, String receiver_email) {
-        if(receiver_email != null)
-        {
-            //send email to receiver email
-            //add amount as new record in db
-        }
-        else
-        {
-            new AlertDialog.Builder(parentHolder.getContext()).setTitle("Reminder").setMessage("This Email ID is not registered with Crimson. An Email Notification will not be sent to this Email ID").create().show();
-        }
-    }
 }

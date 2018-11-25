@@ -49,7 +49,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
         if(TextUtils.isEmpty(resetEmailID))
         {
-            Toast.makeText(ResetPasswordActivity.this, "Please provide an Email ID", Toast.LENGTH_LONG).show();
+            Util.makeToast(ResetPasswordActivity.this, "Please provide an Email ID").show();
         }
         else
         {
@@ -59,12 +59,11 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
                     if(task.isSuccessful())
                     {
-                        Toast.makeText(ResetPasswordActivity.this, "We've sent a password reset link to your Email ID", Toast.LENGTH_LONG).show();
+                        Util.makeToast(ResetPasswordActivity.this, "We've sent a password reset link to your Email ID").show();
                     }
                     else
                     {
-                        Toast.makeText(ResetPasswordActivity.this, "Unable to send password reset email", Toast.LENGTH_LONG).show();
-
+                        Util.makeToast(ResetPasswordActivity.this, "Unable to send password reset email").show();
                     }
                 }
             });

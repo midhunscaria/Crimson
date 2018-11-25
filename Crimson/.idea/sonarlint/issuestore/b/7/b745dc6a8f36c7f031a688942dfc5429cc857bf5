@@ -1,0 +1,25 @@
+
+`squid:HiddenFieldCheck";Rename "handler" which hides the field declared at line 41.(§çµüÿÿÿÿ
+`squid:UselessImportCheck"?Remove this unused import 'android.support.annotation.NonNull'.(¼Åß
+zsquid:S00116"_Rename this field "dash_fragment_object" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ô“ıÿÿÿÿ
+hsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ÿ†›®øÿÿÿÿ
+"squid:ClassVariableVisibilityCheck"SMake handler a static final constant or non-public and provide accessors if needed.(Öı£
+Rsquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+"squid:ClassVariableVisibilityCheck"\Make goalTargetString a static final constant or non-public and provide accessors if needed.(ÙŸ¿Êıÿÿÿÿ
+‡"squid:ClassVariableVisibilityCheck"VMake creategoal a static final constant or non-public and provide accessors if needed.(ÉäÄËÿÿÿÿÿ
+ƒ"squid:ClassVariableVisibilityCheck"RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œ·º øÿÿÿÿ
+‚"squid:ClassVariableVisibilityCheck"VMake goalPeriod a static final constant or non-public and provide accessors if needed.(´ß‡¬
+"squid:ClassVariableVisibilityCheck"\Make goalAmountString a static final constant or non-public and provide accessors if needed.(Ùßü¨ÿÿÿÿÿ
+–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Å„›Ğ
+‡"squid:ClassVariableVisibilityCheck"VMake goalAmount a static final constant or non-public and provide accessors if needed.(¡œëôÿÿÿÿÿ
+jsquid:S00116"TRename this field "push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»í¤‡
+Rsquid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+‡"squid:ClassVariableVisibilityCheck"VMake goalTarget a static final constant or non-public and provide accessors if needed.(ğ®Î—şÿÿÿÿ
+‚"squid:ClassVariableVisibilityCheck"QMake mAuth a static final constant or non-public and provide accessors if needed.(ä××şÿÿÿÿ
+usquid:S00116"ZRename this field "task_successful" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã×‰Øùÿÿÿÿ
+„"squid:ClassVariableVisibilityCheck"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ
+ssquid:UselessImportCheck"LRemove this unused import 'com.google.android.gms.tasks.OnCompleteListener'.(Çğ¸Òÿÿÿÿÿ
+"squid:ClassVariableVisibilityCheck"UMake push_task a static final constant or non-public and provide accessors if needed.(»í¤‡
+"squid:ClassVariableVisibilityCheck"PMake goal a static final constant or non-public and provide accessors if needed.(®ÀÇşÿÿÿÿ
+"squid:ClassVariableVisibilityCheck"\Make goalPeriodString a static final constant or non-public and provide accessors if needed.(ƒ—†äúÿÿÿÿ
+_squid:UselessImportCheck"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8ÌÕŸÀô,

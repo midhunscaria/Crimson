@@ -26,10 +26,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Calendar;
 import java.util.Date;
 
-public class benefit_fragment extends Fragment {
+public class benefit_fragment extends Fragment implements Observer{
 
-
-    //CONVERT COUPON TO OBJECT
     public View parentHolder;
 
     public TextView benefit_username, benefit_subs, benefit_subs_type, benefit_coupon_info;
@@ -46,7 +44,7 @@ public class benefit_fragment extends Fragment {
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
     public DatabaseReference benefitmDbRef = mDbRef.child("Benefits");
 
-    public String user_identifier = FirebaseAuth.getInstance().getUid().toString();
+    public String user_identifier = FirebaseAuth.getInstance().getUid();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -82,7 +80,7 @@ public class benefit_fragment extends Fragment {
                 }
 
             }
-        }, 1500);
+        }, 2000);
 
         benefit_redeem_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +94,7 @@ public class benefit_fragment extends Fragment {
                 } else if (benefit_subs_type_Str.equals("Diamond")) {
                     coupon = new BenefitDiamondDecorator(new BenefitBase());
                 } else {
-                    Toast.makeText(parentHolder.getContext(), "This feature is for Subscription Members Only!", Toast.LENGTH_LONG).show();
+                    Util.makeToast(parentHolder.getContext(), "This feature is for Subscription Members Only!").show();
                 }
 
                 handler = new Handler();
@@ -110,11 +108,11 @@ public class benefit_fragment extends Fragment {
                     public void run() {
 
                         if (push_task.isSuccessful()) {
-                            Toast.makeText(parentHolder.getContext(), "Redeemed!", Toast.LENGTH_SHORT).show();
+                            Util.makeToast(parentHolder.getContext(), "Redeemed!").show();
                             benefit_redeem_button.setEnabled(false);
 
                         } else {
-                            Toast.makeText(parentHolder.getContext(), "Error in redeeming benefits", Toast.LENGTH_LONG).show();
+                            Util.makeToast(parentHolder.getContext(), "Error in redeeming benefits!").show();
                         }
 
                     }
@@ -161,4 +159,8 @@ public class benefit_fragment extends Fragment {
 
     }
 
+    @Override
+    public void update(Boolean status) {
+        this.flag = status;
+    }
 }

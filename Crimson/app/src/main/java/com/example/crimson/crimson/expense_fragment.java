@@ -60,7 +60,7 @@ public class expense_fragment extends Fragment {
 
                 if(TextUtils.isEmpty(amount_double_str) || !TextUtils.isDigitsOnly(amount_double_str) || TextUtils.isEmpty(category_spinner_str) || TextUtils.isEmpty(expense_place_str))
                 {
-                    Toast.makeText(parentHolder.getContext(), "Please Enter All Information!", Toast.LENGTH_LONG).show();
+                    Util.makeToast(parentHolder.getContext(), "Please Enter All Information").show();
                 }
                 else
                 {
@@ -74,7 +74,7 @@ public class expense_fragment extends Fragment {
 
                             if(task.isSuccessful())
                             {
-                                Toast.makeText(parentHolder.getContext(), "Created Record", Toast.LENGTH_LONG).show();
+                                Util.makeToast(parentHolder.getContext(), "Created Record").show();
 
                                 amount.setText("");
                                 category_spinner.setSelection(0);
@@ -82,8 +82,7 @@ public class expense_fragment extends Fragment {
                             }
                             else
                             {
-                                Toast.makeText(parentHolder.getContext(), "Error in record creation!", Toast.LENGTH_LONG).show();
-
+                                Util.makeToast(parentHolder.getContext(), "Error in record creation!").show();
                             }
                         }
                     });

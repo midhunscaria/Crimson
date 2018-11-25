@@ -25,9 +25,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
-public class dues_fragment extends Fragment implements Subject
+public class dues_fragment extends Fragment
 {
-    public List<Observer> observers;
     public View parentHolder;
     public Spinner duesCategorySpinner;
     public EditText dueAmount;
@@ -54,13 +53,7 @@ public class dues_fragment extends Fragment implements Subject
     public List<String> due_information_from_csv = new ArrayList<>();
     public Handler handler;
 
-    public dues_fragment()
-    {
-        observers = new ArrayList<>();
-    }
-
-
-    @Override
+   @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
@@ -94,7 +87,7 @@ public class dues_fragment extends Fragment implements Subject
 
                 if(TextUtils.isEmpty(dueReceiverString) || TextUtils.isEmpty(dueAmountString))
                 {
-                    Toast.makeText(parentHolder.getContext(), "Receiver Name and Amount are compulsory!", Toast.LENGTH_LONG).show();
+                    Util.makeToast(parentHolder.getContext(), "Receiver Name and Amount are compulsory!").show();
                 }
                 else {
 
@@ -107,15 +100,14 @@ public class dues_fragment extends Fragment implements Subject
 
                         db_push_task = mDbRef.child("Dues").child("OneTime").push().setValue(due);
 
-                        notifyObservers();
-
                         task_successful = true;
+                        getActivity().getSupportFragmentManager().beginTransaction().replace( R.id.fragmentPanel,getActivity().getSupportFragmentManager().findFragmentByTag("Benefit")).commit();
                     }
 
                     else if (duesCategorySpinnerString.equals("Periodic")) {
 
                         if (TextUtils.isEmpty(duePeriodString)) {
-                            Toast.makeText(parentHolder.getContext(), "Period is compulsory for a periodic due!", Toast.LENGTH_LONG).show();
+                            Util.makeToast(parentHolder.getContext(), "Period is compulsory for a periodic due!").show();
                         } else {
                             generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DuePeriodic(duePeriodString));
 
@@ -135,11 +127,11 @@ public class dues_fragment extends Fragment implements Subject
                         public void run() {
 
                             if(task_successful) {
-                                Toast.makeText(parentHolder.getContext(), "Due Record created Successfully!", Toast.LENGTH_LONG).show();
+                                Util.makeToast(parentHolder.getContext(), "Due Record created Successfully!").show();
                             }
                             else
                             {
-                                Toast.makeText(parentHolder.getContext(), "Error in Due Creation", Toast.LENGTH_LONG).show();
+                                Util.makeToast(parentHolder.getContext(), "Error in Due Creation").show();
                             }
                         }
                     }, 2000);
@@ -148,31 +140,5 @@ public class dues_fragment extends Fragment implements Subject
         });
 
         return parentHolder;
-    }
-
-    @Override
-    public void register(Observer observer) {
-        if(!observers.contains(observer))
-        {
-            observers.add(observer);
-        }
-    }
-
-    @Override
-    public void unregister(Observer observer) {
-        if(observers.contains(observer))
-        {
-            observers.remove(observer);
-        }
-    }
-
-    @Override
-    public void notifyObservers() {
-
-        for(Observer observer : observers)
-        {
-            observer.update(duesCategorySpinnerString, dueReceiverEmailString);
-        }
-
     }
 }

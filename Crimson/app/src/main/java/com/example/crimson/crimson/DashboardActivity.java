@@ -20,8 +20,6 @@ public class DashboardActivity extends AppCompatActivity
 
     private FirebaseAuth mAuth;
     private Fragment fragment;
-    goals_fragment goals_fragment;
-    dash_fragment dash_fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +45,6 @@ public class DashboardActivity extends AppCompatActivity
 
 
     }
-
 
     @Override
     public void onBackPressed() {
@@ -101,32 +98,35 @@ public class DashboardActivity extends AppCompatActivity
         if (id == R.id.nav_dash)
         {
             fragment = new dash_fragment();
-            
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Dash").commit();
+            Util.navigateFragment(fragment, true, this, "Dash");
         }
         else if (id == R.id.nav_expense)
         {
             fragment = new expense_fragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Exp").commit();
+            Util.navigateFragment(fragment, true, this, "Exp");
         }
         else if (id == R.id.nav_analysis)
         {
             fragment = new analysis_fragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Analysis").commit();
+            Util.navigateFragment(fragment, true, this, "Analysis");
         }
         else if (id == R.id.nav_dues)
         {
             fragment = new dues_fragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Dues").commit();
+            Util.navigateFragment(fragment, true, this, "Dues");
         }
         else if (id == R.id.nav_goals)
         {
             fragment = new goals_fragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Goals").commit();
+            Util.navigateFragment(fragment, true, this, "Goals");
         }
         else if (id == R.id.nav_benefits) {
             fragment = new benefit_fragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, "Benefit").commit();
+            Util.navigateFragment(fragment, true, this, "Benefit");
+        }
+        else if (id == R.id.nav_userProfile) {
+            fragment = new user_profile();
+            Util.navigateFragment(fragment, false, this, "");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

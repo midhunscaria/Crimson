@@ -66,7 +66,7 @@ public class goals_fragment extends Fragment {
                 goalPeriodString=goalPeriod.getText().toString();
 
                 if ((TextUtils.isEmpty(goalTargetString)) || (TextUtils.isEmpty(goalAmountString)|| !TextUtils.isDigitsOnly(goalAmountString)) || (TextUtils.isEmpty(goalPeriodString)|| !TextUtils.isDigitsOnly(goalPeriodString))) {
-                    Toast.makeText(parentHolder.getContext(), "Enter All Details", Toast.LENGTH_LONG).show();
+                    Util.makeToast(parentHolder.getContext(), "Enter All Details").show();
                 } else {
                     goal = new Goals.Builder().setTarget(goalTargetString).setAmount(Double.parseDouble(goalAmountString)).setPeriod(Integer.parseInt(goalPeriodString)).create();
 
@@ -77,10 +77,10 @@ public class goals_fragment extends Fragment {
                         public void run() {
 
                                 if (push_task.isSuccessful()) {
-                                      Toast.makeText(parentHolder.getContext(), "Goal Record Created Successfully", Toast.LENGTH_LONG).show();
+                                      Util.makeToast(parentHolder.getContext(), "Goal Record Created Successfully").show();
                                 }
                                 else  {
-                                        Toast.makeText(parentHolder.getContext(), "Error creating goal record", Toast.LENGTH_LONG).show();
+                                        Util.makeToast(parentHolder.getContext(), "Error creating goal record").show();
                                     }
 
                         }

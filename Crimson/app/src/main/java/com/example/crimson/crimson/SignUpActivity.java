@@ -50,12 +50,10 @@ public class SignUpActivity extends AppCompatActivity {
         final String confirm_password = confrimPasswordField.getText().toString();
 
         if(TextUtils.isEmpty(username)||TextUtils.isEmpty(password)||TextUtils.isEmpty(confirm_password)) {
-
-            Toast.makeText(SignUpActivity.this, "Please Enter All Credentials", Toast.LENGTH_LONG).show();
-
+            Util.makeToast(SignUpActivity.this, "Please Enter All Credentials").show();
         }
         else if(!TextUtils.equals(password,confirm_password)){
-            Toast.makeText(SignUpActivity.this, "Passwords Do Not Match", Toast.LENGTH_LONG).show();
+            Util.makeToast(SignUpActivity.this, "Passwords Do Not Match").show();
         }
         else {
             mAuth.createUserWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -65,7 +63,7 @@ public class SignUpActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         startActivity(new Intent(SignUpActivity.this, MainActivity.class));
                     } else {
-                        Toast.makeText(SignUpActivity.this, "Sign Up Unsuccessful! Try again!", Toast.LENGTH_LONG).show();
+                        Util.makeToast(SignUpActivity.this, "Sign Up Unsuccessful! Try again!").show();
                     }
                 }
             });

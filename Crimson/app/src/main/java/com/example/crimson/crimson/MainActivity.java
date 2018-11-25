@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(TextUtils.isEmpty(username)||TextUtils.isEmpty(password))
         {
-            Toast.makeText(MainActivity.this, "Please enter all credentials", Toast.LENGTH_LONG).show();
+            Util.makeToast(MainActivity.this, "Please enter all credentials").show();
         }
         else
         {
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
 
                     if (!task.isSuccessful()) {
-                        Toast.makeText(MainActivity.this, "Incorrect Credentials", Toast.LENGTH_LONG).show();
+                        Util.makeToast(MainActivity.this, "Incorrect Credentials").show();
                     }
                     else if(task.isSuccessful()) {
                         startActivity(new Intent(MainActivity.this, DashboardActivity.class));

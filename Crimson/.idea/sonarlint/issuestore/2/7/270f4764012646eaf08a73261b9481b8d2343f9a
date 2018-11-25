@@ -1,0 +1,8 @@
+
+ssquid:S00116"^Rename this field "NotRegisteredButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ÏÙt
+vsquid:S1450"bRemove the "NotRegisteredButton" field and declare it as a local variable in the relevant methods.(…ÏÙt
+vsquid:S1450"\Remove the "mAuthListener" field and declare it as a local variable in the relevant methods.(£õ–õúÿÿÿÿ
+{squid:S1450"aRemove the "forgotPasswordText" field and declare it as a local variable in the relevant methods.(İ„£ùÿÿÿÿ
+osquid:S1450"ZRemove the "loginButton" field and declare it as a local variable in the relevant methods.(à…÷Ÿ
+Ksquid:S1068"1Remove this unused "mAuthListener" private field.(£õ–õúÿÿÿÿ
+_squid:UselessImportCheck"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8ãÜ£Àô,
