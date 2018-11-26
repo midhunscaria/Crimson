@@ -101,7 +101,6 @@ public class dues_fragment extends Fragment
                         db_push_task = mDbRef.child("Dues").child("OneTime").push().setValue(due);
 
                         task_successful = true;
-                        getActivity().getSupportFragmentManager().beginTransaction().replace( R.id.fragmentPanel,getActivity().getSupportFragmentManager().findFragmentByTag("Benefit")).commit();
                     }
 
                     else if (duesCategorySpinnerString.equals("Periodic")) {

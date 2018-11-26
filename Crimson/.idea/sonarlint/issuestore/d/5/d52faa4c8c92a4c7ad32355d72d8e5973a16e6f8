@@ -1,13 +1,12 @@
 
-¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ÷‘Şÿÿÿÿÿ8Í†Åô,
-osquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ºè¤îüÿÿÿÿ8Í†Åô,
-‰"squid:ClassVariableVisibilityCheck"QMake mAuth a static final constant or non-public and provide accessors if needed.(ä××şÿÿÿÿ8Í†Åô,
-wsquid:S00116"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß‘¤Ì8Í†Åô,
-Œ"squid:ClassVariableVisibilityCheck"YMake benefitmDbRef a static final constant or non-public and provide accessors if needed.(¼ÔÓÚ8Í†Åô,
-Zsquid:UselessImportCheck",Remove this unused import 'android.net.Uri'.(òêû‘ıÿÿÿÿ8Í†Åô,
-squid:S00116"]Rename this field "userDetails_object" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛŒÊ‹şÿÿÿÿ8Í†Åô,
 ‹"squid:ClassVariableVisibilityCheck"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8Í†Åô,
+‰"squid:ClassVariableVisibilityCheck"QMake mAuth a static final constant or non-public and provide accessors if needed.(ä××şÿÿÿÿ8Í†Åô,
+Zsquid:UselessImportCheck",Remove this unused import 'android.net.Uri'.(òêû‘ıÿÿÿÿ8Í†Åô,
 msquid:UselessImportCheck"DRemove this unused import 'java.nio.channels.AlreadyBoundException'.(’ŒË¯8¾¹‡Åô,
 Š"squid:ClassVariableVisibilityCheck"RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œ·º øÿÿÿÿ8Í†Åô,
-]squid:UselessImportCheck"4Remove this unused import 'android.content.Context'.(©Ê‰è8Í†Åô,
 –"squid:ClassVariableVisibilityCheck"^Make userDetails_object a static final constant or non-public and provide accessors if needed.(ÛŒÊ‹şÿÿÿÿ8Í†Åô,
+osquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ºè¤îüÿÿÿÿ8Í†Åô,
+Œ"squid:ClassVariableVisibilityCheck"YMake benefitmDbRef a static final constant or non-public and provide accessors if needed.(¼ÔÓÚ8Í†Åô,
+wsquid:S00116"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß‘¤Ì8Í†Åô,
+]squid:UselessImportCheck"4Remove this unused import 'android.content.Context'.(©Ê‰è8Í†Åô,
+squid:S00116"]Rename this field "userDetails_object" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛŒÊ‹şÿÿÿÿ8Í†Åô,

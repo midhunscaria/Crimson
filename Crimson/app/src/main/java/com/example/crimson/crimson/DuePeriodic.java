@@ -11,7 +11,7 @@ public class DuePeriodic implements DueAPI {
 
     public String generateDueString(String dueReceiverStr, String dueAmountSt)
     {
-        return new String(dueReceiverStr+","+dueAmountSt+","+this.duePeriodStr);
+        return dueReceiverStr+","+dueAmountSt+","+this.duePeriodStr;
     }
 
 }

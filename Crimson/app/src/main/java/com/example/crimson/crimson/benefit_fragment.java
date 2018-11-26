@@ -1,9 +1,6 @@
 package com.example.crimson.crimson;
 
 import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -12,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Button;
-import android.widget.Toast;
 import android.os.Handler;
 import com.google.android.gms.tasks.Task;
 
@@ -23,10 +19,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Calendar;
-import java.util.Date;
 
-public class benefit_fragment extends Fragment implements Observer{
+public class benefit_fragment extends Fragment{
 
     public View parentHolder;
 
@@ -153,14 +147,10 @@ public class benefit_fragment extends Fragment implements Observer{
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                    throw new UnsupportedOperationException();
             }
         });
 
     }
 
-    @Override
-    public void update(Boolean status) {
-        this.flag = status;
-    }
 }

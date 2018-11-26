@@ -1,5 +1,4 @@
 
-Vsquid:S1118":Add a private constructor to hide the implicit public one.(×¼­Æ8Ôéø¿ô,
-ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ‡ùùÿÿÿÿ8Ôéø¿ô,
-Zsquid:UselessImportCheck"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ8Ôéø¿ô,
-bsquid:UselessImportCheck"4Remove this unused import 'android.app.AlertDialog'.(ª½øşüÿÿÿÿ8 éÿ¿ô,
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ‡ùùÿÿÿÿ8ãüïáô,
+dsquid:UselessImportCheck"4Remove this unused import 'android.app.AlertDialog'.(ª½øşüÿÿÿÿ8ãüïáô,
+\squid:UselessImportCheck"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ8ãüïáô,

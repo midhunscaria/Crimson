@@ -6,6 +6,7 @@ public class WithOffers extends UserDecorator {
         super(newUser);
     }
 
+    @Override
     public String createRegisteredUser(){
         return "Subscription Completed! Your benefits have been added!";
     }

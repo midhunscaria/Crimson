@@ -7,6 +7,7 @@ public class BenefitSilverDecorator extends BenefitDecorator {
         super(base);
     }
 
+    @Override
     public String generateCoupon()
     {
         return "Movie-2"+","+generateCouponAPI.generateCoupon();

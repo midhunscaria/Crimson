@@ -9,6 +9,11 @@ import android.widget.Toast;
 
 public class Util {
 
+    private Util()
+    {
+
+    }
+
     public static void navigateFragment(Fragment fragment, boolean addTOBackStack, AppCompatActivity activity, String Tag){
 
       if (addTOBackStack){

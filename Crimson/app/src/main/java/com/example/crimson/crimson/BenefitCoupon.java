@@ -3,20 +3,20 @@ package com.example.crimson.crimson;
 public class BenefitCoupon
 {
     private String coupon;
-    private String user_identifier;
+    private String userIdentifier;
 
     public String getCoupon() {
         return coupon;
     }
 
-    public String getUser_identifier() {
-        return user_identifier;
+    public String getUserIdentifier() {
+        return userIdentifier;
     }
 
     static class Builder
     {
-        public String coupon;
-        public String user_identifier;
+        private String coupon;
+        private String userIdentifier;
 
         public Builder setCoupon(String coupon)
         {
@@ -24,9 +24,9 @@ public class BenefitCoupon
             return this;
         }
 
-        public Builder setUserIdentifier(String user_identifier)
+        public Builder setUserIdentifier(String userIdentifier)
         {
-            this.user_identifier = user_identifier;
+            this.userIdentifier = userIdentifier;
             return this;
         }
 
@@ -39,6 +39,6 @@ public class BenefitCoupon
     private BenefitCoupon(Builder builder)
     {
         this.coupon = builder.coupon;
-        this.user_identifier = builder.user_identifier;
+        this.userIdentifier = builder.userIdentifier;
     }
 }

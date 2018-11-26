@@ -126,8 +126,7 @@ public class user_profile extends Fragment {
                             .setUserTypeSilver(isSilverUser).setUserIdentifier(user_identifier).create();
                     pushToDb();
 
-                }
-                else if(isGoldenUser){
+                }else if(isGoldenUser){
 
                     userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
                             .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(userType)
@@ -205,7 +204,7 @@ public class user_profile extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                throw new UnsupportedOperationException();
             }
         });
 

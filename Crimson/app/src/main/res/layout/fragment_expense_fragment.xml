@@ -33,7 +33,7 @@
             android:prompt="@string/category_prompt" />
 
         <EditText
-            android:id="@+id/expense_amount_button"
+            android:id="@+id/expense_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -48,7 +48,7 @@
             android:id="@+id/expense_place"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/expense_amount_button"
+            android:layout_alignEnd="@+id/expense_amount"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="-2dp"
             android:layout_marginBottom="192dp"

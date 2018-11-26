@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Button NotRegisteredButton;
 
     private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListener;
+    public FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

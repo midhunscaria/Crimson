@@ -41,15 +41,11 @@ public class goals_fragment extends Fragment {
     public Handler handler;
     public Task<Void> push_task;
 
-    public goals_fragment(){
-
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        final Handler handler = new Handler();
+        handler = new Handler();
 
         parentHolder = inflater.inflate(R.layout.fragment_goals_fragment, container, false);
         goalTarget = (EditText) parentHolder.findViewById(R.id.goalsTarget);
@@ -66,7 +62,7 @@ public class goals_fragment extends Fragment {
                 goalPeriodString=goalPeriod.getText().toString();
 
                 if ((TextUtils.isEmpty(goalTargetString)) || (TextUtils.isEmpty(goalAmountString)|| !TextUtils.isDigitsOnly(goalAmountString)) || (TextUtils.isEmpty(goalPeriodString)|| !TextUtils.isDigitsOnly(goalPeriodString))) {
-                    Util.makeToast(parentHolder.getContext(), "Enter All Details").show();
+                    Util.makeToast(parentHolder.getContext(), "Enter All Details Correctly!").show();
                 } else {
                     goal = new Goals.Builder().setTarget(goalTargetString).setAmount(Double.parseDouble(goalAmountString)).setPeriod(Integer.parseInt(goalPeriodString)).create();
 

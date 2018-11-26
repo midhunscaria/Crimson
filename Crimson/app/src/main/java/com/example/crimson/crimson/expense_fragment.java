@@ -10,15 +10,12 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.w3c.dom.Text;
 
 
 public class expense_fragment extends Fragment {
@@ -44,7 +41,7 @@ public class expense_fragment extends Fragment {
 
         parentHolder = inflater.inflate(R.layout.fragment_expense_fragment, container, false);
 
-        amount = (EditText)parentHolder.findViewById(R.id.expense_amount_button);
+        amount = (EditText)parentHolder.findViewById(R.id.expense_amount);
         category_spinner = (Spinner)parentHolder.findViewById(R.id.expense_category_spinner);
         expense_place = (EditText)parentHolder.findViewById(R.id.expense_place);
         add_expense_button = (Button)parentHolder.findViewById(R.id.add_expense_button);
@@ -93,5 +90,9 @@ public class expense_fragment extends Fragment {
         return parentHolder;
     }
 
+    public View getParentHolder()
+    {
+        return parentHolder;
+    }
 
 }

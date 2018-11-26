@@ -7,6 +7,7 @@ public class BenefitGoldDecorator extends BenefitDecorator {
         super(base);
     }
 
+    @Override
     public String generateCoupon()
     {
         return "Dinner-2"+","+generateCouponAPI.generateCoupon();

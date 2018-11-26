@@ -105,11 +105,6 @@ public class DashboardActivity extends AppCompatActivity
             fragment = new expense_fragment();
             Util.navigateFragment(fragment, true, this, "Exp");
         }
-        else if (id == R.id.nav_analysis)
-        {
-            fragment = new analysis_fragment();
-            Util.navigateFragment(fragment, true, this, "Analysis");
-        }
         else if (id == R.id.nav_dues)
         {
             fragment = new dues_fragment();

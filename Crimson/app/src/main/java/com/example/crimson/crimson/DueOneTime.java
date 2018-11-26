@@ -2,8 +2,6 @@ package com.example.crimson.crimson;
 
 public class DueOneTime implements DueAPI {
 
-    //new DueManager(dueReceiverStr, dueAmountStr, new DueOneTime(email));
-
     public String dueRecieverEmailStr;
 
     public DueOneTime(String dueRecieverEmail)
@@ -13,6 +11,6 @@ public class DueOneTime implements DueAPI {
 
     public String generateDueString(String dueReceiverStr, String dueAmountSt)
     {
-        return new String(dueReceiverStr+","+dueAmountSt+","+this.dueRecieverEmailStr);
+        return dueReceiverStr+","+dueAmountSt+","+this.dueRecieverEmailStr;
     }
 }
