@@ -2,12 +2,12 @@ package com.example.crimson.crimson;
 
 public class Expense {
 
-    private double amount;
+    private String amount;
     private String category;
     private String place;
     private String user_identifier;
 
-    public double getAmount() {
+    public String getAmount() {
         return amount;
     }
 
@@ -25,12 +25,12 @@ public class Expense {
 
     static class Builder
     {
-        private double amount;
+        private String amount;
         private String category;
         private String place;
         private String user_identifier;
 
-        public Builder setAmount(final double amount)
+        public Builder setAmount(final String amount)
         {
             this.amount = amount;
             return this;
@@ -68,8 +68,4 @@ public class Expense {
         user_identifier = builder.user_identifier;
     }
 
-    public Expense()
-    {
-
-    }
 }

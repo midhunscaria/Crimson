@@ -24,7 +24,11 @@
         <activity
             android:name=".DashboardActivity"
             android:label="Welcome to Crimson!"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!--<meta-data-->
+            <!--android:name="com.google.android.actions"-->
+            <!--android:resource="@xml/pom" />-->
     </application>
 
 </manifest>

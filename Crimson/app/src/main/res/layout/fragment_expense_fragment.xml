@@ -27,8 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="66dp"
-            android:layout_marginTop="221dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="155dp"
             android:entries="@array/expense_categories"
             android:prompt="@string/category_prompt" />
 
@@ -38,8 +38,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="66dp"
-            android:layout_marginTop="132dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="93dp"
             android:ems="10"
             android:hint="Amount"
             android:inputType="textPersonName" />
@@ -50,8 +50,8 @@
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/expense_amount"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="-2dp"
-            android:layout_marginBottom="192dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="274dp"
             android:ems="10"
             android:hint="Place"
             android:inputType="textPersonName" />
@@ -63,10 +63,22 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="72dp"
-            android:layout_marginLeft="72dp"
-            android:layout_marginBottom="114dp"
+            android:layout_marginStart="249dp"
+            android:layout_marginLeft="249dp"
+            android:layout_marginBottom="275dp"
             android:text="Add Expense" />
 
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/expense_chart"
+            android:layout_width="match_parent"
+            android:layout_height="269dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp" />
+
     </RelativeLayout>
+
 </LinearLayout>

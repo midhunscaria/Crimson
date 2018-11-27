@@ -1,4 +1,4 @@
 
+\squid:UselessImportCheck"1Remove this unused import 'android.app.Activity'.(‡ΚΝΖ8γόοατ,
 usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ‡ωωÿÿÿÿ8γόοατ,
 dsquid:UselessImportCheck"4Remove this unused import 'android.app.AlertDialog'.(ª½ψώόÿÿÿÿ8γόοατ,
-\squid:UselessImportCheck"1Remove this unused import 'android.app.Activity'.(‡ΚΝΖ8γόοατ,
