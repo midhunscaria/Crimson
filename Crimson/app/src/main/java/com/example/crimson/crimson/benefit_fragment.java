@@ -19,12 +19,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 
 public class benefit_fragment extends Fragment{
 
     public View parentHolder;
 
-    public TextView benefit_username, benefit_subs, benefit_subs_type, benefit_coupon_info;
+    public TextView benefit_coupon_info;
     public Button benefit_redeem_button;
 
     public String benefit_subs_type_Str, checker;
@@ -50,19 +52,14 @@ public class benefit_fragment extends Fragment{
 
         handler = new Handler();
 
-        benefit_username = parentHolder.findViewById(R.id.benefit_username_id);
-        benefit_subs = parentHolder.findViewById(R.id.benefit_subs_id);
-        benefit_subs_type = parentHolder.findViewById(R.id.benefit_subs_type_id);
-        benefit_coupon_info = parentHolder.findViewById(R.id.benefits_ticket_info_id);
-
-        benefit_subs_type_Str = benefit_subs_type.getText().toString();
-        benefit_subs_type_Str="Gold";
-
+        benefit_coupon_info = (TextView)parentHolder.findViewById(R.id.benefits_ticket_info_id);
         benefit_redeem_button = (Button)parentHolder.findViewById(R.id.benefits_redeem_button);
 
         benefit_redeem_button.setEnabled(false);
 
         checkIfRedeemed(user_identifier);
+
+//        benefit_subs_type_Str = benefit_subs_type.getText().toString();
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -136,7 +133,7 @@ public class benefit_fragment extends Fragment{
                         public void run() {
                             if(checker.equals(user_identifier)) {
                                 flag = true;
-                                benefit_coupon_info.setText("You Got "+couponStr.split(","));
+                                benefit_coupon_info.setText("You Got "+couponStr);
                             }
                         }
                     }, 200);
