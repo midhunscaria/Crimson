@@ -8,10 +8,62 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/dashSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/dashSubs"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="87dp" />
+
+        <TextView
+            android:id="@+id/dashSubs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/dashSubsType"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="111dp" />
+
+        <TextView
+            android:id="@+id/dashSubsType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="29dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="139dp" />
+
+        <TextView
+            android:id="@+id/dashName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/dashSalary"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/dashAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/dashSalary"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="46dp" />
+
+        <TextView
+            android:id="@+id/dashOccupation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/dashSalary"
+            android:layout_alignStart="@+id/dashSalary"
+            android:layout_marginBottom="-87dp" />
+
+
+    </RelativeLayout>
 </LinearLayout>

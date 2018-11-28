@@ -14,13 +14,12 @@ public class Util {
 
     }
 
-    public static void navigateFragment(Fragment fragment, boolean addTOBackStack, AppCompatActivity activity, String Tag){
+    public static void navigateFragment(Fragment fragment, AppCompatActivity activity, String Tag){
 
-      if (addTOBackStack){
-          activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, Tag).addToBackStack(Tag).commit();
-      }else {
-          activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
-      }
+//      if (addTOBackStack){
+//          activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, Tag).addToBackStack(Tag).commit();
+//      }else {
+//          activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
 
     }
 

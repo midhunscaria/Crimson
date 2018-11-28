@@ -37,7 +37,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class expense_fragment extends Fragment {
+public class expense_fragment extends Fragment implements Subject{
 
     public View parentHolder;
 
@@ -50,7 +50,6 @@ public class expense_fragment extends Fragment {
     public String amount_double_str;
     public String category_spinner_str;
     public String expense_place_str;
-    private String user_identifier;
     public float temp_amount, amount_float;
     public String category, user_id_fb, amount_str;
 
@@ -60,7 +59,14 @@ public class expense_fragment extends Fragment {
     public Map<String, Float> expense_map = new HashMap<String, Float>();
     public List<PieEntry> pieEntries = new ArrayList<>();
 
+    public List<Observer> observers = new ArrayList<>();
+
     public Handler handler = new Handler();
+
+    public PieDataSet dataSet;
+    public PieData data;
+
+    private String user_identifier = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -69,12 +75,14 @@ public class expense_fragment extends Fragment {
 
         parentHolder = inflater.inflate(R.layout.fragment_expense_fragment, container, false);
 
+        PieChartUpdate pieChartObserver = new PieChartUpdate(this, user_identifier);
+        this.register(pieChartObserver);
+
         amount = (EditText)parentHolder.findViewById(R.id.expense_amount);
         category_spinner = (Spinner)parentHolder.findViewById(R.id.expense_category_spinner);
         expense_place = (EditText)parentHolder.findViewById(R.id.expense_place);
         add_expense_button = (Button)parentHolder.findViewById(R.id.add_expense_button);
         chart = (PieChart)parentHolder.findViewById(R.id.expense_chart);
-        user_identifier = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         drawPieChart(user_identifier);
 
@@ -107,6 +115,9 @@ public class expense_fragment extends Fragment {
                                 amount.setText("");
                                 category_spinner.setSelection(0);
                                 expense_place.setText("");
+
+                                notifyObservers();
+
                             }
                             else
                             {
@@ -123,6 +134,8 @@ public class expense_fragment extends Fragment {
 
     public void drawPieChart(final String u_id)
     {
+        expense_map.clear();
+
         expenseRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -161,36 +174,63 @@ public class expense_fragment extends Fragment {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                createMap(expense_map);
+                createMap();
             }
         },2000);
 
     }
 
-    public void createMap(Map<String, Float> expense_map)
+    public void createMap()
     {
+        pieEntries.clear();
 
         if(expense_map.size() > 0) {
 
             for (Map.Entry<String, Float> entry : expense_map.entrySet()) {
-                String x =  entry.getKey();
-                float y = entry.getValue().floatValue();
-                pieEntries.add(new PieEntry(y,x));
+                pieEntries.add(new PieEntry(entry.getValue().floatValue(), entry.getKey()));
             }
         }
 
+        chart.clear();
         chart.getDescription().setEnabled(false);
-        chart.setExtraOffsets(5,10,5,5);
+        chart.setExtraOffsets(5,10,5,2);
 
-        PieDataSet dataSet = new PieDataSet(pieEntries, "");
+        dataSet = new PieDataSet(pieEntries, "");
         dataSet.setColors(ColorTemplate.JOYFUL_COLORS);
 
-        PieData data = new PieData(dataSet);
+        data = new PieData(dataSet);
         data.setValueTextSize(10f);
         data.setValueTextColor(Color.YELLOW);
 
         chart.setData(data);
         chart.invalidate();
 
+    }
+
+    @Override
+    public void register(Observer o)
+    {
+        if(!observers.contains(o))
+        {
+            observers.add(o);
+        }
+    }
+
+    @Override
+    public void unregister(Observer o)
+    {
+        if(observers.contains(o))
+        {
+            observers.remove(o);
+        }
+    }
+
+    @Override
+    public void notifyObservers()
+    {
+        for(Observer o : observers)
+        {
+            o.update();
+        }
     }
 }

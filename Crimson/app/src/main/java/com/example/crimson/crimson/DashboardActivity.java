@@ -98,30 +98,30 @@ public class DashboardActivity extends AppCompatActivity
         if (id == R.id.nav_dash)
         {
             fragment = new dash_fragment();
-            Util.navigateFragment(fragment, true, this, "Dash");
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
         }
         else if (id == R.id.nav_expense)
         {
             fragment = new expense_fragment();
-            Util.navigateFragment(fragment, true, this, "Exp");
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
         }
         else if (id == R.id.nav_dues)
         {
             fragment = new dues_fragment();
-            Util.navigateFragment(fragment, true, this, "Dues");
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
         }
         else if (id == R.id.nav_goals)
         {
             fragment = new goals_fragment();
-            Util.navigateFragment(fragment, true, this, "Goals");
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
         }
         else if (id == R.id.nav_benefits) {
             fragment = new benefit_fragment();
-            Util.navigateFragment(fragment, true, this, "Benefit");
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
         }
         else if (id == R.id.nav_userProfile) {
             fragment = new user_profile();
-            Util.navigateFragment(fragment, false, this, "");
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

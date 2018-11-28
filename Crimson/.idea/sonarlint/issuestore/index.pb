@@ -100,3 +100,9 @@ h
 Qapp/src/androidTest/java/com/example/crimson/crimson/ExampleInstrumentedTest.java,6\9\694ccdd643ad7bd37c2f02a36960059f3c1fb81f
 g
 7app/src/main/res/layout/dashboard_expense_list_item.xml,e\0\e0bf16548155231b6039039b712167e1ee6ecc4e
+k
+;app/src/main/java/com/example/crimson/crimson/Observer.java,3\a\3af39082eccf5818c71d6a39ffe8dc624f5a4010
+j
+:app/src/main/java/com/example/crimson/crimson/Subject.java,7\3\73287d83df592fb0f012cf17f744b5cf6119106f
+q
+Aapp/src/main/java/com/example/crimson/crimson/PieChartUpdate.java,9\2\92f2998dc9a2447b3a8f14da7ff165c7066b1711

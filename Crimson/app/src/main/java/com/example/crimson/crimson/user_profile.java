@@ -122,27 +122,27 @@ public class user_profile extends Fragment {
                 else if(isSilverUser){
 
                     userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
-                            .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(userType)
-                            .setUserTypeSilver(isSilverUser).setUserIdentifier(user_identifier).create();
+                            .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(Boolean.toString(userType))
+                            .setUserTypeSilver(Boolean.toString(isSilverUser)).setUserIdentifier(user_identifier).create();
                     pushToDb();
 
                 }else if(isGoldenUser){
 
                     userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
-                            .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(userType)
-                            .setUserTypeGolden(isGoldenUser).setUserIdentifier(user_identifier).create();
+                            .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(Boolean.toString(userType))
+                            .setUserTypeGolden(Boolean.toString(isGoldenUser)).setUserIdentifier(user_identifier).create();
                     pushToDb();
                 }
                 else if(isDiamondUser){
 
                     userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
-                            .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(userType)
-                            .setUserTypeDiamond(isDiamondUser).setUserIdentifier(user_identifier).create();
+                            .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(Boolean.toString(userType))
+                            .setUserTypeDiamond(Boolean.toString(isDiamondUser)).setUserIdentifier(user_identifier).create();
                     pushToDb();
                 }
                 else {
                     userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
-                            .setOccupationOfUser(occupationOfUserString).setUserIdentifier(user_identifier).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(userType).create();
+                            .setOccupationOfUser(occupationOfUserString).setUserIdentifier(user_identifier).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(Boolean.toString(userType)).create();
                     pushToDb();
 
                     Util.makeToast(parentHolder.getContext(), "Your information has been saved! You are registered as a free user!").show();

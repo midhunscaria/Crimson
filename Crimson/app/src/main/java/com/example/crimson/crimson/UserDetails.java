@@ -3,30 +3,30 @@ package com.example.crimson.crimson;
 public class UserDetails {
 
     private String name;
-    private int age;
+    private String age;
     private String occupation;
     private String user_identifier;
-    private double annualIncome;
-    private boolean userType;
-    private boolean isSilver;
-    private boolean isGolden;
-    private boolean isDiamond;
+    private String annualIncome;
+    private String userType;
+    private String isSilver;
+    private String isGolden;
+    private String isDiamond;
 
     public String getNameOfUser(){ return name;}
 
-    public int getAgeOfUser(){ return age; }
+    public String getAgeOfUser(){ return age; }
 
     public String getOccupationOfUser() { return occupation; }
 
-    public double getAnnualIncomeofUser(){ return annualIncome; }
+    public String getAnnualIncomeofUser(){ return annualIncome; }
 
-    public boolean getUserType(){ return userType; }
+    public String getUserType(){ return userType; }
 
-    public boolean getUserTypeSilver(){ return isSilver; }
+    public String getUserTypeSilver(){ return isSilver; }
 
-    public boolean getUserTypeGolden(){ return isGolden; }
+    public String getUserTypeGolden(){ return isGolden; }
 
-    public boolean getUserTypeDiamond() { return isDiamond; }
+    public String getUserTypeDiamond() { return isDiamond; }
 
     public String getUser_identifier() {
         return user_identifier;
@@ -36,14 +36,14 @@ public class UserDetails {
     static class Builder {
 
         private String name;
-        private int age;
+        private String age;
         private String occupation;
         private String user_identifier;
-        private double annualIncome;
-        private boolean userType;
-        private boolean isSilver;
-        private boolean isGolden;
-        private boolean isDiamond;
+        private String annualIncome;
+        private String userType;
+        private String isSilver;
+        private String isGolden;
+        private String isDiamond;
 
         public Builder setNameOfUser(final String name)
         {
@@ -53,7 +53,7 @@ public class UserDetails {
 
         public Builder setAgeOfUser(final String age)
         {
-            this.age = Integer.parseInt(age);
+            this.age = age;
             return this;
         }
 
@@ -65,29 +65,29 @@ public class UserDetails {
 
         public Builder setAnnualIncomeOfUser(final String annualIncome)
         {
-            this.annualIncome = Double.parseDouble(annualIncome);
+            this.annualIncome = annualIncome;
             return this;
         }
 
-        public Builder setUserTypeSilver(final boolean isSilver)
+        public Builder setUserTypeSilver(final String isSilver)
         {
             this.isSilver = isSilver;
             return this;
         }
 
-        public Builder setUserTypeGolden(final boolean isGolden)
+        public Builder setUserTypeGolden(final String isGolden)
         {
             this.isGolden = isGolden;
             return this;
         }
 
-        public Builder setUserTypeDiamond (final boolean isDiamond)
+        public Builder setUserTypeDiamond (final String isDiamond)
         {
             this.isDiamond = isDiamond;
             return this;
         }
 
-        public Builder setUserType(final boolean userType)
+        public Builder setUserType(final String userType)
         {
             this.userType = userType;
             return this;
