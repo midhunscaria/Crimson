@@ -56,14 +56,16 @@ public class SignUpActivity extends AppCompatActivity {
             Util.makeToast(SignUpActivity.this, "Passwords Do Not Match").show();
         }
         else {
-            mAuth.createUserWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            Task<AuthResult> signUpTask = mAuth.createUserWithEmailAndPassword(username, password);
+
+            signUpTask.addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
 
                     if (task.isSuccessful()) {
                         startActivity(new Intent(SignUpActivity.this, MainActivity.class));
                     } else {
-                        Util.makeToast(SignUpActivity.this, "Sign Up Unsuccessful! Try again!").show();
+                        Util.makeToast(SignUpActivity.this, ""+task.getException().getMessage()).show();
                     }
                 }
             });
