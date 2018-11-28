@@ -58,7 +58,6 @@ public class dash_fragment extends Fragment{
     public Float duesAmtFloat, duesOneTimeAmtFloat, temp_amount;
 
     public PieChart duesOneTimeChart, duesPeriodicChart;
-    public PieChart goalsChart;
     public PieData data;
     public PieDataSet dataSet;
 
@@ -81,12 +80,10 @@ public class dash_fragment extends Fragment{
         typeLabel = (TextView)parentHolder.findViewById(R.id.dashSubsType);
         duesOneTimeChart = (PieChart)parentHolder.findViewById(R.id.dues_one_time_pie);
         duesPeriodicChart = (PieChart)parentHolder.findViewById(R.id.dues_periodic_pie);
-        goalsChart = (PieChart)parentHolder.findViewById(R.id.goals_pie);
 
 
         getUserProfileDetails(user_identifier);
         drawDuesGraph(user_identifier);
-//        drawGoalsGraph(user_identifier);
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -165,7 +162,12 @@ public class dash_fragment extends Fragment{
     public void drawDuesGraph(final String user_identifier)
     {
         drawOneTimeGraph(dues_one_time_map, duesOneTimeRef);
-        drawPeriodicGraph(dues_periodic_map, duesPeriodicRef);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                drawPeriodicGraph(dues_periodic_map, duesPeriodicRef);
+            }
+        },500);
     }
 
     public void drawOneTimeGraph(Map<String, Float> oneTimeMap, DatabaseReference duesOneTimeRef)
@@ -263,53 +265,6 @@ public class dash_fragment extends Fragment{
             }
         },2000);
     }
-
-//    public void drawGoalsGraph(String user_identifier)
-//    {
-//        goals_map.clear();
-//
-//        goalsRef.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//
-//                for(DataSnapshot ds : dataSnapshot.getChildren())
-//                {
-//                    user_id_fb = ds.child("user_identifier").getValue(String.class);
-//                    category = ds.child("category").getValue(String.class);
-//                    amount_str = ds.child("amount").getValue(String.class);
-//
-//                    amount_float = Float.parseFloat(amount_str);
-//
-//                    if(u_id.equals(user_id_fb))
-//                    {
-//                        if(expense_map.containsKey(category))
-//                        {
-//                            temp_amount = expense_map.get(category);
-//                            temp_amount = amount_float + temp_amount;
-//                            expense_map.put(category, temp_amount);
-//                        }
-//                        else
-//                        {
-//                            expense_map.put(category, amount_float);
-//                        }
-//                    }
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-//
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                createMap(dues_one_time_map, duesPeriodicChart);
-//            }
-//        },2000);
-//    }
 
     public void createMap(Map<String, Float> map, PieChart chart, String description)
     {

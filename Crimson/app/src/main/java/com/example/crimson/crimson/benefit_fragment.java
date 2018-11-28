@@ -39,6 +39,7 @@ public class benefit_fragment extends Fragment{
     public DatabaseReference benefitmDbRef = mDbRef.child("Benefits");
 
     public String user_identifier = FirebaseAuth.getInstance().getUid();
+    public String couponStr;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,10 +50,10 @@ public class benefit_fragment extends Fragment{
 
         handler = new Handler();
 
-        benefit_username = (TextView)parentHolder.findViewById(R.id.benefit_username_id);
-        benefit_subs = (TextView)parentHolder.findViewById(R.id.benefit_subs_id);
-        benefit_subs_type = (TextView)parentHolder.findViewById(R.id.benefit_subs_type_id);
-        benefit_coupon_info = (TextView)parentHolder.findViewById(R.id.benefits_ticket_info_id);
+        benefit_username = parentHolder.findViewById(R.id.benefit_username_id);
+        benefit_subs = parentHolder.findViewById(R.id.benefit_subs_id);
+        benefit_subs_type = parentHolder.findViewById(R.id.benefit_subs_type_id);
+        benefit_coupon_info = parentHolder.findViewById(R.id.benefits_ticket_info_id);
 
         benefit_subs_type_Str = benefit_subs_type.getText().toString();
         benefit_subs_type_Str="Gold";
@@ -128,12 +129,14 @@ public class benefit_fragment extends Fragment{
                 for(DataSnapshot ds : dataSnapshot.getChildren())
                 {
                     checker = ds.child("user_identifier").getValue(String.class);
+                    couponStr = ds.child("coupon").getValue(String.class);
 
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             if(checker.equals(user_identifier)) {
                                 flag = true;
+                                benefit_coupon_info.setText("You Got "+couponStr.split(","));
                             }
                         }
                     }, 200);

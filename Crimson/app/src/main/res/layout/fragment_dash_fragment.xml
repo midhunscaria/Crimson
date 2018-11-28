@@ -84,7 +84,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginEnd="0dp"
             android:layout_marginRight="0dp"
-            android:layout_marginBottom="6dp"></com.github.mikephil.charting.charts.PieChart>
+            android:layout_marginBottom="20dp"></com.github.mikephil.charting.charts.PieChart>
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/dues_periodic_pie"
@@ -93,20 +93,7 @@
             android:layout_alignStart="@+id/dues_one_time_pie"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="0dp"
-            android:layout_marginBottom="199dp" />
-
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/goals_pie"
-            android:layout_width="164dp"
-            android:layout_height="137dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginBottom="46dp">
-
-        </com.github.mikephil.charting.charts.PieChart>
+            android:layout_marginBottom="20dp" />
 
 
     </RelativeLayout>

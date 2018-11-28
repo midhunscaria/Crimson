@@ -5,14 +5,6 @@ public class BenefitCoupon
     private String coupon;
     private String userIdentifier;
 
-    public String getCoupon() {
-        return coupon;
-    }
-
-    public String getUserIdentifier() {
-        return userIdentifier;
-    }
-
     static class Builder
     {
         private String coupon;
