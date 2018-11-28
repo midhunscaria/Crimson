@@ -1,61 +1,47 @@
 
-Ksquid:S1659"*Declare "amount_float" on a separate line.(êÔøîúÿÿÿÿ8ó¦èµõ,
-Isquid:S1659"(Declare "user_id_fb" on a separate line.(§Ÿ¹âúÿÿÿÿ8ó¦èµõ,
-Isquid:S1659"(Declare "amount_str" on a separate line.(§Ÿ¹âúÿÿÿÿ8ó¦èµõ,
-wsquid:S3008"VRename this field "temp_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÔøîúÿÿÿÿ8ó¦èµõ,
-xsquid:S3008"WRename this field "amount_float" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÔøîúÿÿÿÿ8ó¦èµõ,
-vsquid:S3008"URename this field "user_id_fb" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Ÿ¹âúÿÿÿÿ8ó¦èµõ,
-vsquid:S3008"URename this field "amount_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§Ÿ¹âúÿÿÿÿ8ó¦èµõ,
-wsquid:S3008"VRename this field "expense_map" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óğèúÿÿÿÿ8ó¦èµõ,
-zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Óğèúÿÿÿÿ8ó¦èµõ,
-Fsquid:S1444"+Make this "public static chart" field final(şş¡68ó¦èµõ,
-Rsquid:S1444"1Make this "public static temp_amount" field final(êÔøîúÿÿÿÿ8ó¦èµõ,
-Ssquid:S1444"2Make this "public static amount_float" field final(êÔøîúÿÿÿÿ8ó¦èµõ,
-Osquid:S1444".Make this "public static category" field final(§Ÿ¹âúÿÿÿÿ8ó¦èµõ,
-Qsquid:S1444"0Make this "public static user_id_fb" field final(§Ÿ¹âúÿÿÿÿ8ó¦èµõ,
-Qsquid:S1444"0Make this "public static amount_str" field final(§Ÿ¹âúÿÿÿÿ8ó¦èµõ,
-Hsquid:S1444",Make this "public static mDbRef" field final(Œö”ó8ó¦èµõ,
-Qsquid:S1444"0Make this "public static expenseRef" field final(÷í®œÿÿÿÿÿ8ó¦èµõ,
-Rsquid:S1444"1Make this "public static expense_map" field final(Óğèúÿÿÿÿ8ó¦èµõ,
-Lsquid:S1444"0Make this "public static pieEntries" field final(¥ÛĞ¾8ó¦èµõ,
-Isquid:S1444"-Make this "public static handler" field final(Ô¥Èİ8ó¦èµõ,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÁÄÇûÿÿÿÿ8ó¦èµõ,
-Rsquid:S2696"6Make the enclosing method "static" or remove this set.(Ê€Å8ó¦èµõ,
-Wsquid:S2696"6Make the enclosing method "static" or remove this set.(™ïìéşÿÿÿÿ8ó¦èµõ,
-‹"squid:ClassVariableVisibilityCheck"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8ó¦èµõ,
-…"squid:ClassVariableVisibilityCheck"RMake amount a static final constant or non-public and provide accessors if needed.(§«½¡8ó¦èµõ,
-"squid:ClassVariableVisibilityCheck"\Make category_spinner a static final constant or non-public and provide accessors if needed.(“Ì98ó¦èµõ,
-Œ"squid:ClassVariableVisibilityCheck"YMake expense_place a static final constant or non-public and provide accessors if needed.(ÅÚ–8ó¦èµõ,
-‘"squid:ClassVariableVisibilityCheck"^Make add_expense_button a static final constant or non-public and provide accessors if needed.(ŒÓÅ»8ó¦èµõ,
-ƒ"squid:ClassVariableVisibilityCheck"QMake chart a static final constant or non-public and provide accessors if needed.(şş¡68ó¦èµõ,
-"squid:ClassVariableVisibilityCheck"]Make amount_double_str a static final constant or non-public and provide accessors if needed.(•¹×“8ó¦èµõ,
-˜"squid:ClassVariableVisibilityCheck"`Make category_spinner_str a static final constant or non-public and provide accessors if needed.(î¬šïûÿÿÿÿ8ó¦èµõ,
-"squid:ClassVariableVisibilityCheck"]Make expense_place_str a static final constant or non-public and provide accessors if needed.(Î¹üš8ó¦èµõ,
-"squid:ClassVariableVisibilityCheck"WMake temp_amount a static final constant or non-public and provide accessors if needed.(êÔøîúÿÿÿÿ8ó¦èµõ,
-"squid:ClassVariableVisibilityCheck"XMake amount_float a static final constant or non-public and provide accessors if needed.(êÔøîúÿÿÿÿ8ó¦èµõ,
-Œ"squid:ClassVariableVisibilityCheck"TMake category a static final constant or non-public and provide accessors if needed.(§Ÿ¹âúÿÿÿÿ8ó¦èµõ,
-"squid:ClassVariableVisibilityCheck"VMake user_id_fb a static final constant or non-public and provide accessors if needed.(§Ÿ¹âúÿÿÿÿ8ó¦èµõ,
-"squid:ClassVariableVisibilityCheck"VMake amount_str a static final constant or non-public and provide accessors if needed.(§Ÿ¹âúÿÿÿÿ8ó¦èµõ,
-…"squid:ClassVariableVisibilityCheck"RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œö”ó8ó¦èµõ,
-"squid:ClassVariableVisibilityCheck"VMake expenseRef a static final constant or non-public and provide accessors if needed.(÷í®œÿÿÿÿÿ8ó¦èµõ,
-"squid:ClassVariableVisibilityCheck"WMake expense_map a static final constant or non-public and provide accessors if needed.(Óğèúÿÿÿÿ8ó¦èµõ,
-‰"squid:ClassVariableVisibilityCheck"VMake pieEntries a static final constant or non-public and provide accessors if needed.(¥ÛĞ¾8ó¦èµõ,
-ˆ"squid:ClassVariableVisibilityCheck"UMake observers a static final constant or non-public and provide accessors if needed.(È–8ó¦èµõ,
-†"squid:ClassVariableVisibilityCheck"SMake handler a static final constant or non-public and provide accessors if needed.(Ô¥Èİ8ó¦èµõ,
-osquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(£Şçÿøÿÿÿÿ8ó¦èµõ,
-¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ÷‘Şÿÿÿÿÿ8ó¦èµõ,
->squid:S2386"Make this member "protected".(Óğèúÿÿÿÿ8ó¦èµõ,
-9squid:S2386"Make this member "protected".(¥ÛĞ¾8ó¦èµõ,
-wsquid:S00116"[Rename this field "category_spinner" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“Ì98ó¦èµõ,
-usquid:S00116"XRename this field "expense_place" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÚ–8ó¦èµõ,
-zsquid:S00116"]Rename this field "add_expense_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÓÅ»8ó¦èµõ,
-ysquid:S00116"\Rename this field "amount_double_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•¹×“8ó¦èµõ,
-squid:S00116"_Rename this field "category_spinner_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î¬šïûÿÿÿÿ8ó¦èµõ,
-ysquid:S00116"\Rename this field "expense_place_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î¹üš8ó¦èµõ,
-wsquid:S00116"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß‘¤Ì8ó¦èµõ,
-nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã¦Ğ»8ó¦èµõ,
-ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡¡´‰ûÿÿÿÿ8ó¦èµõ,
-esquid:UselessImportCheck"7Remove this unused import 'android.util.FloatProperty'.(»¿®Äÿÿÿÿÿ8ó¦èµõ,
-_squid:UselessImportCheck"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8ó¦èµõ,
-[squid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8ó¦èµõ,
-xsquid:UselessImportCheck"JRemove this unused import 'com.google.android.gms.common.util.ArrayUtils'.(ßìÒ¢ùÿÿÿÿ8ó¦èµõ,
+Msquid:S16595"*Declare "amount_float" on a separate line.(§†¹Äÿÿÿÿÿ8¶Ùß½õ,
+Ksquid:S16596"(Declare "user_id_fb" on a separate line.(Š÷áÜúÿÿÿÿ8¶Ùß½õ,
+Ksquid:S16596"(Declare "amount_str" on a separate line.(Š÷áÜúÿÿÿÿ8¶Ùß½õ,
+|squid:S2293;"YReplace the type specification in this constructor call with the diamond operator ("<>").(…£Î…üÿÿÿÿ8¶Ùß½õ,
+"squid:ClassVariableVisibilityCheck*"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8¶Ùß½õ,
+‡"squid:ClassVariableVisibilityCheck,"RMake amount a static final constant or non-public and provide accessors if needed.(§«½¡8¶Ùß½õ,
+"squid:ClassVariableVisibilityCheck-"\Make category_spinner a static final constant or non-public and provide accessors if needed.(“Ì98¶Ùß½õ,
+"squid:ClassVariableVisibilityCheck."YMake expense_place a static final constant or non-public and provide accessors if needed.(ÅÚ–8¶Ùß½õ,
+“"squid:ClassVariableVisibilityCheck/"^Make add_expense_button a static final constant or non-public and provide accessors if needed.(ŒÓÅ»8¶Ùß½õ,
+†"squid:ClassVariableVisibilityCheck0"QMake chart a static final constant or non-public and provide accessors if needed.(Ø¨Ñ8¶Ùß½õ,
+’"squid:ClassVariableVisibilityCheck2"]Make amount_double_str a static final constant or non-public and provide accessors if needed.(•¹×“8¶Ùß½õ,
+š"squid:ClassVariableVisibilityCheck3"`Make category_spinner_str a static final constant or non-public and provide accessors if needed.(î¬šïûÿÿÿÿ8¶Ùß½õ,
+’"squid:ClassVariableVisibilityCheck4"]Make expense_place_str a static final constant or non-public and provide accessors if needed.(Î¹üš8¶Ùß½õ,
+‘"squid:ClassVariableVisibilityCheck5"WMake temp_amount a static final constant or non-public and provide accessors if needed.(§†¹Äÿÿÿÿÿ8¶Ùß½õ,
+’"squid:ClassVariableVisibilityCheck5"XMake amount_float a static final constant or non-public and provide accessors if needed.(§†¹Äÿÿÿÿÿ8¶Ùß½õ,
+"squid:ClassVariableVisibilityCheck6"TMake category a static final constant or non-public and provide accessors if needed.(Š÷áÜúÿÿÿÿ8¶Ùß½õ,
+"squid:ClassVariableVisibilityCheck6"VMake user_id_fb a static final constant or non-public and provide accessors if needed.(Š÷áÜúÿÿÿÿ8¶Ùß½õ,
+"squid:ClassVariableVisibilityCheck6"VMake amount_str a static final constant or non-public and provide accessors if needed.(Š÷áÜúÿÿÿÿ8¶Ùß½õ,
+Œ"squid:ClassVariableVisibilityCheck8"RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œ·º øÿÿÿÿ8¶Ùß½õ,
+"squid:ClassVariableVisibilityCheck9"VMake expenseRef a static final constant or non-public and provide accessors if needed.(‰šÆåÿÿÿÿÿ8¶Ùß½õ,
+‘"squid:ClassVariableVisibilityCheck;"WMake expense_map a static final constant or non-public and provide accessors if needed.(…£Î…üÿÿÿÿ8¶Ùß½õ,
+‹"squid:ClassVariableVisibilityCheck<"VMake pieEntries a static final constant or non-public and provide accessors if needed.(àÅ÷8¶Ùß½õ,
+Š"squid:ClassVariableVisibilityCheck>"UMake observers a static final constant or non-public and provide accessors if needed.(È–8¶Ùß½õ,
+ˆ"squid:ClassVariableVisibilityCheck@"SMake handler a static final constant or non-public and provide accessors if needed.(±œÙ§8¶Ùß½õ,
+"squid:ClassVariableVisibilityCheckB"SMake dataSet a static final constant or non-public and provide accessors if needed.(Òÿ…ıÿÿÿÿ8¶Ùß½õ,
+Š"squid:ClassVariableVisibilityCheckC"PMake data a static final constant or non-public and provide accessors if needed.(¼ù„§üÿÿÿÿ8¶Ùß½õ,
+qsquid:S00101("MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(£Şçÿøÿÿÿÿ8¶Ùß½õ,
+¥squid:S1186©"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ÷‘Şÿÿÿÿÿ8¶Ùß½õ,
+ysquid:S00116-"[Rename this field "category_spinner" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“Ì98¶Ùß½õ,
+wsquid:S00116."XRename this field "expense_place" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÚ–8¶Ùß½õ,
+|squid:S00116/"]Rename this field "add_expense_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÓÅ»8¶Ùß½õ,
+{squid:S001162"\Rename this field "amount_double_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•¹×“8¶Ùß½õ,
+ƒsquid:S001163"_Rename this field "category_spinner_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(î¬šïûÿÿÿÿ8¶Ùß½õ,
+{squid:S001164"\Rename this field "expense_place_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î¹üš8¶Ùß½õ,
+zsquid:S001165"VRename this field "temp_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§†¹Äÿÿÿÿÿ8¶Ùß½õ,
+{squid:S001165"WRename this field "amount_float" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§†¹Äÿÿÿÿÿ8¶Ùß½õ,
+ysquid:S001166"URename this field "user_id_fb" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š÷áÜúÿÿÿÿ8¶Ùß½õ,
+ysquid:S001166"URename this field "amount_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š÷áÜúÿÿÿÿ8¶Ùß½õ,
+zsquid:S00116;"VRename this field "expense_map" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…£Î…üÿÿÿÿ8¶Ùß½õ,
+~squid:S00116E"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À²µşÿÿÿÿ8¶Ùß½õ,
+psquid:S00117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã¦Ğ»8¶Ùß½õ,
+gsquid:UselessImportCheck	"7Remove this unused import 'android.util.FloatProperty'.(»¿®Äÿÿÿÿÿ8¶Ùß½õ,
+asquid:UselessImportCheck"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8¶Ùß½õ,
+]squid:UselessImportCheck
+"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8¶Ùß½õ,
+zsquid:UselessImportCheck"JRemove this unused import 'com.google.android.gms.common.util.ArrayUtils'.(ßìÒ¢ùÿÿÿÿ8¶Ùß½õ,

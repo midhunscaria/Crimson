@@ -1,10 +1,46 @@
 
-lsquid:UselessImportCheck"KRemove this unused import 'com.google.firebase.database.DatabaseReference'.(ÉÓ¹
-lsquid:UselessImportCheck"JRemove this unused import 'com.google.firebase.database.FirebaseDatabase'.(×Ë—
-_squid:UselessImportCheck"8Remove this unused import 'android.widget.ArrayAdapter'.( €ŠÑÿÿÿÿÿ
-Xsquid:UselessImportCheck"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ
-„"squid:ClassVariableVisibilityCheck"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ
-[squid:UselessImportCheck"4Remove this unused import 'android.app.AlertDialog'.(ª½øşüÿÿÿÿ
-hsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ğâÏÚıÿÿÿÿ
-Rsquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
-Vsquid:UselessImportCheck"4Remove this unused import 'android.widget.ListView'.(Œ‰Ö×
+Dsquid:S1659 "&Declare "ageLabel" on a separate line.(’å›8çŞâ½õ,
+Ksquid:S1659 "-Declare "occupationLabel" on a separate line.(’å›8çŞâ½õ,
+Gsquid:S1659 ")Declare "salaryLabel" on a separate line.(’å›8çŞâ½õ,
+Esquid:S1659 "'Declare "subsLabel" on a separate line.(’å›8çŞâ½õ,
+Esquid:S1659 "'Declare "typeLabel" on a separate line.(’å›8çŞâ½õ,
+Gsquid:S1659""$Declare "ageStr" on a separate line.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+Nsquid:S1659""+Declare "occupationStr" on a separate line.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+Jsquid:S1659""'Declare "salaryStr" on a separate line.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+Hsquid:S1659""%Declare "subsStr" on a separate line.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+Hsquid:S1659""%Declare "typeStr" on a separate line.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+Jsquid:S1659""'Declare "silverStr" on a separate line.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+Hsquid:S1659""%Declare "goldStr" on a separate line.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+Ksquid:S1659""(Declare "diamondStr" on a separate line.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+"squid:ClassVariableVisibilityCheck"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8çŞâ½õ,
+Š"squid:ClassVariableVisibilityCheck "UMake nameLabel a static final constant or non-public and provide accessors if needed.(’å›8çŞâ½õ,
+‰"squid:ClassVariableVisibilityCheck "TMake ageLabel a static final constant or non-public and provide accessors if needed.(’å›8çŞâ½õ,
+"squid:ClassVariableVisibilityCheck "[Make occupationLabel a static final constant or non-public and provide accessors if needed.(’å›8çŞâ½õ,
+Œ"squid:ClassVariableVisibilityCheck "WMake salaryLabel a static final constant or non-public and provide accessors if needed.(’å›8çŞâ½õ,
+Š"squid:ClassVariableVisibilityCheck "UMake subsLabel a static final constant or non-public and provide accessors if needed.(’å›8çŞâ½õ,
+Š"squid:ClassVariableVisibilityCheck "UMake typeLabel a static final constant or non-public and provide accessors if needed.(’å›8çŞâ½õ,
+"squid:ClassVariableVisibilityCheck""SMake nameStr a static final constant or non-public and provide accessors if needed.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+Œ"squid:ClassVariableVisibilityCheck""RMake ageStr a static final constant or non-public and provide accessors if needed.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+“"squid:ClassVariableVisibilityCheck""YMake occupationStr a static final constant or non-public and provide accessors if needed.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+"squid:ClassVariableVisibilityCheck""UMake salaryStr a static final constant or non-public and provide accessors if needed.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+"squid:ClassVariableVisibilityCheck""SMake subsStr a static final constant or non-public and provide accessors if needed.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+"squid:ClassVariableVisibilityCheck""SMake typeStr a static final constant or non-public and provide accessors if needed.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+"squid:ClassVariableVisibilityCheck""UMake silverStr a static final constant or non-public and provide accessors if needed.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+"squid:ClassVariableVisibilityCheck""SMake goldStr a static final constant or non-public and provide accessors if needed.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+"squid:ClassVariableVisibilityCheck""VMake diamondStr a static final constant or non-public and provide accessors if needed.(àŸ¾üÿÿÿÿ8çŞâ½õ,
+‹"squid:ClassVariableVisibilityCheck$"VMake user_id_fb a static final constant or non-public and provide accessors if needed.(ãóÉÎ8çŞâ½õ,
+•"squid:ClassVariableVisibilityCheck&"[Make user_identifier a static final constant or non-public and provide accessors if needed.(¬šÓ¨ûÿÿÿÿ8çŞâ½õ,
+Œ"squid:ClassVariableVisibilityCheck("RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œ·º øÿÿÿÿ8çŞâ½õ,
+"squid:ClassVariableVisibilityCheck)"ZMake userProfileRef a static final constant or non-public and provide accessors if needed.(ÛŞäÍ8çŞâ½õ,
+ˆ"squid:ClassVariableVisibilityCheck+"SMake handler a static final constant or non-public and provide accessors if needed.(±œÙ§8çŞâ½õ,
+usquid:S3776I"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(ßœ…¤ÿÿÿÿÿ8çŞâ½õ,
+qsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ğâÏÚıÿÿÿÿ8çŞâ½õ,
+¤squid:S1186w"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğ÷‘Şÿÿÿÿÿ8çŞâ½õ,
+tsquid:S00116$"URename this field "user_id_fb" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãóÉÎ8çŞâ½õ,
+~squid:S00116&"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬šÓ¨ûÿÿÿÿ8çŞâ½õ,
+]squid:UselessImportCheck"-Remove this unused import 'org.w3c.dom.Text'.(¶Äè‹şÿÿÿÿ8çŞâ½õ,
+[squid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8çŞâ½õ,
+dsquid:UselessImportCheck"4Remove this unused import 'android.app.AlertDialog'.(ª½øşüÿÿÿÿ8çŞâ½õ,
+hsquid:UselessImportCheck"8Remove this unused import 'android.widget.ArrayAdapter'.( €ŠÑÿÿÿÿÿ8çŞâ½õ,
+asquid:UselessImportCheck"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8çŞâ½õ,
+_squid:UselessImportCheck"4Remove this unused import 'android.widget.ListView'.(Œ‰Ö×8çŞâ½õ,

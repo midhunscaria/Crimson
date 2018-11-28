@@ -7,19 +7,18 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
+import com.github.mikephil.charting.data.PieEntry;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 public class Util {
+
+    public static List<PieEntry> pieEntries = new ArrayList<>();
 
     private Util()
     {
-
-    }
-
-    public static void navigateFragment(Fragment fragment, AppCompatActivity activity, String Tag){
-
-//      if (addTOBackStack){
-//          activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment, Tag).addToBackStack(Tag).commit();
-//      }else {
-//          activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
 
     }
 
@@ -27,5 +26,6 @@ public class Util {
     {
         return Toast.makeText(context, ""+message, Toast.LENGTH_LONG);
     }
+
 
 }

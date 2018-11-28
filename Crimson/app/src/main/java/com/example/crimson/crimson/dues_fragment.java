@@ -96,7 +96,7 @@ public class dues_fragment extends Fragment
 
                         due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().toString().split(","));
 
-                        due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(Double.parseDouble(due_information_from_csv.get(1))).setEmailID(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
+                        due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setEmailID(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 
                         db_push_task = mDbRef.child("Dues").child("OneTime").push().setValue(due);
 
@@ -112,7 +112,7 @@ public class dues_fragment extends Fragment
 
                             due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().toString().split(","));
 
-                            due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(Double.parseDouble(due_information_from_csv.get(1))).setPeriod(Integer.parseInt(due_information_from_csv.get(2))).setUserIdentifier(user_identifier).create();
+                            due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setPeriod(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 
                             db_push_task = mDbRef.child("Dues").child("Periodic").push().setValue(due);
 

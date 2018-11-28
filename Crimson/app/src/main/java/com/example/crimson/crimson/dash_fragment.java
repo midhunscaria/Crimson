@@ -1,6 +1,7 @@
 package com.example.crimson.crimson;
 
 import android.app.AlertDialog;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -13,6 +14,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,6 +29,9 @@ import com.google.firebase.database.ValueEventListener;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class dash_fragment extends Fragment{
@@ -32,13 +41,28 @@ public class dash_fragment extends Fragment{
     public TextView nameLabel, ageLabel, occupationLabel, salaryLabel, subsLabel, typeLabel;
 
     public String nameStr, ageStr, occupationStr, salaryStr, subsStr, typeStr, silverStr, goldStr, diamondStr;
-
     public String user_id_fb;
-
+    public String duesEmail, duesAmt, duesPeriodicName, duesPeriodicAmount;
     public String user_identifier = FirebaseAuth.getInstance().getUid();
 
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
     public DatabaseReference userProfileRef = mDbRef.child("User_Details");
+    public DatabaseReference duesOneTimeRef = mDbRef.child("Dues").child("OneTime");
+    public DatabaseReference duesPeriodicRef = mDbRef.child("Dues").child("Periodic");
+    public DatabaseReference goalsRef = mDbRef.child("Goals");
+
+    public Map<String, Float> dues_one_time_map = new HashMap<String, Float>();
+    public Map<String, Float> dues_periodic_map = new HashMap<String, Float>();
+    public Map<String, Float> goals_map = new HashMap<String, Float>();
+
+    public Float duesAmtFloat, duesOneTimeAmtFloat, temp_amount;
+
+    public PieChart duesOneTimeChart, duesPeriodicChart;
+    public PieChart goalsChart;
+    public PieData data;
+    public PieDataSet dataSet;
+
+    public List<PieEntry> pieEntries = new ArrayList<>();
 
     public Handler handler = new Handler();
 
@@ -49,14 +73,20 @@ public class dash_fragment extends Fragment{
 
         parentHolder = inflater.inflate(R.layout.fragment_dash_fragment, container, false);
 
-        nameLabel = (TextView)parentHolder.findViewById(R.id.dashName);
+        nameLabel = parentHolder.findViewById(R.id.dashName);
         ageLabel = (TextView)parentHolder.findViewById(R.id.dashAge);
         occupationLabel = (TextView)parentHolder.findViewById(R.id.dashOccupation);
         salaryLabel = (TextView)parentHolder.findViewById(R.id.dashSalary);
         subsLabel = (TextView)parentHolder.findViewById(R.id.dashSubs);
         typeLabel = (TextView)parentHolder.findViewById(R.id.dashSubsType);
+        duesOneTimeChart = (PieChart)parentHolder.findViewById(R.id.dues_one_time_pie);
+        duesPeriodicChart = (PieChart)parentHolder.findViewById(R.id.dues_periodic_pie);
+        goalsChart = (PieChart)parentHolder.findViewById(R.id.goals_pie);
+
 
         getUserProfileDetails(user_identifier);
+        drawDuesGraph(user_identifier);
+//        drawGoalsGraph(user_identifier);
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -97,11 +127,11 @@ public class dash_fragment extends Fragment{
                             diamondStr = ds.child("userTypeDiamond").getValue(String.class);
 
                             if(silverStr != null && silverStr.equals("true"))
-                                typeStr = "Silver";
+                                typeStr = "Silver Subscription";
                             else if(goldStr != null && goldStr.equals("true"))
-                                typeStr = "Gold";
+                                typeStr = "Gold Subscription";
                             else if(diamondStr != null && diamondStr.equals("true"))
-                                typeStr = "Diamond";
+                                typeStr = "Diamond Subscription";
                         }
                         else
                         {
@@ -130,6 +160,179 @@ public class dash_fragment extends Fragment{
         salaryLabel.setText(salaryStr);
         subsLabel.setText(subsStr);
         typeLabel.setText(typeStr);
+    }
+
+    public void drawDuesGraph(final String user_identifier)
+    {
+        drawOneTimeGraph(dues_one_time_map, duesOneTimeRef);
+        drawPeriodicGraph(dues_periodic_map, duesPeriodicRef);
+    }
+
+    public void drawOneTimeGraph(Map<String, Float> oneTimeMap, DatabaseReference duesOneTimeRef)
+    {
+        dues_one_time_map.clear();
+
+        duesOneTimeRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for(DataSnapshot ds : dataSnapshot.getChildren())
+                {
+                    user_id_fb = ds.child("user_identifier").getValue(String.class);
+                    duesAmt = ds.child("amount").getValue(String.class);
+                    duesEmail = ds.child("email_id").getValue(String.class);
+
+                    duesOneTimeAmtFloat = Float.parseFloat(duesAmt);
+
+                    if(user_identifier.equals(user_id_fb))
+                    {
+                        if(dues_one_time_map.containsKey(duesEmail))
+                        {
+                            temp_amount = dues_one_time_map.get(duesEmail);
+                            temp_amount = duesOneTimeAmtFloat + temp_amount;
+                            dues_one_time_map.put(duesEmail, temp_amount);
+                        }
+                        else
+                        {
+                            dues_one_time_map.put(duesEmail, duesOneTimeAmtFloat);
+                        }
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                createMap(dues_one_time_map, duesOneTimeChart, "One Time Dues");
+            }
+        },2000);
+
+
+    }
+
+    public void drawPeriodicGraph(Map<String, Float> oneTimeMap, DatabaseReference duesPeriodicRef)
+    {
+        dues_periodic_map.clear();
+
+        duesPeriodicRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for(DataSnapshot ds : dataSnapshot.getChildren())
+                {
+                    user_id_fb = ds.child("user_identifier").getValue(String.class);
+                    duesPeriodicAmount = ds.child("amount").getValue(String.class);
+                    duesPeriodicName = ds.child("name").getValue(String.class);
+
+                    duesAmtFloat = Float.parseFloat(duesPeriodicAmount);
+
+                    if(user_identifier.equals(user_id_fb))
+                    {
+                        if(dues_periodic_map.containsKey(duesPeriodicName))
+                        {
+                            temp_amount = dues_periodic_map.get(duesPeriodicName);
+                            temp_amount = duesAmtFloat + temp_amount;
+                            dues_periodic_map.put(duesPeriodicName, temp_amount);
+                        }
+                        else
+                        {
+                            dues_periodic_map.put(duesPeriodicName, duesAmtFloat);
+                        }
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                createMap(dues_periodic_map, duesPeriodicChart, "Periodic Dues");
+            }
+        },2000);
+    }
+
+//    public void drawGoalsGraph(String user_identifier)
+//    {
+//        goals_map.clear();
+//
+//        goalsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//
+//                for(DataSnapshot ds : dataSnapshot.getChildren())
+//                {
+//                    user_id_fb = ds.child("user_identifier").getValue(String.class);
+//                    category = ds.child("category").getValue(String.class);
+//                    amount_str = ds.child("amount").getValue(String.class);
+//
+//                    amount_float = Float.parseFloat(amount_str);
+//
+//                    if(u_id.equals(user_id_fb))
+//                    {
+//                        if(expense_map.containsKey(category))
+//                        {
+//                            temp_amount = expense_map.get(category);
+//                            temp_amount = amount_float + temp_amount;
+//                            expense_map.put(category, temp_amount);
+//                        }
+//                        else
+//                        {
+//                            expense_map.put(category, amount_float);
+//                        }
+//                    }
+//                }
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
+//
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                createMap(dues_one_time_map, duesPeriodicChart);
+//            }
+//        },2000);
+//    }
+
+    public void createMap(Map<String, Float> map, PieChart chart, String description)
+    {
+        pieEntries.clear();
+
+        for(Map.Entry<String, Float> entry :  map.entrySet())
+        {
+            pieEntries.add(new PieEntry(entry.getValue().floatValue(), entry.getKey()));
+        }
+
+        dataSet = new PieDataSet(pieEntries, ""+description);
+        dataSet.setColors(ColorTemplate.JOYFUL_COLORS);
+
+        data = new PieData(dataSet);
+        data.setValueTextSize(10f);
+        data.setValueTextColor(Color.YELLOW);
+
+        chart.clear();
+        chart.getDescription().setEnabled(false);
+        chart.setExtraOffsets(5,10,5,2);
+
+        chart.setData(data);
+        chart.invalidate();
     }
 
 }

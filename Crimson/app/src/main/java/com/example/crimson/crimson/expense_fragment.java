@@ -191,16 +191,16 @@ public class expense_fragment extends Fragment implements Subject{
             }
         }
 
-        chart.clear();
-        chart.getDescription().setEnabled(false);
-        chart.setExtraOffsets(5,10,5,2);
-
         dataSet = new PieDataSet(pieEntries, "");
         dataSet.setColors(ColorTemplate.JOYFUL_COLORS);
 
         data = new PieData(dataSet);
         data.setValueTextSize(10f);
         data.setValueTextColor(Color.YELLOW);
+
+        chart.clear();
+        chart.getDescription().setEnabled(false);
+        chart.setExtraOffsets(5,10,5,2);
 
         chart.setData(data);
         chart.invalidate();

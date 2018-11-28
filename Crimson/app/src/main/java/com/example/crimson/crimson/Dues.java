@@ -4,22 +4,22 @@ public class Dues {
 
     private String name;
     private String email_id;
-    private double amount;
-    private int period;
+    private String amount;
+    private String period;
 
     public String getName() {
         return name;
     }
 
     public String getEmail_id() {
-        return "Email - "+email_id;
+        return email_id;
     }
 
-    public double getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public int getPeriod() {
+    public String getPeriod() {
         return period;
     }
 
@@ -33,8 +33,8 @@ public class Dues {
     {
         private String name;
         private String email_id;
-        private double amount;
-        private int period;
+        private String amount;
+        private String period;
         private String user_identifier;
 
         public Builder setName(final String name)
@@ -49,13 +49,13 @@ public class Dues {
             return this;
         }
 
-        public Builder setAmount(final double amount)
+        public Builder setAmount(final String amount)
         {
             this.amount = amount;
             return this;
         }
 
-        public Builder setPeriod(final int period)
+        public Builder setPeriod(final String period)
         {
             this.period = period;
             return this;

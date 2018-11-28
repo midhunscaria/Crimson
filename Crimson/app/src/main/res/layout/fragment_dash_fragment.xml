@@ -19,7 +19,9 @@
             android:layout_alignStart="@+id/dashSubs"
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="87dp" />
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="145dp"
+            android:text="salary" />
 
         <TextView
             android:id="@+id/dashSubs"
@@ -27,7 +29,10 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/dashSubsType"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="111dp" />
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="190dp"
+            android:text="subs" />
 
         <TextView
             android:id="@+id/dashSubsType"
@@ -36,9 +41,10 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="29dp"
-            android:layout_marginLeft="29dp"
-            android:layout_marginTop="139dp" />
+            android:layout_marginStart="33dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="237dp"
+            android:text="substype" />
 
         <TextView
             android:id="@+id/dashName"
@@ -46,7 +52,8 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/dashSalary"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:text="name" />
 
         <TextView
             android:id="@+id/dashAge"
@@ -54,15 +61,52 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/dashSalary"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="46dp" />
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="66dp"
+            android:text="age" />
 
         <TextView
             android:id="@+id/dashOccupation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/dashSalary"
-            android:layout_alignStart="@+id/dashSalary"
-            android:layout_marginBottom="-87dp" />
+            android:layout_alignEnd="@+id/dashSubsType"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="108dp"
+            android:text="occupation" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/dues_one_time_pie"
+            android:layout_width="159dp"
+            android:layout_height="131dp"
+            android:layout_alignBottom="@+id/dashSalary"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="6dp"></com.github.mikephil.charting.charts.PieChart>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/dues_periodic_pie"
+            android:layout_width="160dp"
+            android:layout_height="137dp"
+            android:layout_alignStart="@+id/dues_one_time_pie"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="199dp" />
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/goals_pie"
+            android:layout_width="164dp"
+            android:layout_height="137dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="46dp">
+
+        </com.github.mikephil.charting.charts.PieChart>
 
 
     </RelativeLayout>
