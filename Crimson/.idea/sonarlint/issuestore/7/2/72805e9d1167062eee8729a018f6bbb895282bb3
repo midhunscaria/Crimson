@@ -1,6 +1,7 @@
 
-Psquid:S1905"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ8æ€¤¹õ,
-Rsquid:S1905"1Remove this unnecessary cast to "NavigationView".(üûÍøÿÿÿÿ8æ€¤¹õ,
-Ksquid:S1905"*Remove this unnecessary cast to "Toolbar".(ªü–ıÿÿÿÿ8æ€¤¹õ,
-Psquid:S1905"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ8æ€¤¹õ,
-Psquid:S1905"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ8æ€¤¹õ,
+Rsquid:S1905"1Remove this unnecessary cast to "NavigationView".(üûÍøÿÿÿÿ8ŠïÁĞõ,
+Psquid:S1905"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ8ŠïÁĞõ,
+Ksquid:S1905"*Remove this unnecessary cast to "Toolbar".(ªü–ıÿÿÿÿ8ŠïÁĞõ,
+Psquid:S1905"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ8ŠïÁĞõ,
+Psquid:S1905"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ8ŠïÁĞõ,
+asquid:UselessImportCheck"3Remove this unused import 'android.graphics.Color'.(øãíòşÿÿÿÿ8ÎŸÂĞõ,

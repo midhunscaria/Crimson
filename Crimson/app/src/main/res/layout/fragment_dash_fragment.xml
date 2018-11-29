@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".dash_fragment">
+    tools:context=".Controller.Fragments.dash_fragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -82,8 +82,8 @@
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/dues_one_time_pie"
-            android:layout_width="159dp"
-            android:layout_height="131dp"
+            android:layout_width="160dp"
+            android:layout_height="269dp"
             android:layout_alignBottom="@+id/dashSalary"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -95,7 +95,7 @@
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/dues_periodic_pie"
             android:layout_width="160dp"
-            android:layout_height="137dp"
+            android:layout_height="269dp"
             android:layout_alignStart="@+id/dues_one_time_pie"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="0dp"

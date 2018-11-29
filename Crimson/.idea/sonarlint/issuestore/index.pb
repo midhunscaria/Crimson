@@ -9,8 +9,6 @@ Dapp/src/main/java/com/example/crimson/crimson/DashboardActivity.java,7\2\72805
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
-p
-@app/src/main/java/com/example/crimson/crimson/dues_fragment.java,2\0\209f2af8a973180b998d671445a432d03b6e7aee
 n
 >app/src/main/java/com/example/crimson/crimson/BenefitBase.java,9\0\9089edbac89b88ac2947fc2118d772120396905e
 p
@@ -104,3 +102,5 @@ j
 :app/src/main/java/com/example/crimson/crimson/Subject.java,7\3\73287d83df592fb0f012cf17f744b5cf6119106f
 q
 Aapp/src/main/java/com/example/crimson/crimson/PieChartUpdate.java,9\2\92f2998dc9a2447b3a8f14da7ff165c7066b1711
+{
+Kapp/src/main/java/com/example/crimson/crimson/Controller/dues_fragment.java,a\f\af6871b60e424b4a42ed4d4bda858d9ca42e1dd5
