@@ -5,3 +5,6 @@ public interface generateCouponAPI {
     //All decorators implement this
     public String generateCoupon();
 }
+
+
+

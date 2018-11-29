@@ -1,12 +1,0 @@
-
-‡"squid:ClassVariableVisibilityCheck
-"SMake user_id a static final constant or non-public and provide accessors if needed.( Õ²?8¡’É½õ,
-Œ"squid:ClassVariableVisibilityCheck"RMake e_frag a static final constant or non-public and provide accessors if needed.(Ø£õÍøÿÿÿÿ8¡’É½õ,
-psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡‘ñ„8¡’É½õ,
-usquid:S00116"QRename this field "e_frag" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø£õÍøÿÿÿÿ8¡’É½õ,
-Zsquid:UselessImportCheck"/Remove this unused import 'android.os.Handler'.(ûÛ’¡8¡’É½õ,
-Zsquid:UselessImportCheck"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8ÉÊ½õ,
-psquid:S00116
-"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Õ²?8¡’É½õ,
-asquid:UselessImportCheck"1Remove this unused import 'android.widget.Toast'.(©›ïÍúÿÿÿÿ8¡’É½õ,
-psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡‘ñ„8¡’É½õ,

@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.crimson.crimson.Model.DAO;
 import com.example.crimson.crimson.R;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
@@ -48,7 +49,7 @@ public class dash_fragment extends Fragment{
 
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
     public DatabaseReference userProfileRef = mDbRef.child("User_Details");
-    public DatabaseReference duesOneTimeRef = mDbRef.child("Dues").child("OneTime");
+    public DatabaseReference duesOneTimeRef = mDbRef.child("Dues").child("One Time");
     public DatabaseReference duesPeriodicRef = mDbRef.child("Dues").child("Periodic");
     public DatabaseReference goalsRef = mDbRef.child("Goals");
 
@@ -63,6 +64,7 @@ public class dash_fragment extends Fragment{
     public PieDataSet dataSet;
 
     public List<PieEntry> pieEntries = new ArrayList<>();
+    public List<String> userProfileInfo = new ArrayList<>();
 
     public Handler handler = new Handler();
 
@@ -83,8 +85,9 @@ public class dash_fragment extends Fragment{
         duesPeriodicChart = (PieChart)parentHolder.findViewById(R.id.dues_periodic_pie);
 
 
-        getUserProfileDetails(user_identifier);
+//        userProfileInfo = DAO.getUserProfileDetails(user_identifier);
         drawDuesGraph(user_identifier);
+
 
         handler.postDelayed(new Runnable() {
             @Override
@@ -168,7 +171,7 @@ public class dash_fragment extends Fragment{
             public void run() {
                 drawPeriodicGraph(dues_periodic_map, duesPeriodicRef);
             }
-        },500);
+        },2000);
     }
 
     public void drawOneTimeGraph(Map<String, Float> oneTimeMap, DatabaseReference duesOneTimeRef)

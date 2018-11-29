@@ -16,7 +16,8 @@ import android.widget.Button;
 import com.example.crimson.crimson.Controller.PieChartUpdate;
 import com.example.crimson.crimson.Interfaces.Observer;
 import com.example.crimson.crimson.Interfaces.Subject;
-import com.example.crimson.crimson.Model.Expense;
+import com.example.crimson.crimson.Model.DAO;
+import com.example.crimson.crimson.Model.Builder.Expense;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.github.mikephil.charting.charts.PieChart;
@@ -67,6 +68,9 @@ public class expense_fragment extends Fragment implements Subject {
 
     public PieDataSet dataSet;
     public PieData data;
+    public static boolean expense_push_task_flag;
+    public static Task<Void> expense_push_task;
+
 
     private String user_identifier = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
@@ -111,9 +115,31 @@ public class expense_fragment extends Fragment implements Subject {
                     Expense expense_object = new Expense.Builder().setAmount(amount_double_str).setCategory(category_spinner_str).
                             setPlace(expense_place_str).setUserIdentifier(user_identifier).create();
 
-                    mDbRef = FirebaseDatabase.getInstance().getReference();
+                    DAO.pushExpenses(expense_object,mDbRef);
 
-                    mDbRef.child("Expenses").push().setValue(expense_object).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            if (expense_push_task_flag) {
+                                Util.makeToast(parentHolder.getContext(), "Expense Record Created Successfully").show();
+
+                                notifyObservers();
+
+                                amount.setText("");
+                                category_spinner.setSelection(0);
+                                expense_place.setText("");
+                            }
+                            else  {
+                                Util.makeToast(parentHolder.getContext(), "Error creating expense record").show();
+                            }
+
+                        }
+                    }, 2000);
+
+                    // mDbRef = FirebaseDatabase.getInstance().getReference();
+
+                   /* mDbRef.child("Expenses").push().setValue(expense_object).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
 
@@ -125,7 +151,7 @@ public class expense_fragment extends Fragment implements Subject {
                                 category_spinner.setSelection(0);
                                 expense_place.setText("");
 
-                                /**
+                                //*
                                  * Observer Design Pattern
                                  *
                                  * expense_fragment class implements subject interface
@@ -133,7 +159,7 @@ public class expense_fragment extends Fragment implements Subject {
                                  * Here the change is that a new expense has been added.
                                  * Graph has to be updated
                                  *
-                                 */
+                                 //
                                 notifyObservers();
 
                             }
@@ -142,7 +168,7 @@ public class expense_fragment extends Fragment implements Subject {
                                 Util.makeToast(parentHolder.getContext(), "Error in record creation!").show();
                             }
                         }
-                    });
+                    });*/
                 }
             }
         });

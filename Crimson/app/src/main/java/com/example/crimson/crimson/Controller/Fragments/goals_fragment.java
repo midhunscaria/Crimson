@@ -10,7 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.os.Handler;
 
-import com.example.crimson.crimson.Model.Goals;
+import com.example.crimson.crimson.Model.DAO;
+import com.example.crimson.crimson.Model.Builder.Goals;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.google.android.gms.tasks.Task;
@@ -34,9 +35,9 @@ public class goals_fragment extends Fragment {
     public String goalTargetString;
     public String goalAmountString;
     public String goalPeriodString;
+    public static boolean push_task;
 
     public Handler handler;
-    public Task<Void> push_task;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -63,21 +64,21 @@ public class goals_fragment extends Fragment {
                 } else {
                     goal = new Goals.Builder().setTarget(goalTargetString).setAmount(Double.parseDouble(goalAmountString)).setPeriod(Integer.parseInt(goalPeriodString)).create();
 
-                    push_task = mDbRef.child("Goals").push().setValue(goal);
+                    DAO.pushGoals(goal,mDbRef);
 
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
 
-                                if (push_task.isSuccessful()) {
-                                      Util.makeToast(parentHolder.getContext(), "Goal Record Created Successfully").show();
-                                }
-                                else  {
-                                        Util.makeToast(parentHolder.getContext(), "Error creating goal record").show();
-                                    }
+                            if (push_task) {
+                                Util.makeToast(parentHolder.getContext(), "Goal Record Created Successfully").show();
+                            }
+                            else  {
+                                Util.makeToast(parentHolder.getContext(), "Error creating goal record").show();
+                            }
 
                         }
-                    }, 1000);
+                    }, 2000);
 
                 }
 

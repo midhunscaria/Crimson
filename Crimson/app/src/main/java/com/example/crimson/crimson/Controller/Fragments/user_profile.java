@@ -13,10 +13,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import com.example.crimson.crimson.Controller.BasicUser;
-import com.example.crimson.crimson.Controller.WithOffers;
-import com.example.crimson.crimson.Interfaces.User;
-import com.example.crimson.crimson.Model.UserDetails;
+import com.example.crimson.crimson.Model.Builder.UserDetails;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.google.firebase.auth.FirebaseAuth;
@@ -56,6 +53,7 @@ public class user_profile extends Fragment {
     private String annualIncomeOfUserString;
     private String user_identifier;
     private String checker;
+    private String subsType;
 
     private boolean userType;
     private boolean isSilverUser;
@@ -113,53 +111,45 @@ public class user_profile extends Fragment {
                 occupationOfUserString = occupationOfUser.getText().toString();
                 annualIncomeOfUserString = annualIncomeOfUser.getText().toString();
                 userType = subscriptionCheckbox.isChecked();
-                isSilverUser = isSilver.isChecked();
-                isGoldenUser = isGolden.isChecked();
-                isDiamondUser = isDiamond.isChecked();
 
 
-                if ((TextUtils.isEmpty(nameOfUserString)) || (TextUtils.isEmpty(ageOfUserString)|| !TextUtils.isDigitsOnly(ageOfUserString)) || (TextUtils.isEmpty(annualIncomeOfUserString)|| !TextUtils.isDigitsOnly(annualIncomeOfUserString) )|| (TextUtils.isEmpty(occupationOfUserString))) {
+                if(isSilver.isChecked())
+                    subsType = "Silver";
+
+                else if(isGolden.isChecked())
+                    subsType = "Gold";
+
+                else if(isDiamond.isChecked())
+                    subsType = "Diamond";
+
+
+                if (checkPassConditions()) {
                     Util.makeToast(parentHolder.getContext(), "Enter All Details").show();
                 }
-                else if(isSilverUser){
-
-                    userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
-                            .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(Boolean.toString(userType))
-                            .setUserTypeSilver(Boolean.toString(isSilverUser)).setUserIdentifier(user_identifier).create();
-                    pushToDb();
-
-                }else if(isGoldenUser){
-
-                    userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
-                            .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(Boolean.toString(userType))
-                            .setUserTypeGolden(Boolean.toString(isGoldenUser)).setUserIdentifier(user_identifier).create();
-                    pushToDb();
-                }
-                else if(isDiamondUser){
-
-                    userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
-                            .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(Boolean.toString(userType))
-                            .setUserTypeDiamond(Boolean.toString(isDiamondUser)).setUserIdentifier(user_identifier).create();
-                    pushToDb();
-                }
                 else {
-                    userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
-                            .setOccupationOfUser(occupationOfUserString).setUserIdentifier(user_identifier).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(Boolean.toString(userType)).create();
+
+                    if(userType)
+                    {
+                        userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
+                                .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(Boolean.toString(userType))
+                                .setUserSubsType(subsType).setUserIdentifier(user_identifier).create();
+                    }
+                    else
+                    {
+                        userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
+                                .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType("Free User")
+                                .setUserIdentifier(user_identifier).create();
+
+
+                        Util.makeToast(parentHolder.getContext(), "Your information has been saved! You are registered as a free user!").show();
+
+                    }
+
                     pushToDb();
 
-                    Util.makeToast(parentHolder.getContext(), "Your information has been saved! You are registered as a free user!").show();
-                    disableCheckboxes();
                 }
 
-
-                if(userType){
-
-                    User user = new WithOffers(new BasicUser());
-                    Util.makeToast(parentHolder.getContext(), user.createRegisteredUser()).show();
-
-                    disableCheckboxes();
-
-                }
+                disableCheckboxes();
             }
         });
 
@@ -173,6 +163,12 @@ public class user_profile extends Fragment {
         isGolden.setEnabled(false);
         isDiamond.setEnabled(false);
         submitUserDetails.setEnabled(false);
+    }
+
+    public boolean checkPassConditions()
+    {
+        return (TextUtils.isEmpty(nameOfUserString)) || (TextUtils.isEmpty(ageOfUserString)|| !TextUtils.isDigitsOnly(ageOfUserString))
+                || (TextUtils.isEmpty(annualIncomeOfUserString)|| !TextUtils.isDigitsOnly(annualIncomeOfUserString) )|| (TextUtils.isEmpty(occupationOfUserString));
     }
 
     public void checkIfProfileExists(final String user_identifier)

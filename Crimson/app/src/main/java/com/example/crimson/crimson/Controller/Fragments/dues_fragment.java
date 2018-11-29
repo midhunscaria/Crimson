@@ -19,7 +19,8 @@ import com.example.crimson.crimson.Controller.DueBridge;
 import com.example.crimson.crimson.Controller.DueManager;
 import com.example.crimson.crimson.Controller.DueOneTime;
 import com.example.crimson.crimson.Controller.DuePeriodic;
-import com.example.crimson.crimson.Model.Dues;
+import com.example.crimson.crimson.Model.DAO;
+import com.example.crimson.crimson.Model.Builder.Dues;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.google.android.gms.tasks.Task;
@@ -54,8 +55,11 @@ public class dues_fragment extends Fragment
     public DueBridge generated_due_csv;
     public List<String> due_information_from_csv = new ArrayList<>();
     public Handler handler;
+    public static boolean due_push_task_flag=false;
+    public static Task<Void> due_push_task;
 
-   @Override
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
@@ -111,9 +115,9 @@ public class dues_fragment extends Fragment
 
                         due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setEmailID(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 
-                        db_push_task = mDbRef.child("Dues").child("OneTime").push().setValue(due);
+                        //db_push_task = mDbRef.child("Dues").child("OneTime").push().setValue(due);
 
-                        task_successful = true;
+                        //task_successful = true;
                     }
 
                     else if (duesCategorySpinnerString.equals("Periodic")) {
@@ -127,18 +131,21 @@ public class dues_fragment extends Fragment
 
                             due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setPeriod(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 
-                            db_push_task = mDbRef.child("Dues").child("Periodic").push().setValue(due);
 
-                            task_successful = true;
+                            //db_push_task = mDbRef.child("Dues").child("Periodic").push().setValue(due);
+
+                            //task_successful = true;
                         }
                     }
+
+                    DAO.pushDues(due,mDbRef,duesCategorySpinnerString);
 
                     handler.postDelayed(new Runnable() {
 
                         @Override
                         public void run() {
 
-                            if(task_successful) {
+                            if(due_push_task_flag) {
                                 Util.makeToast(parentHolder.getContext(), "Due Record created Successfully!").show();
                             }
                             else

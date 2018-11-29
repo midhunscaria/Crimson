@@ -1,0 +1,85 @@
+
+"squid:ClassVariableVisibilityCheck<"WMake temp_amount a static final constant or non-public and provide accessors if needed.(™ιÒ8λόσ‚φ,
+¥squid:S1186„"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Πχ‘ήÿÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck3"ZMake userProfileRef a static final constant or non-public and provide accessors if needed.(ΫήδΝ8λόσ‚φ,
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…‡…Λ8λόσ‚φ,
+‘"squid:ClassVariableVisibilityCheck/"\Make duesPeriodicName a static final constant or non-public and provide accessors if needed.(ΣΧΎ8λόσ‚φ,
+’"squid:ClassVariableVisibilityCheck9"]Make dues_periodic_map a static final constant or non-public and provide accessors if needed.( ·­γ8λόσ‚φ,
+Gsquid:S1659<")Declare "temp_amount" on a separate line.(™ιÒ8λόσ‚φ,
+wsquid:S22939"YReplace the type specification in this constructor call with the diamond operator ("<>").( ·­γ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck5"[Make duesPeriodicRef a static final constant or non-public and provide accessors if needed.(Μƒγΐ8λόσ‚φ,
+—"squid:ClassVariableVisibilityCheck8"]Make dues_one_time_map a static final constant or non-public and provide accessors if needed.(γ»ύÿÿÿÿ8λόσ‚φ,
+ssquid:S1192p"PDefine a constant instead of duplicating this literal "user_identifier" 3 times.(½¤—Ιωÿÿÿÿ8λόσ‚φ,
+Gsquid:S1659+")Declare "salaryLabel" on a separate line.(’ε›8λόσ‚φ,
+‰"squid:ClassVariableVisibilityCheck6"TMake goalsRef a static final constant or non-public and provide accessors if needed.(ύΝ—Μ8λόσ‚φ,
+Hsquid:S1659-"%Declare "goldStr" on a separate line.(ΰΎόÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck<"XMake duesAmtFloat a static final constant or non-public and provide accessors if needed.(™ιÒ8λόσ‚φ,
+qsquid:S00101'"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(πβΟΪύÿÿÿÿ8λόσ‚φ,
+]squid:UselessImportCheck"-Remove this unused import 'org.w3c.dom.Text'.(¶Δθ‹ώÿÿÿÿ8λόσ‚φ,
+•"squid:ClassVariableVisibilityCheckC"[Make userProfileInfo a static final constant or non-public and provide accessors if needed.(€·Ή€ϋÿÿÿÿ8λόσ‚φ,
+|squid:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(γ»ύÿÿÿÿ8λόσ‚φ,
+Esquid:S1659+"'Declare "typeLabel" on a separate line.(’ε›8λόσ‚φ,
+Gsquid:S1659-"$Declare "ageStr" on a separate line.(ΰΎόÿÿÿÿ8λόσ‚φ,
+“"squid:ClassVariableVisibilityCheck/"^Make duesPeriodicAmount a static final constant or non-public and provide accessors if needed.(ΣΧΎ8λόσ‚φ,
+Dsquid:S1659+"&Declare "ageLabel" on a separate line.(’ε›8λόσ‚φ,
+Rsquid:S1659>"/Declare "duesPeriodicChart" on a separate line.(υψΩϊÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheckE"SMake handler a static final constant or non-public and provide accessors if needed.(±Ω§8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck2"RMake mDbRef a static final constant or non-public and provide accessors if needed.(·Ί ψÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck@"SMake dataSet a static final constant or non-public and provide accessors if needed.(Òÿ…ύÿÿÿÿ8λόσ‚φ,
+asquid:UselessImportCheck"1Remove this unused import 'android.widget.Toast'.(©›οΝϊÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck-"VMake diamondStr a static final constant or non-public and provide accessors if needed.(ΰΎόÿÿÿÿ8λόσ‚φ,
+|squid:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(θ­ΥΌÿÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck+"UMake subsLabel a static final constant or non-public and provide accessors if needed.(’ε›8λόσ‚φ,
+Jsquid:S1659-"'Declare "salaryStr" on a separate line.(ΰΎόÿÿÿÿ8λόσ‚φ,
+usquid:S00116<"VRename this field "temp_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ιÒ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck+"WMake salaryLabel a static final constant or non-public and provide accessors if needed.(’ε›8λόσ‚φ,
+Jsquid:S1659-"'Declare "silverStr" on a separate line.(ΰΎόÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck-"RMake ageStr a static final constant or non-public and provide accessors if needed.(ΰΎόÿÿÿÿ8λόσ‚φ,
+‰"squid:ClassVariableVisibilityCheck+"TMake ageLabel a static final constant or non-public and provide accessors if needed.(’ε›8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck-"UMake salaryStr a static final constant or non-public and provide accessors if needed.(ΰΎόÿÿÿÿ8λόσ‚φ,
+dsquid:UselessImportCheck"4Remove this unused import 'android.app.AlertDialog'.(ª½ψώόÿÿÿÿ8λόσ‚φ,
+¥squid:S1186Σ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Πχ‘ήÿÿÿÿÿ8λόσ‚φ,
+Osquid:S1659<"1Declare "duesOneTimeAmtFloat" on a separate line.(™ιÒ8λόσ‚φ,
+_squid:UselessImportCheck"4Remove this unused import 'android.widget.ListView'.(‰ΦΧ8λόσ‚φ,
+Ksquid:S1659+"-Declare "occupationLabel" on a separate line.(’ε›8λόσ‚φ,
+Hsquid:S1659-"%Declare "typeStr" on a separate line.(ΰΎόÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck)"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ΦΓΑ8λόσ‚φ,
+Osquid:S1172β"1Remove this unused method parameter "oneTimeMap".(Ήώώ!8λόσ‚φ,
+nsquid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(³όσύψÿÿÿÿ8ΥΕτ‚φ,
+"squid:ClassVariableVisibilityCheck/"SMake duesAmt a static final constant or non-public and provide accessors if needed.(ΣΧΎ8λόσ‚φ,
+“"squid:ClassVariableVisibilityCheck-"YMake occupationStr a static final constant or non-public and provide accessors if needed.(ΰΎόÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck-"SMake nameStr a static final constant or non-public and provide accessors if needed.(ΰΎόÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck+"UMake typeLabel a static final constant or non-public and provide accessors if needed.(’ε›8λόσ‚φ,
+•"squid:ClassVariableVisibilityCheck0"[Make user_identifier a static final constant or non-public and provide accessors if needed.(¬Σ¨ϋÿÿÿÿ8λόσ‚φ,
+–"squid:ClassVariableVisibilityCheck>"\Make duesOneTimeChart a static final constant or non-public and provide accessors if needed.(υψΩϊÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck/"UMake duesEmail a static final constant or non-public and provide accessors if needed.(ΣΧΎ8λόσ‚φ,
+—"squid:ClassVariableVisibilityCheck>"]Make duesPeriodicChart a static final constant or non-public and provide accessors if needed.(υψΩϊÿÿÿÿ8λόσ‚φ,
+‹"squid:ClassVariableVisibilityCheckB"VMake pieEntries a static final constant or non-public and provide accessors if needed.(ΰΕχ8λόσ‚φ,
+¥squid:S1186–"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Πχ‘ήÿÿÿÿÿ8λόσ‚φ,
+€squid:S001168"\Rename this field "dues_one_time_map" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(γ»ύÿÿÿÿ8λόσ‚φ,
+hsquid:UselessImportCheck"8Remove this unused import 'android.widget.ArrayAdapter'.( €Ρÿÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck+"UMake nameLabel a static final constant or non-public and provide accessors if needed.(’ε›8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck-"SMake goldStr a static final constant or non-public and provide accessors if needed.(ΰΎόÿÿÿÿ8λόσ‚φ,
+Usquid:S1172¦"6Remove this unused method parameter "user_identifier".(΅ΘΉ‹8λόσ‚φ,
+Csquid:S1659/"%Declare "duesAmt" on a separate line.(ΣΧΎ8λόσ‚φ,
+Ksquid:S1659-"(Declare "diamondStr" on a separate line.(ΰΎόÿÿÿÿ8λόσ‚φ,
+”"squid:ClassVariableVisibilityCheck4"ZMake duesOneTimeRef a static final constant or non-public and provide accessors if needed.(Ψ†•ϋÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck+"[Make occupationLabel a static final constant or non-public and provide accessors if needed.(’ε›8λόσ‚φ,
+Usquid:S1172±"1Remove this unused method parameter "oneTimeMap".(η¬ύÿÿÿÿ8λόσ‚φ,
+Nsquid:S1659/"0Declare "duesPeriodicAmount" on a separate line.(ΣΧΎ8λόσ‚φ,
+‹"squid:ClassVariableVisibilityCheck."VMake user_id_fb a static final constant or non-public and provide accessors if needed.(γσΙΞ8λόσ‚φ,
+tsquid:S00116."URename this field "user_id_fb" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(γσΙΞ8λόσ‚φ,
+~squid:S001160"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Σ¨ϋÿÿÿÿ8λόσ‚φ,
+Esquid:S1659+"'Declare "subsLabel" on a separate line.(’ε›8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck-"SMake subsStr a static final constant or non-public and provide accessors if needed.(ΰΎόÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck-"UMake silverStr a static final constant or non-public and provide accessors if needed.(ΰΎόÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck:"UMake goals_map a static final constant or non-public and provide accessors if needed.(θ­ΥΌÿÿÿÿÿ8λόσ‚φ,
+”"squid:ClassVariableVisibilityCheck<"_Make duesOneTimeAmtFloat a static final constant or non-public and provide accessors if needed.(™ιÒ8λόσ‚φ,
+usquid:S3776h"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(ί…¤ÿÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck?"PMake data a static final constant or non-public and provide accessors if needed.(Όω„§όÿÿÿÿ8λόσ‚φ,
+{squid:S001169"\Rename this field "dues_periodic_map" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ·­γ8λόσ‚φ,
+Lsquid:S1659/".Declare "duesPeriodicName" on a separate line.(ΣΧΎ8λόσ‚φ,
+Nsquid:S1659-"+Declare "occupationStr" on a separate line.(ΰΎόÿÿÿÿ8λόσ‚φ,
+"squid:ClassVariableVisibilityCheck-"SMake typeStr a static final constant or non-public and provide accessors if needed.(ΰΎόÿÿÿÿ8λόσ‚φ,
+xsquid:S00116:"TRename this field "goals_map" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(θ­ΥΌÿÿÿÿÿ8λόσ‚φ,
+Hsquid:S1659-"%Declare "subsStr" on a separate line.(ΰΎόÿÿÿÿ8λόσ‚φ,
