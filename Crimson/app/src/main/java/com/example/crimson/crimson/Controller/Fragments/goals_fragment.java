@@ -11,10 +11,9 @@ import android.widget.EditText;
 import android.os.Handler;
 
 import com.example.crimson.crimson.Model.DAO;
-import com.example.crimson.crimson.Model.Builder.Goals;
+import com.example.crimson.crimson.Controller.BuilderClasses.Goals;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

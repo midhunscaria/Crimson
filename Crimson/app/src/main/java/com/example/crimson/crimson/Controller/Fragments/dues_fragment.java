@@ -15,12 +15,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.example.crimson.crimson.Controller.DueBridge;
-import com.example.crimson.crimson.Controller.DueManager;
-import com.example.crimson.crimson.Controller.DueOneTime;
-import com.example.crimson.crimson.Controller.DuePeriodic;
+import com.example.crimson.crimson.Controller.Dues.DueBridge;
+import com.example.crimson.crimson.Controller.Dues.DueManager;
+import com.example.crimson.crimson.Controller.Dues.DueOneTime;
+import com.example.crimson.crimson.Controller.Dues.DuePeriodic;
 import com.example.crimson.crimson.Model.DAO;
-import com.example.crimson.crimson.Model.Builder.Dues;
+import com.example.crimson.crimson.Controller.BuilderClasses.Dues;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.google.android.gms.tasks.Task;
@@ -115,9 +115,6 @@ public class dues_fragment extends Fragment
 
                         due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setEmailID(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 
-                        //db_push_task = mDbRef.child("Dues").child("OneTime").push().setValue(due);
-
-                        //task_successful = true;
                     }
 
                     else if (duesCategorySpinnerString.equals("Periodic")) {
@@ -131,10 +128,6 @@ public class dues_fragment extends Fragment
 
                             due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setPeriod(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 
-
-                            //db_push_task = mDbRef.child("Dues").child("Periodic").push().setValue(due);
-
-                            //task_successful = true;
                         }
                     }
 

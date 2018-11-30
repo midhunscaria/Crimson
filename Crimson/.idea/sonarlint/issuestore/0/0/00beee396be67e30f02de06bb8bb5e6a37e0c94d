@@ -1,13 +1,13 @@
 
-˜"squid:ClassVariableVisibilityCheck$"^Make userDetails_object a static final constant or non-public and provide accessors if needed.(ÛŒÊ‹şÿÿÿÿ8€’ƒö,
-Ssquid:S1068<"0Remove this unused "isGoldenUser" private field.(öÀŞ€üÿÿÿÿ8€’ƒö,
-Nsquid:S1068="1Remove this unused "isDiamondUser" private field.(õ„˜8€’ƒö,
-Œ"squid:ClassVariableVisibilityCheck "RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œ·º øÿÿÿÿ8€’ƒö,
-"squid:ClassVariableVisibilityCheck!"YMake benefitmDbRef a static final constant or non-public and provide accessors if needed.(¼ÔÓÚ8€’ƒö,
 ‹"squid:ClassVariableVisibilityCheck"QMake mAuth a static final constant or non-public and provide accessors if needed.(ä××şÿÿÿÿ8€’ƒö,
-ysquid:S001166"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß‘¤Ì8€’ƒö,
-qsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ºè¤îüÿÿÿÿ8€’ƒö,
-squid:S00116$"]Rename this field "userDetails_object" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛŒÊ‹şÿÿÿÿ8€’ƒö,
-ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…‡…Ë8€’ƒö,
+Nsquid:S1068="1Remove this unused "isDiamondUser" private field.(õ„˜8€’ƒö,
 Nsquid:S1068;"0Remove this unused "isSilverUser" private field.(—ó8€’ƒö,
+squid:S00116$"]Rename this field "userDetails_object" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛŒÊ‹şÿÿÿÿ8€’ƒö,
+Ssquid:S1068<"0Remove this unused "isGoldenUser" private field.(öÀŞ€üÿÿÿÿ8€’ƒö,
+Œ"squid:ClassVariableVisibilityCheck "RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œ·º øÿÿÿÿ8€’ƒö,
+ysquid:S001166"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß‘¤Ì8€’ƒö,
+"squid:ClassVariableVisibilityCheck!"YMake benefitmDbRef a static final constant or non-public and provide accessors if needed.(¼ÔÓÚ8€’ƒö,
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…‡…Ë8€’ƒö,
+˜"squid:ClassVariableVisibilityCheck$"^Make userDetails_object a static final constant or non-public and provide accessors if needed.(ÛŒÊ‹şÿÿÿÿ8€’ƒö,
 "squid:ClassVariableVisibilityCheck"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8€’ƒö,
+qsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ºè¤îüÿÿÿÿ8€’ƒö,

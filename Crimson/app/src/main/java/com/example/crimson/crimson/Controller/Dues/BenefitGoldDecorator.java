@@ -1,4 +1,4 @@
-package com.example.crimson.crimson.Controller;
+package com.example.crimson.crimson.Controller.Dues;
 
 public class BenefitGoldDecorator extends BenefitDecorator {
 

@@ -1,4 +1,4 @@
-package com.example.crimson.crimson.Model.Builder;
+package com.example.crimson.crimson.Controller.BuilderClasses;
 
 public class Expense {
 

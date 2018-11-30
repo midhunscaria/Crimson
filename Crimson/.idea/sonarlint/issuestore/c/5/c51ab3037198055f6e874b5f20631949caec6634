@@ -1,7 +1,7 @@
 
-Dsquid:S1905"*Remove this unnecessary cast to "Toolbar".(ªü–ıÿÿÿÿ
-Isquid:S1905"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ
-Ksquid:S1905"1Remove this unnecessary cast to "NavigationView".(üûÍøÿÿÿÿ
-Isquid:S1905"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ
-Isquid:S1905"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ
-usquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çÔ«¾úÿÿÿÿ
+Ksquid:S1905:"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ
+Lsquid:S1905†"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çÔ«¾úÿÿÿÿ
+Msquid:S1905,"1Remove this unnecessary cast to "NavigationView".(üûÍøÿÿÿÿ
+Ksquid:S1905&"/Remove this unnecessary cast to "DrawerLayout".(ĞÍè¨şÿÿÿÿ
+Fsquid:S1905#"*Remove this unnecessary cast to "Toolbar".(ªü–ıÿÿÿÿ

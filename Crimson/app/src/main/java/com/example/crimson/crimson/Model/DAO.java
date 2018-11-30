@@ -1,31 +1,29 @@
 package com.example.crimson.crimson.Model;
 
 import android.os.Handler;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
-import android.widget.Toast;
 
 import com.example.crimson.crimson.Controller.Fragments.dues_fragment;
 import com.example.crimson.crimson.Controller.Fragments.expense_fragment;
 import com.example.crimson.crimson.Controller.Fragments.goals_fragment;
-import com.example.crimson.crimson.Model.Builder.Dues;
-import com.example.crimson.crimson.Model.Builder.Expense;
-import com.example.crimson.crimson.Model.Builder.Goals;
-import com.example.crimson.crimson.Model.Builder.UserDetails;
-import com.example.crimson.crimson.Utility.Util;
+import com.example.crimson.crimson.Controller.BuilderClasses.Dues;
+import com.example.crimson.crimson.Controller.BuilderClasses.Expense;
+import com.example.crimson.crimson.Controller.BuilderClasses.Goals;
+import com.example.crimson.crimson.Controller.BuilderClasses.UserDetails;
 
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 
 public class DAO {
+
     public static DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
     public static DatabaseReference userProfileRef = mDbRef.child("User_Details");
+
     public static Task<Void> fb_push_task;
 
     public Task<Void> push_t;

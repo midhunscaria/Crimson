@@ -1,4 +1,4 @@
-package com.example.crimson.crimson.Controller;
+package com.example.crimson.crimson.Utility;
 
 import android.app.Application;
 

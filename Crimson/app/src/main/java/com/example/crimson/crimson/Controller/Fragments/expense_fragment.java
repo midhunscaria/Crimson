@@ -17,15 +17,18 @@ import com.example.crimson.crimson.Controller.PieChartUpdate;
 import com.example.crimson.crimson.Interfaces.Observer;
 import com.example.crimson.crimson.Interfaces.Subject;
 import com.example.crimson.crimson.Model.DAO;
-import com.example.crimson.crimson.Model.Builder.Expense;
+import com.example.crimson.crimson.Controller.BuilderClasses.Expense;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
+
+//Libraries for MPAndroidChart
+
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
-import com.google.android.gms.tasks.OnCompleteListener;
+
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -94,6 +97,8 @@ public class expense_fragment extends Fragment implements Subject {
         category_spinner = (Spinner)parentHolder.findViewById(R.id.expense_category_spinner);
         expense_place = (EditText)parentHolder.findViewById(R.id.expense_place);
         add_expense_button = (Button)parentHolder.findViewById(R.id.add_expense_button);
+
+        //This line ensures that the chart varialbe is linked to the chart in the view.
         chart = (PieChart)parentHolder.findViewById(R.id.expense_chart);
 
         drawPieChart(user_identifier);
@@ -137,38 +142,6 @@ public class expense_fragment extends Fragment implements Subject {
                         }
                     }, 2000);
 
-                    // mDbRef = FirebaseDatabase.getInstance().getReference();
-
-                   /* mDbRef.child("Expenses").push().setValue(expense_object).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-
-                            if(task.isSuccessful())
-                            {
-                                Util.makeToast(parentHolder.getContext(), "Created Record").show();
-
-                                amount.setText("");
-                                category_spinner.setSelection(0);
-                                expense_place.setText("");
-
-                                //*
-                                 * Observer Design Pattern
-                                 *
-                                 * expense_fragment class implements subject interface
-                                 * and notifies it's observers when there is a change.
-                                 * Here the change is that a new expense has been added.
-                                 * Graph has to be updated
-                                 *
-                                 //
-                                notifyObservers();
-
-                            }
-                            else
-                            {
-                                Util.makeToast(parentHolder.getContext(), "Error in record creation!").show();
-                            }
-                        }
-                    });*/
                 }
             }
         });
@@ -223,6 +196,13 @@ public class expense_fragment extends Fragment implements Subject {
         },2000);
 
     }
+
+    /**
+     * The createMap() function gets ready the dataSet that will be used to generate the charts.
+     *
+     * The dataSet variable contains the data that will be displayed within the chart, with the
+     * help of the chart.setData() function.
+     */
 
     public void createMap()
     {

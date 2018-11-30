@@ -1,4 +1,4 @@
-package com.example.crimson.crimson.Controller;
+package com.example.crimson.crimson.Controller.Dues;
 
 import com.example.crimson.crimson.Interfaces.DueAPI;
 

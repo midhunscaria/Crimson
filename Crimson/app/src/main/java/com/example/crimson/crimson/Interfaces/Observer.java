@@ -1,8 +1,5 @@
 package com.example.crimson.crimson.Interfaces;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Observer Pattern
  *

@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import com.example.crimson.crimson.Model.Builder.UserDetails;
+import com.example.crimson.crimson.Controller.BuilderClasses.UserDetails;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.google.firebase.auth.FirebaseAuth;

@@ -12,13 +12,12 @@ import android.widget.Button;
 import android.os.Handler;
 import android.widget.Toast;
 
-import com.example.crimson.crimson.Controller.BenefitBase;
-import com.example.crimson.crimson.Controller.BenefitCoupon;
-import com.example.crimson.crimson.Controller.BenefitDiamondDecorator;
-import com.example.crimson.crimson.Controller.BenefitGoldDecorator;
-import com.example.crimson.crimson.Controller.BenefitSilverDecorator;
+import com.example.crimson.crimson.Controller.Dues.BenefitBase;
+import com.example.crimson.crimson.Controller.Dues.BenefitCoupon;
+import com.example.crimson.crimson.Controller.Dues.BenefitDiamondDecorator;
+import com.example.crimson.crimson.Controller.Dues.BenefitGoldDecorator;
+import com.example.crimson.crimson.Controller.Dues.BenefitSilverDecorator;
 import com.example.crimson.crimson.Interfaces.generateCouponAPI;
-import com.example.crimson.crimson.Model.DAO;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.google.android.gms.tasks.Task;

@@ -1,12 +1,0 @@
-
-Qsquid:S1068"3Remove this unused "user_identifier" private field.(ß‘¤Ì8š¨¬€ö,
-Qsquid:S1068".Remove this unused "occupation" private field.(À›¹Õùÿÿÿÿ8š¨¬€ö,
-Esquid:S1068"'Remove this unused "age" private field.(–Œó¯8š¨¬€ö,
-ysquid:S00116"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß‘¤Ì8úÙ©€ö,
-Ssquid:S1068	"0Remove this unused "annualIncome" private field.(’•‡‹úÿÿÿÿ8š¨¬€ö,
-Jsquid:S1068
-",Remove this unused "userType" private field.(ĞÄû8š¨¬€ö,
-Osquid:S1068",Remove this unused "subsType" private field.(¿šşÿÿÿÿ8µ¨äö,
-ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Î˜ô¤8úÙ©€ö,
-ysquid:S00116"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß‘¤Ì8úÙ©€ö,
-Fsquid:S1068"(Remove this unused "name" private field.(Ë¥¼8š¨¬€ö,
