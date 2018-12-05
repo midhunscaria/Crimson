@@ -1,14 +1,23 @@
-package com.example.crimson.crimson.Controller.Dues;
+package com.example.crimson.crimson.Controller.BuilderClasses;
 
 public class BenefitCoupon
 {
     private String coupon;
-    private String userIdentifier;
+    private String user_identifier;
+    public String getCoupon() {
+        return coupon;
+    }
+
+    public String getUser_identifier() {
+        return user_identifier;
+    }
 
     public static class Builder
     {
+
+
         private String coupon;
-        private String userIdentifier;
+        private String user_identifier;
 
         public Builder setCoupon(String coupon)
         {
@@ -18,7 +27,7 @@ public class BenefitCoupon
 
         public Builder setUserIdentifier(String userIdentifier)
         {
-            this.userIdentifier = userIdentifier;
+            this.user_identifier = userIdentifier;
             return this;
         }
 
@@ -31,6 +40,6 @@ public class BenefitCoupon
     private BenefitCoupon(Builder builder)
     {
         this.coupon = builder.coupon;
-        this.userIdentifier = builder.userIdentifier;
+        this.user_identifier = builder.user_identifier;
     }
 }

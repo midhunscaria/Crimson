@@ -1,4 +1,4 @@
-package com.example.crimson.crimson.Controller.Dues;
+package com.example.crimson.crimson.Controller.Benefit;
 
 import com.example.crimson.crimson.Interfaces.generateCouponAPI;
 

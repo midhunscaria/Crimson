@@ -10,13 +10,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Button;
 import android.os.Handler;
-import android.widget.Toast;
 
-import com.example.crimson.crimson.Controller.Dues.BenefitBase;
-import com.example.crimson.crimson.Controller.Dues.BenefitCoupon;
-import com.example.crimson.crimson.Controller.Dues.BenefitDiamondDecorator;
-import com.example.crimson.crimson.Controller.Dues.BenefitGoldDecorator;
-import com.example.crimson.crimson.Controller.Dues.BenefitSilverDecorator;
+import com.example.crimson.crimson.Controller.Benefit.BenefitBase;
+import com.example.crimson.crimson.Controller.BuilderClasses.BenefitCoupon;
+import com.example.crimson.crimson.Controller.Benefit.BenefitDiamondDecorator;
+import com.example.crimson.crimson.Controller.Benefit.BenefitGoldDecorator;
+import com.example.crimson.crimson.Controller.Benefit.BenefitSilverDecorator;
 import com.example.crimson.crimson.Interfaces.generateCouponAPI;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
@@ -86,18 +85,6 @@ public class benefit_fragment extends Fragment{
             }
         }, 2000);
 
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                if(flag) {
-//                    new AlertDialog.Builder(parentHolder.getContext()).setTitle("Sorry!").setMessage("Your benefits were already Redeemed!").create().show();
-//                }
-//                else {
-//                    benefit_redeem_button.setEnabled(true);
-//                }
-
-//            }
-//        }, 2000);
 
         benefit_redeem_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,7 +131,7 @@ public class benefit_fragment extends Fragment{
     {
         flag = false;
 
-        benefitmDbRef.addListenerForSingleValueEvent( new ValueEventListener() {
+        benefitmDbRef.addValueEventListener( new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 

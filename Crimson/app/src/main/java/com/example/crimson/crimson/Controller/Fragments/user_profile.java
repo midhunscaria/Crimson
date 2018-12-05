@@ -135,7 +135,6 @@ public class user_profile extends Fragment {
                                 .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(Boolean.toString(userType))
                                 .setUserSubsType(subsType).setUserIdentifier(user_identifier).create();
 
-//                        Util.makeToast(parentHolder.getContext(), userDetails_object.toString()).show();
 
                         pushToDb(userDetails_object);
                     }
@@ -213,7 +212,7 @@ public class user_profile extends Fragment {
     {
         DAO.pushUserProfile(userDetails_object ,mDbRef);
 
-        Util.makeToast(parentHolder.getContext(), "Profile Created Successfully! You can continue using the application!").show();
+        Util.makeToast(parentHolder.getContext(), "Profile Created Successfully! Please log in again to redeem your benefits! You can continue using the application!").show();
 
     }
 
