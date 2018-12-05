@@ -71,22 +71,33 @@ public class benefit_fragment extends Fragment{
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(parentHolder.getContext(), ""+benefit_subs_type_Str, Toast.LENGTH_LONG).show();
+
+                if(dash_fragment.typeStr == null) {
+                    new AlertDialog.Builder(parentHolder.getContext()).setTitle("Sorry!").setMessage("Please register you profile first!").create().show();;
+                }
+                    else
+                    {
+                        if (flag) {
+                            new AlertDialog.Builder(parentHolder.getContext()).setTitle("Sorry!").setMessage("Your benefits were already Redeemed!").create().show();
+                        } else {
+                            benefit_redeem_button.setEnabled(true);
+                        }
+                    }
             }
         }, 2000);
 
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if(flag) {
-                    new AlertDialog.Builder(parentHolder.getContext()).setTitle("Sorry!").setMessage("Your benefits were already Redeemed!").create().show();
-                }
-                else {
-                    benefit_redeem_button.setEnabled(true);
-                }
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                if(flag) {
+//                    new AlertDialog.Builder(parentHolder.getContext()).setTitle("Sorry!").setMessage("Your benefits were already Redeemed!").create().show();
+//                }
+//                else {
+//                    benefit_redeem_button.setEnabled(true);
+//                }
 
-            }
-        }, 2000);
+//            }
+//        }, 2000);
 
         benefit_redeem_button.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -12,8 +12,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.crimson.crimson.Controller.BuilderClasses.UserDetails;
+import com.example.crimson.crimson.Model.DAO;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,7 +33,6 @@ public class user_profile extends Fragment {
     public FirebaseAuth mAuth;
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
     public DatabaseReference benefitmDbRef = mDbRef.child("User_Details");
-
 
     public UserDetails userDetails_object;
 
@@ -133,6 +134,10 @@ public class user_profile extends Fragment {
                         userDetails_object = new UserDetails.Builder().setNameOfUser(nameOfUserString).setAgeOfUser(ageOfUserString)
                                 .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType(Boolean.toString(userType))
                                 .setUserSubsType(subsType).setUserIdentifier(user_identifier).create();
+
+//                        Util.makeToast(parentHolder.getContext(), userDetails_object.toString()).show();
+
+                        pushToDb(userDetails_object);
                     }
                     else
                     {
@@ -140,13 +145,9 @@ public class user_profile extends Fragment {
                                 .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType("Free User")
                                 .setUserIdentifier(user_identifier).create();
 
-
-                        Util.makeToast(parentHolder.getContext(), "Your information has been saved! You are registered as a free user!").show();
+                        pushToDb(userDetails_object);
 
                     }
-
-                    pushToDb();
-
                 }
 
                 disableCheckboxes();
@@ -208,9 +209,12 @@ public class user_profile extends Fragment {
 
     }
 
-    public void pushToDb()
+    public void pushToDb(UserDetails user_detail)
     {
-        mDbRef.child("User_Details").push().setValue(userDetails_object);
+        DAO.pushUserProfile(userDetails_object ,mDbRef);
+
+        Util.makeToast(parentHolder.getContext(), "Profile Created Successfully! You can continue using the application!").show();
+
     }
 
 }

@@ -10,6 +10,35 @@ public class UserDetails {
     private String userType;
     private String subsType;
 
+    public String getName() {
+        return name;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public String getOccupation() {
+        return occupation;
+    }
+
+    public String getUser_identifier() {
+        return user_identifier;
+    }
+
+    public String getAnnualIncome() {
+        return annualIncome;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public String getSubsType() {
+        return subsType;
+    }
+
+
     public static class Builder {
 
         private String name;

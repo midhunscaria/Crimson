@@ -42,7 +42,8 @@ public class dash_fragment extends Fragment{
 
     public TextView nameLabel, ageLabel, occupationLabel, salaryLabel, subsLabel, typeLabel;
 
-    public String nameStr, ageStr, occupationStr, salaryStr, subsStr, typeStr, silverStr, goldStr, diamondStr;
+    public String nameStr, ageStr, occupationStr, salaryStr, subsStr, silverStr, goldStr, diamondStr;
+    public static String typeStr;
     public String user_id_fb;
     public String duesEmail, duesAmt, duesPeriodicName, duesPeriodicAmount;
     public String user_identifier = FirebaseAuth.getInstance().getUid();
@@ -85,7 +86,7 @@ public class dash_fragment extends Fragment{
         duesPeriodicChart = (PieChart)parentHolder.findViewById(R.id.dues_periodic_pie);
 
 
-//        userProfileInfo = DAO.getUserProfileDetails(user_identifier);
+        getUserProfileDetails(user_identifier);
         drawDuesGraph(user_identifier);
 
 
@@ -121,18 +122,7 @@ public class dash_fragment extends Fragment{
 
                         if(subsStr.equals("true"))
                         {
-                            subsStr = "Subscribed Member";
-
-                            silverStr = ds.child("userTypeSilver").getValue(String.class);
-                            goldStr = ds.child("userTypeGold").getValue(String.class);
-                            diamondStr = ds.child("userTypeDiamond").getValue(String.class);
-
-                            if(silverStr != null && silverStr.equals("true"))
-                                typeStr = "Silver Subscription";
-                            else if(goldStr != null && goldStr.equals("true"))
-                                typeStr = "Gold Subscription";
-                            else if(diamondStr != null && diamondStr.equals("true"))
-                                typeStr = "Diamond Subscription";
+                            typeStr = ds.child("subsType").getValue(String.class);
                         }
                         else
                         {
