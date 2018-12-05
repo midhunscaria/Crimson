@@ -103,12 +103,12 @@ public class benefit_fragment extends Fragment{
             @Override
             public void onClick(View view) {
 
-                if (benefit_subs_type_Str.equals("Silver")) {
+                if (dash_fragment.typeStr.equals("Silver")) {
                     coupon = new BenefitSilverDecorator(new BenefitBase());
-                } else if (benefit_subs_type_Str.equals("Gold")) {
+                } else if (dash_fragment.typeStr.equals("Gold")) {
                     coupon = new BenefitGoldDecorator(new BenefitBase());
 
-                } else if (benefit_subs_type_Str.equals("Diamond")) {
+                } else if (dash_fragment.typeStr.equals("Diamond")) {
                     coupon = new BenefitDiamondDecorator(new BenefitBase());
                 } else {
                     Util.makeToast(parentHolder.getContext(), "This feature is for Subscription Members Only!").show();
