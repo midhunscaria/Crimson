@@ -33,7 +33,6 @@
             android:layout_marginLeft="33dp"
             android:layout_marginTop="153dp"
             android:ems="10"
-            android:text="salary"
             android:textColor="@color/generalText"
             android:textStyle="bold" />
 
@@ -47,9 +46,8 @@
             android:layout_marginLeft="33dp"
             android:layout_marginTop="190dp"
             android:ems="10"
-            android:text="subs"
-            android:textStyle="bold"
-            android:textColor="@color/generalText"/>
+            android:textColor="@color/generalText"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/dashSubsType"
@@ -62,9 +60,8 @@
             android:layout_marginLeft="33dp"
             android:layout_marginTop="237dp"
             android:ems="10"
-            android:text="substype"
-            android:textStyle="bold"
-            android:textColor="@color/generalText"/>
+            android:textColor="@color/generalText"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/dashName"
@@ -74,7 +71,6 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="48dp"
-            android:text="name"
             android:textColor="@color/generalText"
             android:textStyle="bold" />
 
@@ -87,7 +83,6 @@
             android:layout_marginStart="3dp"
             android:layout_marginTop="83dp"
             android:ems="10"
-            android:text="age"
             android:textColor="@color/generalText"
             android:textStyle="bold" />
 
@@ -101,7 +96,6 @@
             android:layout_marginTop="116dp"
             android:layout_marginEnd="0dp"
             android:ems="10"
-            android:text="occupation"
             android:textColor="@color/generalText"
             android:textStyle="bold" />
 

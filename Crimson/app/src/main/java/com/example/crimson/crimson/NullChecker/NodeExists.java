@@ -4,6 +4,6 @@ public class NodeExists implements ICheckNull {
 
     @Override
     public boolean isNull() {
-        return true;
+        return false;
     }
 }

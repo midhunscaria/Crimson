@@ -104,3 +104,13 @@ Vapp/src/main/java/com/example/crimson/crimson/Controller/Benefit/BenefitDecorat
 Zapp/src/main/java/com/example/crimson/crimson/Controller/Benefit/BenefitGoldDecorator.java,7\4\7418416a3488ee106eada0fbdcea7218277ec27e
 Œ
 \app/src/main/java/com/example/crimson/crimson/Controller/Benefit/BenefitSilverDecorator.java,4\5\4526f81bf2bba0f58b61c1541e242bbf24c53dc8
+y
+Iapp/src/main/java/com/example/crimson/crimson/NullChecker/ICheckNull.java,1\6\16b29e740a4cc7095b2c121ed160c38587f0099d
+
+Oapp/src/main/java/com/example/crimson/crimson/NullChecker/NodeDoesNotExist.java,8\f\8fb08b1910154ffd1b18dd6c305cd85071e3baf9
+y
+Iapp/src/main/java/com/example/crimson/crimson/NullChecker/NodeExists.java,4\e\4e9f0cfc6b290dbb060636a608515cf5ca9451a8
+w
+Gapp/src/main/java/com/example/crimson/crimson/NullChecker/NodeInfo.java,7\0\705fae6a2f611a838a310003a251353d75dadd03
+…
+Uapp/src/main/java/com/example/crimson/crimson/Interceptor/PerformanceInterceptor.java,9\a\9ad8ea7356c1b2c8394a6aa11e29cf0334c48980

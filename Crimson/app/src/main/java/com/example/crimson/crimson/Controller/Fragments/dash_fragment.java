@@ -52,6 +52,7 @@ public class dash_fragment extends Fragment{
     public String user_id_fb;
     public String duesEmail, duesAmt, duesPeriodicName, duesPeriodicAmount;
     public String user_identifier = FirebaseAuth.getInstance().getUid();
+    public String flag = null;
 
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
     public DatabaseReference userProfileRef = mDbRef.child("User_Details");
@@ -61,7 +62,9 @@ public class dash_fragment extends Fragment{
 
     public Map<String, Float> dues_one_time_map = new HashMap<String, Float>();
     public Map<String, Float> dues_periodic_map = new HashMap<String, Float>();
-    public List<Object> goals = new ArrayList<>();
+    public List<String> goals = new ArrayList<String>();
+
+    public ArrayAdapter goalListAdapter;
 
     public Float duesAmtFloat, duesOneTimeAmtFloat, temp_amount;
 
@@ -90,16 +93,11 @@ public class dash_fragment extends Fragment{
         duesPeriodicChart = (PieChart)parentHolder.findViewById(R.id.dues_periodic_pie);
         goalsListView = (ListView)parentHolder.findViewById(R.id.goal_listview_id);
 
-
-        if(NodeInfo.checkDbRefNull(goalsRef)) {
-            loadGoals(user_identifier);
-        }
+        loadGoals(user_identifier);
 
         getUserProfileDetails(user_identifier);
 
-        drawDuesGraph(user_identifier);
-
-
+        drawDuesGraph();
 
         return parentHolder;
     }
@@ -118,12 +116,9 @@ public class dash_fragment extends Fragment{
                         goalPeriodStr = ds.child("goalPeriod").getValue(String.class);
                         goalTargetStr = ds.child("goalTarget").getValue(String.class);
 
-                        Object goalObject = new Goals.Builder().setAmount(goalAmtStr).setPeriod(goalPeriodStr).setTarget(goalTargetStr);
-                        goals.add(goalObject);
+                        goals.add(goalAmtStr+goalPeriodStr+goalTargetStr);
                     }
                 }
-
-                setGoals();
             }
 
             @Override
@@ -131,6 +126,8 @@ public class dash_fragment extends Fragment{
 
             }
         });
+
+        setGoals("Not Null");
     }
 
     public void getUserProfileDetails(final String user_identifier)
@@ -175,9 +172,15 @@ public class dash_fragment extends Fragment{
         });
     }
 
-    public void setGoals()
+    public void setGoals(String flag)
     {
-
+        if(!NodeInfo.checkDbRefNull(flag)) {
+            goalListAdapter = new ArrayAdapter(parentHolder.getContext(), R.layout.list_item, goals);
+            goalsListView.setAdapter(goalListAdapter);
+        }
+        else{
+            Util.makeToast(parentHolder.getContext(), "You have no Goals added yet!").show();
+        }
     }
 
     public void setProfile()
@@ -190,18 +193,18 @@ public class dash_fragment extends Fragment{
         typeLabel.setText(typeStr);
     }
 
-    public void drawDuesGraph(final String user_identifier)
+    public void drawDuesGraph()
     {
-        drawOneTimeGraph(dues_one_time_map, duesOneTimeRef);
+        drawOneTimeGraph(duesOneTimeRef);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                drawPeriodicGraph(dues_periodic_map, duesPeriodicRef);
+                drawPeriodicGraph(duesPeriodicRef);
             }
         },1000);
     }
 
-    public void drawOneTimeGraph(Map<String, Float> oneTimeMap, DatabaseReference duesOneTimeRef)
+    public void drawOneTimeGraph(DatabaseReference duesOneTimeRef)
     {
         dues_one_time_map.clear();
 
@@ -250,7 +253,7 @@ public class dash_fragment extends Fragment{
 
     }
 
-    public void drawPeriodicGraph(Map<String, Float> oneTimeMap, DatabaseReference duesPeriodicRef)
+    public void drawPeriodicGraph(DatabaseReference duesPeriodicRef)
     {
         dues_periodic_map.clear();
 
@@ -318,6 +321,8 @@ public class dash_fragment extends Fragment{
         chart.setExtraOffsets(5,10,5,2);
 
         chart.setData(data);
+        chart.setRotationEnabled(false);
+        chart.setTouchEnabled(false);
         chart.invalidate();
     }
 

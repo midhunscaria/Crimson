@@ -4,12 +4,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,6 +21,8 @@ import com.example.crimson.crimson.Controller.Dues.DueBridge;
 import com.example.crimson.crimson.Controller.Dues.DueManager;
 import com.example.crimson.crimson.Controller.Dues.DueOneTime;
 import com.example.crimson.crimson.Controller.Dues.DuePeriodic;
+import com.example.crimson.crimson.Interceptor.FilterManager;
+import com.example.crimson.crimson.Interceptor.InputIntegrityFilter;
 import com.example.crimson.crimson.Model.DAO;
 import com.example.crimson.crimson.Controller.BuilderClasses.Dues;
 import com.example.crimson.crimson.R;
@@ -58,6 +62,12 @@ public class dues_fragment extends Fragment
     public static boolean due_push_task_flag=false;
     public static Task<Void> due_push_task;
 
+    public FilterManager filterManager;
+
+    public void setFilterManager(FilterManager filterManager)
+    {
+        this.filterManager = filterManager;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -77,6 +87,10 @@ public class dues_fragment extends Fragment
         duePeriod = (EditText)parentHolder.findViewById(R.id.duesPeriod);
         duesReceiverEmail = (EditText)parentHolder.findViewById(R.id.duesReceiverEmailID);
         dueSubmitButton = (Button)parentHolder.findViewById(R.id.createDueButton);
+
+        filterManager = new FilterManager();
+        filterManager.addFilter(new InputIntegrityFilter("Username Integrity Check"));
+        this.setFilterManager(filterManager);
 
         dueSubmitButton.setOnClickListener(new View.OnClickListener()
         {
@@ -111,6 +125,11 @@ public class dues_fragment extends Fragment
                         if (TextUtils.isEmpty(dueReceiverEmailString)) {
                             Util.makeToast(parentHolder.getContext(), "Receiver Email is compulsory for a One Time due!").show();
                         } else {
+
+
+                            filterManager.execute(dueReceiverEmailString);
+
+
 
                             generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DueOneTime(dueReceiverEmailString));
 

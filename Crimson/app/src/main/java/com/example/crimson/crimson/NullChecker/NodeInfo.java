@@ -1,12 +1,8 @@
 package com.example.crimson.crimson.NullChecker;
 
-import com.google.firebase.database.DatabaseReference;
-
 public class NodeInfo {
 
-    public DatabaseReference nodeDbRef;
-
-    public static boolean checkDbRefNull(DatabaseReference appDbRef)
+    public static boolean checkDbRefNull(String appDbRef)
     {
         if(appDbRef != null)
         {

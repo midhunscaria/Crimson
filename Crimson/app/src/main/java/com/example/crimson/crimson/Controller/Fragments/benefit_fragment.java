@@ -29,12 +29,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Arrays;
+import java.util.List;
+
 
 public class benefit_fragment extends Fragment{
 
     public View parentHolder;
 
     public TextView benefit_coupon_info;
+    public TextView benefit_list1;
+    public TextView benefit_list2;
     public Button benefit_redeem_button;
 
     public String benefit_subs_type_Str, checker;
@@ -63,6 +68,8 @@ public class benefit_fragment extends Fragment{
 
         benefit_coupon_info = (TextView)parentHolder.findViewById(R.id.benefits_ticket_info_id);
         benefit_redeem_button = (Button)parentHolder.findViewById(R.id.benefits_redeem_button);
+        benefit_list1=(TextView)parentHolder.findViewById(R.id.textView10);
+        benefit_list2=(TextView)parentHolder.findViewById(R.id.textView12);
 
         benefit_redeem_button.setEnabled(false);
 
@@ -141,12 +148,18 @@ public class benefit_fragment extends Fragment{
                     checker = ds.child("user_identifier").getValue(String.class);
                     couponStr = ds.child("coupon").getValue(String.class);
 
+                    String []s= couponStr.split(",");
+                    final List<String> coupon_list= Arrays.asList(s);
+
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             if(checker.equals(user_identifier)) {
                                 flag = true;
-                                benefit_coupon_info.setText("You Got "+couponStr);
+                                benefit_coupon_info.setText("You Got ");
+                                benefit_list1.setText(coupon_list.get(0));
+                                benefit_list2.setText(coupon_list.get(1));
+
                             }
 
                         }
