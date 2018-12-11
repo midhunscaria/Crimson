@@ -14,8 +14,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.crimson.crimson.Controller.BuilderClasses.Goals;
 import com.example.crimson.crimson.Model.DAO;
+import com.example.crimson.crimson.NullChecker.NodeInfo;
 import com.example.crimson.crimson.R;
+import com.example.crimson.crimson.Utility.Util;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -41,8 +44,10 @@ public class dash_fragment extends Fragment{
     public View parentHolder;
 
     public TextView nameLabel, ageLabel, occupationLabel, salaryLabel, subsLabel, typeLabel;
+    public ListView goalsListView;
 
-    public String nameStr, ageStr, occupationStr, salaryStr, subsStr, silverStr, goldStr, diamondStr;
+    public String nameStr, ageStr, occupationStr, salaryStr, subsStr;
+    public String goalAmtStr, goalPeriodStr, goalTargetStr;
     public static String typeStr;
     public String user_id_fb;
     public String duesEmail, duesAmt, duesPeriodicName, duesPeriodicAmount;
@@ -56,7 +61,7 @@ public class dash_fragment extends Fragment{
 
     public Map<String, Float> dues_one_time_map = new HashMap<String, Float>();
     public Map<String, Float> dues_periodic_map = new HashMap<String, Float>();
-    public Map<String, Float> goals_map = new HashMap<String, Float>();
+    public List<Object> goals = new ArrayList<>();
 
     public Float duesAmtFloat, duesOneTimeAmtFloat, temp_amount;
 
@@ -65,7 +70,6 @@ public class dash_fragment extends Fragment{
     public PieDataSet dataSet;
 
     public List<PieEntry> pieEntries = new ArrayList<>();
-    public List<String> userProfileInfo = new ArrayList<>();
 
     public Handler handler = new Handler();
 
@@ -76,7 +80,7 @@ public class dash_fragment extends Fragment{
 
         parentHolder = inflater.inflate(R.layout.fragment_dash_fragment, container, false);
 
-        nameLabel = parentHolder.findViewById(R.id.dashName);
+        nameLabel = (TextView)parentHolder.findViewById(R.id.dashName);
         ageLabel = (TextView)parentHolder.findViewById(R.id.dashAge);
         occupationLabel = (TextView)parentHolder.findViewById(R.id.dashOccupation);
         salaryLabel = (TextView)parentHolder.findViewById(R.id.dashSalary);
@@ -84,22 +88,49 @@ public class dash_fragment extends Fragment{
         typeLabel = (TextView)parentHolder.findViewById(R.id.dashSubsType);
         duesOneTimeChart = (PieChart)parentHolder.findViewById(R.id.dues_one_time_pie);
         duesPeriodicChart = (PieChart)parentHolder.findViewById(R.id.dues_periodic_pie);
+        goalsListView = (ListView)parentHolder.findViewById(R.id.goal_listview_id);
 
+
+        if(NodeInfo.checkDbRefNull(goalsRef)) {
+            loadGoals(user_identifier);
+        }
 
         getUserProfileDetails(user_identifier);
+
         drawDuesGraph(user_identifier);
 
 
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                setProfile();
-
-            }
-        },2000);
 
         return parentHolder;
+    }
+
+    public void loadGoals(final String user_identifier)
+    {
+        goalsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for(DataSnapshot ds : dataSnapshot.getChildren())
+                {
+                    user_id_fb = ds.child("userIdentifier").getValue(String.class);
+                    if(user_id_fb.equals(user_identifier)) {
+                        goalAmtStr = ds.child("goalAmount").getValue(String.class);
+                        goalPeriodStr = ds.child("goalPeriod").getValue(String.class);
+                        goalTargetStr = ds.child("goalTarget").getValue(String.class);
+
+                        Object goalObject = new Goals.Builder().setAmount(goalAmtStr).setPeriod(goalPeriodStr).setTarget(goalTargetStr);
+                        goals.add(goalObject);
+                    }
+                }
+
+                setGoals();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     public void getUserProfileDetails(final String user_identifier)
@@ -114,10 +145,10 @@ public class dash_fragment extends Fragment{
 
                     if(user_id_fb.equals(user_identifier))
                     {
-                        nameStr = ds.child("nameOfUser").getValue(String.class);
-                        ageStr = ds.child("ageOfUser").getValue(String.class);
-                        occupationStr = ds.child("occupationOfUser").getValue(String.class);
-                        salaryStr = ds.child("annualIncomeofUser").getValue(String.class);
+                        nameStr = ds.child("name").getValue(String.class);
+                        ageStr = ds.child("age").getValue(String.class);
+                        occupationStr = ds.child("occupation").getValue(String.class);
+                        salaryStr = ds.child("annualIncome").getValue(String.class);
                         subsStr = ds.child("userType").getValue(String.class);
 
                         if(subsStr.equals("true"))
@@ -134,6 +165,7 @@ public class dash_fragment extends Fragment{
                     }
                 }
 
+                setProfile();
             }
 
             @Override
@@ -141,6 +173,11 @@ public class dash_fragment extends Fragment{
 
             }
         });
+    }
+
+    public void setGoals()
+    {
+
     }
 
     public void setProfile()
@@ -161,7 +198,7 @@ public class dash_fragment extends Fragment{
             public void run() {
                 drawPeriodicGraph(dues_periodic_map, duesPeriodicRef);
             }
-        },2000);
+        },1000);
     }
 
     public void drawOneTimeGraph(Map<String, Float> oneTimeMap, DatabaseReference duesOneTimeRef)

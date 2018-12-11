@@ -108,13 +108,17 @@ public class dues_fragment extends Fragment
                          *The DueManager takes the required parameters as per due category and constructs
                          * the required result string. The result string is generated using the generateResultString() method.
                          */
+                        if (TextUtils.isEmpty(dueReceiverEmailString)) {
+                            Util.makeToast(parentHolder.getContext(), "Receiver Email is compulsory for a One Time due!").show();
+                        } else {
 
-                        generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DueOneTime(dueReceiverEmailString));
+                            generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DueOneTime(dueReceiverEmailString));
 
-                        due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().toString().split(","));
+                            due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().split(","));
 
-                        due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setEmailID(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
+                            due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setEmailID(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 
+                        }
                     }
 
                     else if (duesCategorySpinnerString.equals("Periodic")) {
@@ -124,7 +128,7 @@ public class dues_fragment extends Fragment
                         } else {
                             generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DuePeriodic(duePeriodString));
 
-                            due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().toString().split(","));
+                            due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().split(","));
 
                             due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setPeriod(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 

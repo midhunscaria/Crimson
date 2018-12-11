@@ -9,37 +9,39 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/generalBackground">
 
         <Spinner
             android:id="@+id/dues_period_spinner"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="316dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="314dp"
+            android:ems="10"
             android:entries="@array/dues_categories" />
 
         <EditText
             android:id="@+id/duesAmount"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/dues_period_spinner"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="-106dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="-108dp"
             android:ems="10"
             android:hint="Amount"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/duesReceiverName"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="76dp"
             android:layout_marginTop="91dp"
             android:ems="10"
             android:hint=" Receiver Name"
@@ -47,12 +49,12 @@
 
         <EditText
             android:id="@+id/duesPeriod"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginBottom="98dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginBottom="97dp"
             android:ems="10"
             android:hint="Period ( In Months )"
             android:inputType="textPersonName" />
@@ -67,6 +69,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="27dp"
             android:layout_marginRight="27dp"
+            android:ems="10"
+            android:background="@color/buttonColor"
             android:layout_marginBottom="15dp"
             android:text="Create Due Record" />
 
@@ -79,16 +83,17 @@
             android:layout_marginStart="-43dp"
             android:layout_marginTop="18dp"
             android:text="I owe"
+            android:ems="10"
             android:textColor="@color/Information"
             android:textSize="@dimen/heading_size" />
 
         <EditText
             android:id="@+id/duesReceiverEmailID"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="76dp"
             android:layout_marginBottom="304dp"
             android:ems="10"
             android:hint="Receiver's Email ID"

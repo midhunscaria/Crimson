@@ -11,6 +11,7 @@ import com.example.crimson.crimson.Controller.BuilderClasses.Expense;
 import com.example.crimson.crimson.Controller.BuilderClasses.Goals;
 import com.example.crimson.crimson.Controller.BuilderClasses.UserDetails;
 
+import com.example.crimson.crimson.Utility.Util;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,54 +29,6 @@ public class DAO {
 
     public Task<Void> push_t;
 
-
-    public static String nameStr, ageStr, occupationStr, salaryStr, subsStr, silverStr, goldStr, diamondStr, typeStr;
-
-    public static void getUserProfileDetails(final String user_identifier) {
-        mDbRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    String user_id_fb = ds.child("user_identifier").getValue(String.class);
-
-                    if (user_id_fb.equals(user_identifier)) {
-                        nameStr = ds.child("nameOfUser").getValue(String.class);
-                        ageStr = ds.child("ageOfUser").getValue(String.class);
-                        occupationStr = ds.child("occupationOfUser").getValue(String.class);
-                        salaryStr = ds.child("annualIncomeofUser").getValue(String.class);
-                        subsStr = ds.child("userType").getValue(String.class);
-
-                        if (subsStr.equals("true")) {
-                            subsStr = "Subscribed Member";
-
-                            silverStr = ds.child("userTypeSilver").getValue(String.class);
-                            goldStr = ds.child("userTypeGold").getValue(String.class);
-                            diamondStr = ds.child("userTypeDiamond").getValue(String.class);
-
-                            if (silverStr != null && silverStr.equals("true"))
-                                typeStr = "Silver Subscription";
-                            else if (goldStr != null && goldStr.equals("true"))
-                                typeStr = "Gold Subscription";
-                            else if (diamondStr != null && diamondStr.equals("true"))
-                                typeStr = "Diamond Subscription";
-                        } else {
-                            subsStr = "Free Memeber";
-                            typeStr = "";
-                        }
-
-                        break;
-                    }
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }
 
     public static void pushGoals(Goals goals, DatabaseReference databaseReference) {
         Handler handler = new Handler();

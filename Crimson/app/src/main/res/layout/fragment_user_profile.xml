@@ -9,7 +9,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/generalBackground">
 
         <EditText
             android:id="@+id/UserProfileName"
@@ -119,6 +120,7 @@
             android:layout_marginStart="142dp"
             android:layout_marginLeft="142dp"
             android:layout_marginBottom="16dp"
+            android:background="@color/buttonColor"
             android:text="Submit" />
     </RelativeLayout>
 </FrameLayout>

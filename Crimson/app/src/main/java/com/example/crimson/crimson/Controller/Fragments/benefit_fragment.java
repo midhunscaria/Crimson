@@ -17,6 +17,7 @@ import com.example.crimson.crimson.Controller.Benefit.BenefitDiamondDecorator;
 import com.example.crimson.crimson.Controller.Benefit.BenefitGoldDecorator;
 import com.example.crimson.crimson.Controller.Benefit.BenefitSilverDecorator;
 import com.example.crimson.crimson.Interfaces.generateCouponAPI;
+import com.example.crimson.crimson.Model.DAO;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.google.android.gms.tasks.Task;

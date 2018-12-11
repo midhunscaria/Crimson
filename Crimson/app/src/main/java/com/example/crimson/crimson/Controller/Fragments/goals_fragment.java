@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.os.Handler;
+import android.widget.ListView;
 
 import com.example.crimson.crimson.Model.DAO;
 import com.example.crimson.crimson.Controller.BuilderClasses.Goals;
@@ -30,7 +31,7 @@ public class goals_fragment extends Fragment {
     public Goals goal;
     public FirebaseAuth mAuth;
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
-    dash_fragment dash_fragment_object;
+    public String user_identifier = FirebaseAuth.getInstance().getUid();
     public String goalTargetString;
     public String goalAmountString;
     public String goalPeriodString;
@@ -61,7 +62,7 @@ public class goals_fragment extends Fragment {
                 if ((TextUtils.isEmpty(goalTargetString)) || (TextUtils.isEmpty(goalAmountString)|| !TextUtils.isDigitsOnly(goalAmountString)) || (TextUtils.isEmpty(goalPeriodString)|| !TextUtils.isDigitsOnly(goalPeriodString))) {
                     Util.makeToast(parentHolder.getContext(), "Enter All Details Correctly!").show();
                 } else {
-                    goal = new Goals.Builder().setTarget(goalTargetString).setAmount(Double.parseDouble(goalAmountString)).setPeriod(Integer.parseInt(goalPeriodString)).create();
+                    goal = new Goals.Builder().setTarget(goalTargetString).setAmount(goalAmountString).setPeriod(goalPeriodString).setUserIdentifier(user_identifier).create();
 
                     DAO.pushGoals(goal,mDbRef);
 

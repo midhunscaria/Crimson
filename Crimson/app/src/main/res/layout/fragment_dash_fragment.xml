@@ -10,7 +10,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/generalBackground">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/dashSalary"
+            android:layout_alignParentTop="true"
+            android:text="Profile"
+            android:textColor="@color/generalText"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/dashSalary"
@@ -20,9 +31,11 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="33dp"
-            android:layout_marginTop="145dp"
+            android:layout_marginTop="153dp"
             android:ems="10"
-            android:text="salary" />
+            android:text="salary"
+            android:textColor="@color/generalText"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/dashSubs"
@@ -34,7 +47,9 @@
             android:layout_marginLeft="33dp"
             android:layout_marginTop="190dp"
             android:ems="10"
-            android:text="subs" />
+            android:text="subs"
+            android:textStyle="bold"
+            android:textColor="@color/generalText"/>
 
         <TextView
             android:id="@+id/dashSubsType"
@@ -47,7 +62,9 @@
             android:layout_marginLeft="33dp"
             android:layout_marginTop="237dp"
             android:ems="10"
-            android:text="substype" />
+            android:text="substype"
+            android:textStyle="bold"
+            android:textColor="@color/generalText"/>
 
         <TextView
             android:id="@+id/dashName"
@@ -55,8 +72,11 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/dashSalary"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"
-            android:text="name" />
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="48dp"
+            android:text="name"
+            android:textColor="@color/generalText"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/dashAge"
@@ -65,9 +85,11 @@
             android:layout_alignStart="@+id/dashSalary"
             android:layout_alignParentTop="true"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="66dp"
+            android:layout_marginTop="83dp"
             android:ems="10"
-            android:text="age" />
+            android:text="age"
+            android:textColor="@color/generalText"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/dashOccupation"
@@ -76,31 +98,78 @@
             android:layout_alignEnd="@+id/dashSubsType"
             android:layout_alignParentTop="true"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="108dp"
+            android:layout_marginTop="116dp"
+            android:layout_marginEnd="0dp"
             android:ems="10"
-            android:text="occupation" />
+            android:text="occupation"
+            android:textColor="@color/generalText"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/dues_one_time_pie"
+            android:layout_alignStart="@+id/dues_periodic_pie"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="-7dp"
+            android:text="Periodic Due"
+            android:textStyle="bold"
+            android:textColor="@color/generalText"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/goal_listview_id"
+            android:layout_alignStart="@+id/dues_one_time_pie"
+            android:layout_marginTop="-249dp"
+            android:text="One Time Due"
+            android:textStyle="bold"
+            android:textColor="@color/generalText"/>
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/dues_one_time_pie"
-            android:layout_width="160dp"
-            android:layout_height="269dp"
-            android:layout_alignBottom="@+id/dashSalary"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
-            android:ems="10"
-            android:layout_marginBottom="20dp"></com.github.mikephil.charting.charts.PieChart>
+            android:layout_width="158dp"
+            android:layout_height="222dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="210dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginBottom="12dp" />
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/dues_periodic_pie"
-            android:layout_width="160dp"
-            android:layout_height="269dp"
+            android:layout_width="158dp"
+            android:layout_height="222dp"
             android:layout_alignStart="@+id/dues_one_time_pie"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginBottom="20dp"
-            android:ems="10" />
+            android:layout_marginStart="-191dp"
+            android:layout_marginBottom="12dp"/>
+
+        <ListView
+            android:id="@+id/goal_listview_id"
+            android:layout_width="136dp"
+            android:layout_height="226dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="238dp"
+            android:layout_marginLeft="238dp"
+            android:layout_marginBottom="249dp">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/goal_listview_id"
+            android:layout_alignParentTop="true"
+            android:text="Your Goals So Far"
+            android:textStyle="bold"
+            android:textColor="@color/generalText"/>
 
 
     </RelativeLayout>

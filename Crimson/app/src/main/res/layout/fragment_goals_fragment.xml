@@ -9,10 +9,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/generalBackground">
 
         <EditText
             android:id="@+id/goalsTarget"
+            style="@android:style/Widget.EditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -54,7 +56,8 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="29dp"
-            android:text="Create Goal" />
+            android:text="Create Goal"
+            android:background="@color/buttonColor"/>
 
         <TextView
             android:id="@+id/textView11"
@@ -64,6 +67,10 @@
             android:layout_marginEnd="-166dp"
             android:layout_toStartOf="@+id/createGoals"
             android:text="Goals"
+            android:textColor="@color/Information"
+            android:textSize="24sp"
             android:textStyle="bold" />
+
     </RelativeLayout>
+
 </LinearLayout>
