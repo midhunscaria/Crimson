@@ -184,7 +184,7 @@ public class expense_fragment extends Fragment implements Subject {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                //Handle Cancel operations here
             }
         });
 

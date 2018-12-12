@@ -1,6 +1,5 @@
 package com.example.crimson.crimson.Controller.Fragments;
 
-import android.app.AlertDialog;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,13 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.crimson.crimson.Controller.BuilderClasses.Goals;
-import com.example.crimson.crimson.Model.DAO;
-import com.example.crimson.crimson.NullChecker.NodeInfo;
 import com.example.crimson.crimson.R;
-import com.example.crimson.crimson.Utility.Util;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -30,8 +24,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,7 +44,6 @@ public class dash_fragment extends Fragment{
     public String user_id_fb;
     public String duesEmail, duesAmt, duesPeriodicName, duesPeriodicAmount;
     public String user_identifier = FirebaseAuth.getInstance().getUid();
-    public String flag = null;
 
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
     public DatabaseReference userProfileRef = mDbRef.child("User_Details");
@@ -116,18 +107,18 @@ public class dash_fragment extends Fragment{
                         goalPeriodStr = ds.child("goalPeriod").getValue(String.class);
                         goalTargetStr = ds.child("goalTarget").getValue(String.class);
 
-                        goals.add(goalAmtStr+goalPeriodStr+goalTargetStr);
+                        goals.add("Goal: "+goalTargetStr+"\nAmount Required: "+goalAmtStr+"\nTotal Time: "+goalPeriodStr+"\n");
                     }
                 }
+
+                setGoals();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                //Handle Cancel operations here
             }
         });
-
-        setGoals("Not Null");
     }
 
     public void getUserProfileDetails(final String user_identifier)
@@ -151,6 +142,7 @@ public class dash_fragment extends Fragment{
                         if(subsStr.equals("true"))
                         {
                             typeStr = ds.child("subsType").getValue(String.class);
+                            subsStr = "Subscribed Member";
                         }
                         else
                         {
@@ -167,20 +159,15 @@ public class dash_fragment extends Fragment{
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                //Handle Cancel operations here
             }
         });
     }
 
-    public void setGoals(String flag)
+    public void setGoals()
     {
-        if(!NodeInfo.checkDbRefNull(flag)) {
-            goalListAdapter = new ArrayAdapter(parentHolder.getContext(), R.layout.list_item, goals);
-            goalsListView.setAdapter(goalListAdapter);
-        }
-        else{
-            Util.makeToast(parentHolder.getContext(), "You have no Goals added yet!").show();
-        }
+        goalListAdapter = new ArrayAdapter(parentHolder.getContext(), R.layout.list_item, goals);
+        goalsListView.setAdapter(goalListAdapter);
     }
 
     public void setProfile()
@@ -239,7 +226,7 @@ public class dash_fragment extends Fragment{
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                //Handle Cancel operations here
             }
         });
 
@@ -288,7 +275,7 @@ public class dash_fragment extends Fragment{
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                //Handle Cancel operations here
             }
         });
 

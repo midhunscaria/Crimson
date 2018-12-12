@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.example.crimson.crimson.Controller.BuilderClasses.UserDetails;
 import com.example.crimson.crimson.Model.DAO;
@@ -57,9 +56,6 @@ public class user_profile extends Fragment {
     private String subsType;
 
     private boolean userType;
-    private boolean isSilverUser;
-    private boolean isGoldenUser;
-    private boolean isDiamondUser;
     private boolean flag;
 
     private Handler handler;
@@ -136,7 +132,7 @@ public class user_profile extends Fragment {
                                 .setUserSubsType(subsType).setUserIdentifier(user_identifier).create();
 
 
-                        pushToDb(userDetails_object);
+                        pushToDb();
                     }
                     else
                     {
@@ -144,7 +140,7 @@ public class user_profile extends Fragment {
                                 .setOccupationOfUser(occupationOfUserString).setAnnualIncomeOfUser(annualIncomeOfUserString).setUserType("Free User")
                                 .setUserIdentifier(user_identifier).create();
 
-                        pushToDb(userDetails_object);
+                        pushToDb();
 
                     }
                 }
@@ -208,7 +204,7 @@ public class user_profile extends Fragment {
 
     }
 
-    public void pushToDb(UserDetails user_detail)
+    public void pushToDb()
     {
         DAO.pushUserProfile(userDetails_object ,mDbRef);
 

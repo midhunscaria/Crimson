@@ -8,7 +8,6 @@ import java.util.List;
 public class FilterChain {
 
         public List<IFilter> filterChain = new ArrayList<IFilter>();
-        public Target target;
 
         public String response;
 

@@ -59,7 +59,6 @@
             android:layout_marginStart="141dp"
             android:layout_marginLeft="141dp"
             android:layout_marginTop="225dp"
-            android:text="TextView"
             android:textColor="@color/generalText"
             android:textStyle="bold" />
 
@@ -73,7 +72,6 @@
             android:layout_marginStart="141dp"
             android:layout_marginLeft="141dp"
             android:layout_marginTop="252dp"
-            android:text="TextView"
             android:textColor="@color/generalText"
             android:textStyle="bold" />
 

@@ -17,7 +17,6 @@ import com.example.crimson.crimson.Controller.Benefit.BenefitDiamondDecorator;
 import com.example.crimson.crimson.Controller.Benefit.BenefitGoldDecorator;
 import com.example.crimson.crimson.Controller.Benefit.BenefitSilverDecorator;
 import com.example.crimson.crimson.Interfaces.generateCouponAPI;
-import com.example.crimson.crimson.Model.DAO;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.google.android.gms.tasks.Task;
@@ -42,7 +41,7 @@ public class benefit_fragment extends Fragment{
     public TextView benefit_list2;
     public Button benefit_redeem_button;
 
-    public String benefit_subs_type_Str, checker;
+    public String checker;
     public boolean flag;
 
     public generateCouponAPI coupon;
@@ -52,7 +51,6 @@ public class benefit_fragment extends Fragment{
 
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
     public DatabaseReference benefitmDbRef = mDbRef.child("Benefits");
-    public DatabaseReference userProfileRef = mDbRef.child("User_Details");
 
     public String user_identifier = FirebaseAuth.getInstance().getUid();
     public String couponStr;
@@ -156,9 +154,9 @@ public class benefit_fragment extends Fragment{
                         public void run() {
                             if(checker.equals(user_identifier)) {
                                 flag = true;
-                                benefit_coupon_info.setText("You Got ");
-                                benefit_list1.setText(coupon_list.get(0));
-                                benefit_list2.setText(coupon_list.get(1));
+                                benefit_coupon_info.setText("You Redeemed ");
+                                benefit_list1.setText(coupon_list.get(0).split("-")[0]+" Tickets");
+                                benefit_list2.setText(coupon_list.get(1).split("-")[0]+" Tickets");
 
                             }
 
