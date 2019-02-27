@@ -51,7 +51,7 @@ public class DataInterceptor implements Observer {
         this.category_str = this.exp_frag.category;
         this.place_str = this.exp_frag.expense_place_str;
 
-        FileInputStream fin = new FileInputStream("/file.ser", Context.MODE_PRIVATE);
+        ObjectOutputStream out = new ObjectOutputStream(file);
 
     }
 }
