@@ -1,37 +1,38 @@
 
-Ysquid:S1444"8Make this "public static due_push_task_flag" field final(à­ñıÿÿÿÿÿ8öûÑèù,
-ysquid:S3008"XRename this field "due_push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç›œ ÿÿÿÿÿ8öûÑèù,
-˜"squid:ClassVariableVisibilityCheck"eMake duesCategorySpinnerString a static final constant or non-public and provide accessors if needed.(ùÄ™á8öûÑèù,
-"squid:ClassVariableVisibilityCheck"[Make task_successful a static final constant or non-public and provide accessors if needed.(ÇÃÒ¨8öûÑèù,
-"squid:ClassVariableVisibilityCheck"XMake db_push_task a static final constant or non-public and provide accessors if needed.(–„Ÿşÿÿÿÿ8öûÑèù,
-"squid:ClassVariableVisibilityCheck"UMake duePeriod a static final constant or non-public and provide accessors if needed.(ŒØ¹şÿÿÿÿ8öûÑèù,
-wsquid:S00116"ZRename this field "task_successful" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÃÒ¨8öûÑèù,
-squid:S00116"cRename this field "due_information_from_csv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şí	8öûÑèù,
-ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ËÄ•åûÿÿÿÿ8öûÑèù,
-Tsquid:S1444"3Make this "public static due_push_task" field final(Ç›œ ÿÿÿÿÿ8öûÑèù,
-~squid:S00116"\Rename this field "generated_due_csv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öûÕ÷üÿÿÿÿ8öûÑèù,
-’"squid:ClassVariableVisibilityCheck"_Make duesCategorySpinner a static final constant or non-public and provide accessors if needed.(ˆ¹°Ò8öûÑèù,
-"squid:ClassVariableVisibilityCheck"]Make duesReceiverEmail a static final constant or non-public and provide accessors if needed.(¡‰„›8öûÑèù,
-"squid:ClassVariableVisibilityCheck"UMake dueAmount a static final constant or non-public and provide accessors if needed.(ğĞéÿÿÿÿÿ8öûÑèù,
-"squid:ClassVariableVisibilityCheck"[Make dueAmountString a static final constant or non-public and provide accessors if needed.(„Øàï8öûÑèù,
-"squid:ClassVariableVisibilityCheck"[Make duePeriodString a static final constant or non-public and provide accessors if needed.(àË®×8öûÑèù,
-isquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Õ¢®8öûÑèù,
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…‡…Ë8öûÑèù,
-‚"squid:ClassVariableVisibilityCheck"OMake due a static final constant or non-public and provide accessors if needed.(‰Í÷ƒ8öûÑèù,
-‹"squid:ClassVariableVisibilityCheck"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8öûÑèù,
-–"squid:ClassVariableVisibilityCheck"dMake due_information_from_csv a static final constant or non-public and provide accessors if needed.(Şí	8öûÑèù,
-‘"squid:ClassVariableVisibilityCheck"YMake due_push_task a static final constant or non-public and provide accessors if needed.(Ç›œ ÿÿÿÿÿ8öûÑèù,
-“"squid:ClassVariableVisibilityCheck"[Make dueSubmitButton a static final constant or non-public and provide accessors if needed.(ñ¦’ãùÿÿÿÿ8öûÑèù,
-•"squid:ClassVariableVisibilityCheck"bMake dueReceiverEmailString a static final constant or non-public and provide accessors if needed.(à÷÷Ğ8öûÑèù,
-"squid:ClassVariableVisibilityCheck"[Make user_identifier a static final constant or non-public and provide accessors if needed.(û¾àÉ8öûÑèù,
-\squid:S1858"@"getUid" returns a string, there's no need to call "toString()".(û¾àÉ8öûÑèù,
-•"squid:ClassVariableVisibilityCheck"]Make dueReceiverString a static final constant or non-public and provide accessors if needed.(ßáÆŸıÿÿÿÿ8öûÑèù,
-‰"squid:ClassVariableVisibilityCheck"QMake mAuth a static final constant or non-public and provide accessors if needed.(ä××şÿÿÿÿ8öûÑèù,
-…"squid:ClassVariableVisibilityCheck"RMake mDbRef a static final constant or non-public and provide accessors if needed.(¥¡å®8öûÑèù,
-–"squid:ClassVariableVisibilityCheck"^Make due_push_task_flag a static final constant or non-public and provide accessors if needed.(à­ñıÿÿÿÿÿ8öûÑèù,
-~squid:S3008"]Rename this field "due_push_task_flag" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à­ñıÿÿÿÿÿ8öûÑèù,
-wsquid:S00116"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û¾àÉ8öûÑèù,
-•"squid:ClassVariableVisibilityCheck"]Make generated_due_csv a static final constant or non-public and provide accessors if needed.(öûÕ÷üÿÿÿÿ8öûÑèù,
-ysquid:S00116"WRename this field "db_push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–„Ÿşÿÿÿÿ8öûÑèù,
-†"squid:ClassVariableVisibilityCheck"SMake handler a static final constant or non-public and provide accessors if needed.(Öı£8öûÑèù,
-"squid:ClassVariableVisibilityCheck"WMake dueReceiver a static final constant or non-public and provide accessors if needed.(Õè²¾ÿÿÿÿÿ8öûÑèù,
+{squid:S001167"WRename this field "db_push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–„Ÿşÿÿÿÿ8“Á•ûù,
+€squid:S001169"\Rename this field "generated_due_csv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öûÕ÷üÿÿÿÿ8“Á•ûù,
+"squid:ClassVariableVisibilityCheck2"[Make dueAmountString a static final constant or non-public and provide accessors if needed.(„Øàï8“Á•ûù,
+[squid:S1444<"8Make this "public static due_push_task_flag" field final(à­ñıÿÿÿÿÿ8“Á•ûù,
+”"squid:ClassVariableVisibilityCheck$"_Make duesCategorySpinner a static final constant or non-public and provide accessors if needed.(ˆ¹°Ò8“Á•ûù,
+"squid:ClassVariableVisibilityCheck'"UMake duePeriod a static final constant or non-public and provide accessors if needed.(ŒØ¹şÿÿÿÿ8“Á•ûù,
+˜"squid:ClassVariableVisibilityCheck<"^Make due_push_task_flag a static final constant or non-public and provide accessors if needed.(à­ñıÿÿÿÿÿ8“Á•ûù,
+ysquid:S00116."ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û¾àÉ8“Á•ûù,
+—"squid:ClassVariableVisibilityCheck3"]Make dueReceiverString a static final constant or non-public and provide accessors if needed.(ßáÆŸıÿÿÿÿ8“Á•ûù,
+ksquid:S00101!"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Õ¢®8“Á•ûù,
+{squid:S3008="XRename this field "due_push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç›œ ÿÿÿÿÿ8“Á•ûù,
+„"squid:ClassVariableVisibilityCheck8"OMake due a static final constant or non-public and provide accessors if needed.(‰Í÷ƒ8“Á•ûù,
+"squid:ClassVariableVisibilityCheck#"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8“Á•ûù,
+‹"squid:ClassVariableVisibilityCheck+"QMake mAuth a static final constant or non-public and provide accessors if needed.(ä××şÿÿÿÿ8“Á•ûù,
+"squid:ClassVariableVisibilityCheck4"[Make duePeriodString a static final constant or non-public and provide accessors if needed.(àË®×8“Á•ûù,
+‘"squid:ClassVariableVisibilityCheck&"WMake dueReceiver a static final constant or non-public and provide accessors if needed.(Õè²¾ÿÿÿÿÿ8“Á•ûù,
+usquid:S3776G"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ËÄ•åûÿÿÿÿ8“Á•ûù,
+—"squid:ClassVariableVisibilityCheck5"bMake dueReceiverEmailString a static final constant or non-public and provide accessors if needed.(à÷÷Ğ8“Á•ûù,
+“"squid:ClassVariableVisibilityCheck="YMake due_push_task a static final constant or non-public and provide accessors if needed.(Ç›œ ÿÿÿÿÿ8“Á•ûù,
+"squid:ClassVariableVisibilityCheck?"YMake filterManager a static final constant or non-public and provide accessors if needed.(Íé÷s8“Á•ûù,
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…‡…Ë8“Á•ûù,
+•"squid:ClassVariableVisibilityCheck)"[Make dueSubmitButton a static final constant or non-public and provide accessors if needed.(ñ¦’ãùÿÿÿÿ8“Á•ûù,
+^squid:S1858."@"getUid" returns a string, there's no need to call "toString()".(û¾àÉ8“Á•ûù,
+ˆ"squid:ClassVariableVisibilityCheck;"SMake handler a static final constant or non-public and provide accessors if needed.(Öı£8“Á•ûù,
+˜"squid:ClassVariableVisibilityCheck:"dMake due_information_from_csv a static final constant or non-public and provide accessors if needed.(Şí	8“Á•ûù,
+"squid:ClassVariableVisibilityCheck/"[Make task_successful a static final constant or non-public and provide accessors if needed.(ÇÃÒ¨8“Á•ûù,
+Vsquid:S1444="3Make this "public static due_push_task" field final(Ç›œ ÿÿÿÿÿ8“Á•ûù,
+"squid:ClassVariableVisibilityCheck."[Make user_identifier a static final constant or non-public and provide accessors if needed.(û¾àÉ8“Á•ûù,
+‡"squid:ClassVariableVisibilityCheck,"RMake mDbRef a static final constant or non-public and provide accessors if needed.(¥¡å®8“Á•ûù,
+—"squid:ClassVariableVisibilityCheck9"]Make generated_due_csv a static final constant or non-public and provide accessors if needed.(öûÕ÷üÿÿÿÿ8“Á•ûù,
+š"squid:ClassVariableVisibilityCheck1"eMake duesCategorySpinnerString a static final constant or non-public and provide accessors if needed.(ùÄ™á8“Á•ûù,
+ysquid:S00116/"ZRename this field "task_successful" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇÃÒ¨8“Á•ûù,
+squid:S00116:"cRename this field "due_information_from_csv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şí	8“Á•ûù,
+€squid:S3008<"]Rename this field "due_push_task_flag" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à­ñıÿÿÿÿÿ8“Á•ûù,
+"squid:ClassVariableVisibilityCheck%"UMake dueAmount a static final constant or non-public and provide accessors if needed.(ğĞéÿÿÿÿÿ8“Á•ûù,
+’"squid:ClassVariableVisibilityCheck("]Make duesReceiverEmail a static final constant or non-public and provide accessors if needed.(¡‰„›8“Á•ûù,
+’"squid:ClassVariableVisibilityCheck7"XMake db_push_task a static final constant or non-public and provide accessors if needed.(–„Ÿşÿÿÿÿ8“Á•ûù,

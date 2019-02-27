@@ -1,0 +1,6 @@
+
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ìÙôĞ8•ˆºŒú,
+‡"squid:ClassVariableVisibilityCheck"TMake response a static final constant or non-public and provide accessors if needed.(½ËÁ™8•ˆºŒú,
+"squid:ClassVariableVisibilityCheck"WMake filterChain a static final constant or non-public and provide accessors if needed.(Òö˜¸øÿÿÿÿ8•ˆºŒú,
+;squid:S1700"Rename field "filterChain"(Òö˜¸øÿÿÿÿ8•ˆºŒú,
+zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Òö˜¸øÿÿÿÿ8•ˆºŒú,

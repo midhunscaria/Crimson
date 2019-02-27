@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Button;
 
+import com.example.crimson.crimson.Controller.Interceptor.DataInterceptor;
 import com.example.crimson.crimson.Controller.PieChartUpdate;
 import com.example.crimson.crimson.Interfaces.Observer;
 import com.example.crimson.crimson.Interfaces.Subject;
@@ -37,6 +38,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -93,6 +95,9 @@ public class expense_fragment extends Fragment implements Subject {
         PieChartUpdate pieChartObserver = new PieChartUpdate(this, user_identifier);
         this.register(pieChartObserver);
 
+        DataInterceptor interceptor = new DataInterceptor(this);
+        this.register(interceptor);
+
         amount = (EditText)parentHolder.findViewById(R.id.expense_amount);
         category_spinner = (Spinner)parentHolder.findViewById(R.id.expense_category_spinner);
         expense_place = (EditText)parentHolder.findViewById(R.id.expense_place);
@@ -129,7 +134,11 @@ public class expense_fragment extends Fragment implements Subject {
                             if (expense_push_task_flag) {
                                 Util.makeToast(parentHolder.getContext(), "Expense Record Created Successfully").show();
 
-                                notifyObservers();
+                                try {
+                                    notifyObservers();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
 
                                 amount.setText("");
                                 category_spinner.setSelection(0);
@@ -259,8 +268,7 @@ public class expense_fragment extends Fragment implements Subject {
     }
 
     @Override
-    public void notifyObservers()
-    {
+    public void notifyObservers() throws IOException {
         for(Observer o : observers)
         {
             o.update();

@@ -1,5 +1,7 @@
 package com.example.crimson.crimson.Interfaces;
 
+import java.io.IOException;
+
 /**
  * Observer Pattern
  *
@@ -12,6 +14,6 @@ package com.example.crimson.crimson.Interfaces;
 
 public interface Observer {
 
-    public void update();
+    public void update() throws IOException;
 
 }

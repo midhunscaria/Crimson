@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "601638308949",
-    "firebase_url": "https://crimson-ed2b5.firebaseio.com",
-    "project_id": "crimson-ed2b5",
-    "storage_bucket": "crimson-ed2b5.appspot.com"
+    "project_number": "1008248706260",
+    "firebase_url": "https://crimson-b80a0.firebaseio.com",
+    "project_id": "crimson-b80a0",
+    "storage_bucket": "crimson-b80a0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:601638308949:android:df10f94b034a142c",
+        "mobilesdk_app_id": "1:1008248706260:android:df10f94b034a142c",
         "android_client_info": {
           "package_name": "com.example.crimson.crimson"
         }
       },
       "oauth_client": [
         {
-          "client_id": "601638308949-koee6jfam58v5878jn05q5f039rgh1qt.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.crimson.crimson",
-            "certificate_hash": "f100979cb0cd2525464155b18dc716f8703e9f42"
-          }
-        },
-        {
-          "client_id": "601638308949-temrieesj2je7mkj7k98ua7n033q71pk.apps.googleusercontent.com",
+          "client_id": "1008248706260-2b69b0sfrec9hnab5lhij328jfaomkql.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAZkLR-1MoZQF5iUdMmRa3sMLsuRzZ6AuM"
+          "current_key": "AIzaSyCPJeYR2xMEnsF5P6aZw7DopjgcQDNcG2A"
         }
       ],
       "services": {
@@ -37,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "601638308949-temrieesj2je7mkj7k98ua7n033q71pk.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
