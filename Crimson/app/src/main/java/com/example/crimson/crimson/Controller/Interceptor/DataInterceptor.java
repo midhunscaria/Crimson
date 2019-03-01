@@ -5,13 +5,14 @@ import android.util.Log;
 import com.example.crimson.crimson.Controller.Fragments.expense_fragment;
 import com.example.crimson.crimson.Interfaces.Observer;
 import java.io.IOException;
+import java.util.logging.Handler;
 
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
-public class DataInterceptor implements Observer, UnmarshaledRequest {
+public class DataInterceptor implements Observer, UnmarshaledRequest, MarshaledRequest {
 
     public String url = "http://10.52.243.3:8080";
     public String url_wo_port = "http://10.52.243.3";
@@ -64,9 +65,14 @@ public class DataInterceptor implements Observer, UnmarshaledRequest {
         method = "GET";
     }
 
+    @Override
+    public void MeasureLatency() {
+
+    }
+
     public void update() throws IOException {
 
-        createContextObject();
+        extractData();
 
         OkHttpClient client = new OkHttpClient();
 
@@ -90,7 +96,7 @@ public class DataInterceptor implements Observer, UnmarshaledRequest {
         });
     }
 
-    public void createContextObject()
+    public void extractData()
     {
         this.u_id_str = this.exp_frag.user_id_fb;
         this.amount_str = this.exp_frag.amount_str;

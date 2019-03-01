@@ -14,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.Button;
 
 import com.example.crimson.crimson.Controller.Interceptor.DataInterceptor;
+import com.example.crimson.crimson.Controller.Interceptor.RequestInterceptor;
 import com.example.crimson.crimson.Controller.PieChartUpdate;
 import com.example.crimson.crimson.Interfaces.Observer;
 import com.example.crimson.crimson.Interfaces.Subject;

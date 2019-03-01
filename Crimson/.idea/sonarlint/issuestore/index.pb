@@ -120,3 +120,9 @@ Yapp/src/main/java/com/example/crimson/crimson/Controller/Interceptor/DataInterc
 Uapp/src/main/java/com/example/crimson/crimson/Command/GenerateLoadBalanceService.java,5\c\5ceb63dcc5e54dc0d0a4d1cc678770abcb61faa4
 s
 Capp/src/main/java/com/example/crimson/crimson/Command/Services.java,8\f\8f44621ca3cc87f6d33d71af2d6788b843c2208b
+’
+bapp/src/main/java/com/example/crimson/crimson/Controller/Interceptor/ClientRequestInterceptor.java,c\3\c3e0cbaa495d03e282dec3536df7f5811033917b
+Š
+Zapp/src/main/java/com/example/crimson/crimson/Controller/Interceptor/MarshaledRequest.java,0\4\04dd539667dd2cac6a7a46f17bdd24c9c6ccd641
+Œ
+\app/src/main/java/com/example/crimson/crimson/Controller/Interceptor/RequestInterceptor.java,8\d\8d33968d955b4c3c8d7ed4b15fd10d47c0c5f1d9
