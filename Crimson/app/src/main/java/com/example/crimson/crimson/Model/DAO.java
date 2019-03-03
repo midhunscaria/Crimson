@@ -3,6 +3,7 @@ package com.example.crimson.crimson.Model;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 
+import com.example.crimson.crimson.Controller.BuilderClasses.Sample;
 import com.example.crimson.crimson.Controller.Fragments.dues_fragment;
 import com.example.crimson.crimson.Controller.Fragments.expense_fragment;
 import com.example.crimson.crimson.Controller.Fragments.goals_fragment;
@@ -56,7 +57,7 @@ public class DAO {
 
     }
 
-    public static void pushDues(Dues dues, DatabaseReference databaseReference, String category) {
+    public static void pushDues(Sample dues, DatabaseReference databaseReference, String category) {
         Handler handler = new Handler();
         dues_fragment.due_push_task = databaseReference.child("Dues").child(category).push().setValue(dues);
         handler.postDelayed(new Runnable() {

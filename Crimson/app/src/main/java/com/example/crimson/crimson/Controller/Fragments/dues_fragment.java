@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.example.crimson.crimson.Controller.BuilderClasses.ObjectFactory;
+import com.example.crimson.crimson.Controller.BuilderClasses.Sample;
 import com.example.crimson.crimson.Controller.Dues.DueBridge;
 import com.example.crimson.crimson.Controller.Dues.DueManager;
 import com.example.crimson.crimson.Controller.Dues.DueOneTime;
@@ -53,7 +55,7 @@ public class dues_fragment extends Fragment
     public String dueReceiverEmailString;
 
     public Task<Void> db_push_task;
-    public Dues due;
+    public Sample due;
     public DueBridge generated_due_csv;
     public List<String> due_information_from_csv = new ArrayList<>();
     public Handler handler;
@@ -131,7 +133,8 @@ public class dues_fragment extends Fragment
 
                             due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().split(","));
 
-                            due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setEmailID(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
+                            due= ObjectFactory.getObject(due_information_from_csv.get(0),due_information_from_csv.get(1),"0",user_identifier,due_information_from_csv.get(2),"One Time");
+                            //due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setEmailID(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 
                         }
                     }
@@ -144,8 +147,9 @@ public class dues_fragment extends Fragment
                             generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DuePeriodic(duePeriodString));
 
                             due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().split(","));
+                            due= ObjectFactory.getObject(due_information_from_csv.get(0),due_information_from_csv.get(1),due_information_from_csv.get(2),user_identifier,due_information_from_csv.get(2),"One Time");
 
-                            due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setPeriod(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
+                            //due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setPeriod(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 
                         }
                     }

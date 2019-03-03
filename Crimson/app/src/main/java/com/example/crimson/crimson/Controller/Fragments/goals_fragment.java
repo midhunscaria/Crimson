@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.os.Handler;
 
+import com.example.crimson.crimson.Controller.BuilderClasses.ObjectFactory;
+import com.example.crimson.crimson.Controller.BuilderClasses.Sample;
 import com.example.crimson.crimson.Model.DAO;
 import com.example.crimson.crimson.Controller.BuilderClasses.Goals;
 import com.example.crimson.crimson.R;
