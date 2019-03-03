@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +16,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.example.crimson.crimson.Controller.BuilderClasses.DueSingleton;
 import com.example.crimson.crimson.Controller.BuilderClasses.ObjectFactory;
+import com.example.crimson.crimson.Controller.BuilderClasses.OneTimeStrategy;
+import com.example.crimson.crimson.Controller.BuilderClasses.PeriodicStrategy;
 import com.example.crimson.crimson.Controller.BuilderClasses.Sample;
+import com.example.crimson.crimson.Controller.BuilderClasses.StrategyContext;
 import com.example.crimson.crimson.Controller.Dues.DueBridge;
 import com.example.crimson.crimson.Controller.Dues.DueManager;
 import com.example.crimson.crimson.Controller.Dues.DueOneTime;
@@ -105,11 +110,15 @@ public class dues_fragment extends Fragment
 
                 task_successful = false;
 
-                if(TextUtils.isEmpty(dueReceiverString) || TextUtils.isEmpty(dueAmountString))
-                {
-                    Util.makeToast(parentHolder.getContext(), "Receiver Name and Amount are compulsory!").show();
-                }
-                else {
+//                if(TextUtils.isEmpty(dueReceiverString) || TextUtils.isEmpty(dueAmountString))
+//                {
+//                    Util.makeToast(parentHolder.getContext(), "Receiver Name and Amount are compulsory!").show();
+//                }
+//                else {
+
+
+                DueSingleton dueSingleton=new DueSingleton(dueReceiverString,dueAmountString,duePeriodString,duesCategorySpinnerString,dueReceiverEmailString,user_identifier);
+
 
                     if (duesCategorySpinnerString.equals("One Time")) {
 
@@ -121,37 +130,60 @@ public class dues_fragment extends Fragment
                          *
                          *The DueManager takes the required parameters as per due category and constructs
                          * the required result string. The result string is generated using the generateResultString() method.
-                         */
-                        if (TextUtils.isEmpty(dueReceiverEmailString)) {
-                            Util.makeToast(parentHolder.getContext(), "Receiver Email is compulsory for a One Time due!").show();
-                        } else {
+//                         */
+//                        if (TextUtils.isEmpty(dueReceiverEmailString)) {
+//                            Util.makeToast(parentHolder.getContext(), "Receiver Email is compulsory for a One Time due!").show();
+//                        } else {
 
 
-                            filterManager.execute(dueReceiverEmailString);
 
-                            generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DueOneTime(dueReceiverEmailString));
 
-                            due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().split(","));
+                        StrategyContext sc = new StrategyContext(new OneTimeStrategy());
 
-                            due= ObjectFactory.getObject(due_information_from_csv.get(0),due_information_from_csv.get(1),"0",user_identifier,due_information_from_csv.get(2),"One Time");
+                        DAO.pushDues(sc.executeStrategy(dueSingleton), mDbRef, duesCategorySpinnerString);
+
+
+
+//                            filterManager.execute(dueReceiverEmailString);
+
+//                            generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DueOneTime(dueReceiverEmailString));
+//
+//                            due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().split(","));
+//
+//                            due = ObjectFactory.getObject(dueSingleton);
+
                             //due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setEmailID(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 
-                        }
+//                        }
                     }
 
                     else if (duesCategorySpinnerString.equals("Periodic")) {
 
-                        if (TextUtils.isEmpty(duePeriodString)) {
-                            Util.makeToast(parentHolder.getContext(), "Period is compulsory for a periodic due!").show();
-                        } else {
-                            generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DuePeriodic(duePeriodString));
 
-                            due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().split(","));
-                            due= ObjectFactory.getObject(due_information_from_csv.get(0),due_information_from_csv.get(1),due_information_from_csv.get(2),user_identifier,due_information_from_csv.get(2),"One Time");
+
+
+
+
+
+                        StrategyContext sc = new StrategyContext(new PeriodicStrategy());
+
+                        DAO.pushDues(sc.executeStrategy(dueSingleton), mDbRef, duesCategorySpinnerString);
+
+
+
+
+
+//                        if (TextUtils.isEmpty(duePeriodString)) {
+//                            Util.makeToast(parentHolder.getContext(), "Period is compulsory for a periodic due!").show();
+//                        } else {
+//                            generated_due_csv = new DueManager(dueReceiverString, dueAmountString, new DuePeriodic(duePeriodString));
+
+//                            due_information_from_csv = Arrays.asList(generated_due_csv.generateResultString().split(","));
+//                            due= ObjectFactory.getObject(dueSingleton);
 
                             //due = new Dues.Builder().setName(due_information_from_csv.get(0)).setAmount(due_information_from_csv.get(1)).setPeriod(due_information_from_csv.get(2)).setUserIdentifier(user_identifier).create();
 
-                        }
+//                        }
                     }
 
                     DAO.pushDues(due,mDbRef,duesCategorySpinnerString);
@@ -170,7 +202,7 @@ public class dues_fragment extends Fragment
                             }
                         }
                     }, 2000);
-                }
+//                }
             }
         });
 

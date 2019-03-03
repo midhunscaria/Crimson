@@ -5,12 +5,15 @@ public class NewDueOneTime extends Sample {
     private String oneTimeAmount;
     private String oneTimeEmailId;
     private String oneTimeUserID;
-    public NewDueOneTime(String name, String amount, String email, String user)
+    private DueSingleton dueSingleton;
+    public NewDueOneTime(DueSingleton dueSingleton1)
     {
-      this.oneTimeAmount=amount;
-      this.oneTimeName=name;
-      this.oneTimeEmailId=email;
-      this.oneTimeUserID=user;
+      this.dueSingleton=dueSingleton1;
+      this.oneTimeAmount=dueSingleton.singleAmount;
+      this.oneTimeName=dueSingleton.singleReceiverName;
+      this.oneTimeEmailId=dueSingleton.singleEmail;
+      this.oneTimeUserID=dueSingleton.singleUserID;
+
     }
     public String getName(){
         return oneTimeName;

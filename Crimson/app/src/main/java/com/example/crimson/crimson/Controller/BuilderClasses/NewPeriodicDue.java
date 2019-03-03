@@ -6,13 +6,15 @@ public class NewPeriodicDue extends Sample {
     private String periodicAmount;
     private String periodicPeriod;
     private String periodicUser_identifier;
-    public NewPeriodicDue(String name, String amount, String email, String period, String user)
+    private DueSingleton dueSingleton;
+    public NewPeriodicDue(DueSingleton dueSingleton1)
     {
-        this.periodicName=name;
-        this.periodicAmount=amount;
-        this.periodicEmail_id=email;
-        this.periodicUser_identifier=user;
-        this.periodicPeriod=period;
+        this.dueSingleton=dueSingleton1;
+        this.periodicName=dueSingleton.singleReceiverName;
+        this.periodicAmount=dueSingleton.singleAmount;
+        this.periodicEmail_id=dueSingleton.singleEmail;
+        this.periodicUser_identifier=dueSingleton.singleUserID;
+        this.periodicPeriod=dueSingleton.singlePeriod;
     }
     public String getName()
     {
@@ -33,3 +35,4 @@ public class NewPeriodicDue extends Sample {
         return periodicEmail_id;
     }
 }
+
