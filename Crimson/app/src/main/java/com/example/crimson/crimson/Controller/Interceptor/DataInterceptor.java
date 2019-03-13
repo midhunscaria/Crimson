@@ -14,7 +14,7 @@ import com.squareup.okhttp.Response;
 
 public class DataInterceptor implements Observer, UnmarshaledRequest, MarshaledRequest {
 
-    public String url = "http://10.52.243.3:8080";
+    public String url = "http://10.53.113.195:8080";
     public String url_wo_port = "http://10.52.243.3";
 
     public String method = "GET";

@@ -126,3 +126,5 @@ bapp/src/main/java/com/example/crimson/crimson/Controller/Interceptor/ClientRequ
 Zapp/src/main/java/com/example/crimson/crimson/Controller/Interceptor/MarshaledRequest.java,0\4\04dd539667dd2cac6a7a46f17bdd24c9c6ccd641
 Œ
 \app/src/main/java/com/example/crimson/crimson/Controller/Interceptor/RequestInterceptor.java,8\d\8d33968d955b4c3c8d7ed4b15fd10d47c0c5f1d9
+Œ
+\app/src/main/java/com/example/crimson/crimson/Controller/Interceptor/UnmarshaledRequest.java,1\0\10780163b1a1662dcecd1f4944023f0c036d5145

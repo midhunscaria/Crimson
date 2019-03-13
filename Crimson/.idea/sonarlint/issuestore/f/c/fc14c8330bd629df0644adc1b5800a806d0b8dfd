@@ -1,28 +1,28 @@
 
-wsquid:S00116"SRename this field "exp_frag" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óæ·øÿÿÿÿ8¬é¼ƒ’-
-psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ëù†›8¬é¼ƒ’-
-squid:S00116"]Rename this field "load_balanced_port" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥šëÚıÿÿÿÿ8Ÿğª¡“-
-ssquid:S00116"TRename this field "place_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8¬é¼ƒ’-
-vsquid:S00116"WRename this field "category_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8¬é¼ƒ’-
-‹"squid:ClassVariableVisibilityCheck"VMake amount_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8¬é¼ƒ’-
-asquid:S1226A"CIntroduce a new variable instead of reusing the parameter "method".(ì¶¨²8Ÿğª¡“-
-‰"squid:ClassVariableVisibilityCheck"OMake url a static final constant or non-public and provide accessors if needed.(¡¨âşûÿÿÿÿ8Ÿğª¡“-
-˜"squid:ClassVariableVisibilityCheck"^Make load_balanced_port a static final constant or non-public and provide accessors if needed.(¥šëÚıÿÿÿÿ8Ÿğª¡“-
-squid:S1186E"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(’É¢8Ÿğª¡“-
-Hsquid:S1659"*Declare "category_str" on a separate line.(‰Í÷Ë8¬é¼ƒ’-
-—"squid:ClassVariableVisibilityCheck"]Make sendRequestToPort a static final constant or non-public and provide accessors if needed.(ØûÇ±ıÿÿÿÿ8Ÿğª¡“-
-‘"squid:ClassVariableVisibilityCheck"WMake url_wo_port a static final constant or non-public and provide accessors if needed.(çãüÁúÿÿÿÿ8Ÿğª¡“-
-Fsquid:S1148T"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ÿğª¡“-
-"squid:ClassVariableVisibilityCheck"XMake category_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8¬é¼ƒ’-
-‰"squid:ClassVariableVisibilityCheck"TMake u_id_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8¬é¼ƒ’-
-Œ"squid:ClassVariableVisibilityCheck"RMake method a static final constant or non-public and provide accessors if needed.(ñ°àãşÿÿÿÿ8Ÿğª¡“-
-Esquid:S1659"'Declare "place_str" on a separate line.(‰Í÷Ë8¬é¼ƒ’-
-Š"squid:ClassVariableVisibilityCheck"UMake place_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8¬é¼ƒ’-
-"squid:ClassVariableVisibilityCheck"TMake exp_frag a static final constant or non-public and provide accessors if needed.(óæ·øÿÿÿÿ8¬é¼ƒ’-
-fsquid:UselessImportCheck"6Remove this unused import 'java.util.logging.Handler'.(ƒœ®èûÿÿÿÿ8Ÿğª¡“-
-~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àášÏşÿÿÿÿ8¬é¼ƒ’-
-zsquid:S00116"VRename this field "url_wo_port" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çãüÁúÿÿÿÿ8Ÿğª¡“-
-Fsquid:S1659"(Declare "amount_str" on a separate line.(‰Í÷Ë8¬é¼ƒ’-
-Xsquid:S1854A":Remove this useless assignment to local variable "method".(ì¶¨²8Ÿğª¡“-
-rsquid:S00116"SRename this field "u_id_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8¬é¼ƒ’-
-tsquid:S00116"URename this field "amount_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8¬é¼ƒ’-
+Xsquid:S1854A":Remove this useless assignment to local variable "method".(ì¶¨²8 ¿§”-
+squid:S00116"]Rename this field "load_balanced_port" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥šëÚıÿÿÿÿ8‘ ¿§”-
+squid:S1186E"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(’É¢8 ¿§”-
+vsquid:S00116"WRename this field "category_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8 ¿§”-
+Esquid:S1659"'Declare "place_str" on a separate line.(‰Í÷Ë8 ¿§”-
+Fsquid:S1659"(Declare "amount_str" on a separate line.(‰Í÷Ë8 ¿§”-
+asquid:S1226A"CIntroduce a new variable instead of reusing the parameter "method".(ì¶¨²8 ¿§”-
+‰"squid:ClassVariableVisibilityCheck"OMake url a static final constant or non-public and provide accessors if needed.(˜§¤êÿÿÿÿÿ8 ¿§”-
+Fsquid:S1148T"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‘ ¿§”-
+Š"squid:ClassVariableVisibilityCheck"UMake place_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8 ¿§”-
+˜"squid:ClassVariableVisibilityCheck"^Make load_balanced_port a static final constant or non-public and provide accessors if needed.(¥šëÚıÿÿÿÿ8 ¿§”-
+tsquid:S00116"URename this field "amount_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8 ¿§”-
+"squid:ClassVariableVisibilityCheck"TMake exp_frag a static final constant or non-public and provide accessors if needed.(óæ·øÿÿÿÿ8 ¿§”-
+‰"squid:ClassVariableVisibilityCheck"TMake u_id_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8 ¿§”-
+ssquid:S00116"TRename this field "place_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8‘ ¿§”-
+~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àášÏşÿÿÿÿ8‘ ¿§”-
+wsquid:S00116"SRename this field "exp_frag" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óæ·øÿÿÿÿ8‘ ¿§”-
+‘"squid:ClassVariableVisibilityCheck"WMake url_wo_port a static final constant or non-public and provide accessors if needed.(çãüÁúÿÿÿÿ8 ¿§”-
+‹"squid:ClassVariableVisibilityCheck"VMake amount_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8 ¿§”-
+—"squid:ClassVariableVisibilityCheck"]Make sendRequestToPort a static final constant or non-public and provide accessors if needed.(ØûÇ±ıÿÿÿÿ8 ¿§”-
+psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ëù†›8‘ ¿§”-
+zsquid:S00116"VRename this field "url_wo_port" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çãüÁúÿÿÿÿ8 ¿§”-
+rsquid:S00116"SRename this field "u_id_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8 ¿§”-
+fsquid:UselessImportCheck"6Remove this unused import 'java.util.logging.Handler'.(ƒœ®èûÿÿÿÿ8‘ ¿§”-
+"squid:ClassVariableVisibilityCheck"XMake category_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8 ¿§”-
+Hsquid:S1659"*Declare "category_str" on a separate line.(‰Í÷Ë8 ¿§”-
+Œ"squid:ClassVariableVisibilityCheck"RMake method a static final constant or non-public and provide accessors if needed.(ñ°àãşÿÿÿÿ8 ¿§”-
