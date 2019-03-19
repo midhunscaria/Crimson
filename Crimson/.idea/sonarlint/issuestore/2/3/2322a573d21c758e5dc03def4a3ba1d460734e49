@@ -1,8 +1,8 @@
 
-…"squid:ClassVariableVisibilityCheck"SMake user_id a static final constant or non-public and provide accessors if needed.( Õ²?8é•©ÿ‘-
 Š"squid:ClassVariableVisibilityCheck"RMake e_frag a static final constant or non-public and provide accessors if needed.(Ø£õÍøÿÿÿÿ8é•©ÿ‘-
-nsquid:S00116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Õ²?8é•©ÿ‘-
-ssquid:S00116"QRename this field "e_frag" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø£õÍøÿÿÿÿ8é•©ÿ‘-
 nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡‘ñ„8é•©ÿ‘-
 nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡‘ñ„8é•©ÿ‘-
 |squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çÔ«¾úÿÿÿÿ8é•©ÿ‘-
+…"squid:ClassVariableVisibilityCheck"SMake user_id a static final constant or non-public and provide accessors if needed.( Õ²?8é•©ÿ‘-
+nsquid:S00116"RRename this field "user_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Õ²?8é•©ÿ‘-
+ssquid:S00116"QRename this field "e_frag" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø£õÍøÿÿÿÿ8é•©ÿ‘-

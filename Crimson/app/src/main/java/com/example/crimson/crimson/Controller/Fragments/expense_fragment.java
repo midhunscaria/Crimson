@@ -13,8 +13,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Button;
 
+import com.example.crimson.crimson.Controller.Interceptor.ContextObject;
+import com.example.crimson.crimson.Controller.Interceptor.ContextObjectInterface;
 import com.example.crimson.crimson.Controller.Interceptor.DataInterceptor;
-import com.example.crimson.crimson.Controller.Interceptor.RequestInterceptor;
+import com.example.crimson.crimson.Controller.Interceptor.InterceptorDriver;
+import com.example.crimson.crimson.Controller.Interceptor.MarshaledRequest;
+import com.example.crimson.crimson.Controller.Interceptor.Timer;
 import com.example.crimson.crimson.Controller.PieChartUpdate;
 import com.example.crimson.crimson.Interfaces.Observer;
 import com.example.crimson.crimson.Interfaces.Subject;
@@ -77,6 +81,8 @@ public class expense_fragment extends Fragment implements Subject {
     public static boolean expense_push_task_flag;
     public static Task<Void> expense_push_task;
 
+    public ContextObjectInterface expenseContextObject;
+    public MarshaledRequest timer;
 
     private String user_identifier = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
@@ -87,6 +93,15 @@ public class expense_fragment extends Fragment implements Subject {
 
         parentHolder = inflater.inflate(R.layout.fragment_expense_fragment, container, false);
 
+        this.expenseContextObject = new ContextObject();
+
+        //Initial Context Object Configuration
+        this.expenseContextObject.setHost("http://10.52.242.169");
+        this.expenseContextObject.setMethod("GET");
+        this.expenseContextObject.setPort(8080);
+
+        timer = new Timer();
+
         /**
          * Observer Pattern
          *
@@ -96,8 +111,10 @@ public class expense_fragment extends Fragment implements Subject {
         PieChartUpdate pieChartObserver = new PieChartUpdate(this, user_identifier);
         this.register(pieChartObserver);
 
-        DataInterceptor interceptor = new DataInterceptor(this);
+        InterceptorDriver interceptor = new InterceptorDriver(this.expenseContextObject, this.timer);
         this.register(interceptor);
+
+        DataInterceptor dataInterceptor = new DataInterceptor();
 
         amount = (EditText)parentHolder.findViewById(R.id.expense_amount);
         category_spinner = (Spinner)parentHolder.findViewById(R.id.expense_category_spinner);

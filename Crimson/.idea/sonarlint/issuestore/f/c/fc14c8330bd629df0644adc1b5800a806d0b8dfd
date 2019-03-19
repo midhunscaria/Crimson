@@ -1,28 +1,15 @@
 
-Xsquid:S1854A":Remove this useless assignment to local variable "method".(ì¶¨²8 ¿§”-
-squid:S00116"]Rename this field "load_balanced_port" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥šëÚıÿÿÿÿ8‘ ¿§”-
-squid:S1186E"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(’É¢8 ¿§”-
-vsquid:S00116"WRename this field "category_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8 ¿§”-
-Esquid:S1659"'Declare "place_str" on a separate line.(‰Í÷Ë8 ¿§”-
-Fsquid:S1659"(Declare "amount_str" on a separate line.(‰Í÷Ë8 ¿§”-
-asquid:S1226A"CIntroduce a new variable instead of reusing the parameter "method".(ì¶¨²8 ¿§”-
-‰"squid:ClassVariableVisibilityCheck"OMake url a static final constant or non-public and provide accessors if needed.(˜§¤êÿÿÿÿÿ8 ¿§”-
-Fsquid:S1148T"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‘ ¿§”-
-Š"squid:ClassVariableVisibilityCheck"UMake place_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8 ¿§”-
-˜"squid:ClassVariableVisibilityCheck"^Make load_balanced_port a static final constant or non-public and provide accessors if needed.(¥šëÚıÿÿÿÿ8 ¿§”-
-tsquid:S00116"URename this field "amount_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8 ¿§”-
-"squid:ClassVariableVisibilityCheck"TMake exp_frag a static final constant or non-public and provide accessors if needed.(óæ·øÿÿÿÿ8 ¿§”-
-‰"squid:ClassVariableVisibilityCheck"TMake u_id_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8 ¿§”-
-ssquid:S00116"TRename this field "place_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8‘ ¿§”-
-~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àášÏşÿÿÿÿ8‘ ¿§”-
-wsquid:S00116"SRename this field "exp_frag" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óæ·øÿÿÿÿ8‘ ¿§”-
-‘"squid:ClassVariableVisibilityCheck"WMake url_wo_port a static final constant or non-public and provide accessors if needed.(çãüÁúÿÿÿÿ8 ¿§”-
-‹"squid:ClassVariableVisibilityCheck"VMake amount_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8 ¿§”-
-—"squid:ClassVariableVisibilityCheck"]Make sendRequestToPort a static final constant or non-public and provide accessors if needed.(ØûÇ±ıÿÿÿÿ8 ¿§”-
-psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ëù†›8‘ ¿§”-
-zsquid:S00116"VRename this field "url_wo_port" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çãüÁúÿÿÿÿ8 ¿§”-
-rsquid:S00116"SRename this field "u_id_str" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Í÷Ë8 ¿§”-
-fsquid:UselessImportCheck"6Remove this unused import 'java.util.logging.Handler'.(ƒœ®èûÿÿÿÿ8‘ ¿§”-
-"squid:ClassVariableVisibilityCheck"XMake category_str a static final constant or non-public and provide accessors if needed.(‰Í÷Ë8 ¿§”-
-Hsquid:S1659"*Declare "category_str" on a separate line.(‰Í÷Ë8 ¿§”-
-Œ"squid:ClassVariableVisibilityCheck"RMake method a static final constant or non-public and provide accessors if needed.(ñ°àãşÿÿÿÿ8 ¿§”-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(“¨Ç¶8ÿ™â›™-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¼í«´8ÿ™â›™-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ø¶‚‚üÿÿÿÿ8ÿ™â›™-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¯ ªé8ÿ™â›™-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8ÿ™â›™-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ø®ÿÚúÿÿÿÿ8ÿ™â›™-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¥é“Ñÿÿÿÿÿ8ÿ™â›™-
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÅÏø8ÿ™â›™-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‡ƒ³Ûşÿÿÿÿ8ÿ™â›™-
+‡"squid:ClassVariableVisibilityCheck"OMake url a static final constant or non-public and provide accessors if needed.(˜§¤êÿÿÿÿÿ8ÿ™â›™-
+¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ªº¨Ëşÿÿÿÿ8ÿ™â›™-
+|squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àášÏşÿÿÿÿ8ÿ™â›™-
+zsquid:UselessImportCheck"LRemove this unused import 'com.example.crimson.crimson.Interfaces.Observer'.(¸‹Ö™ûÿÿÿÿ8ÿ™â›™-
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÿ™â›™-

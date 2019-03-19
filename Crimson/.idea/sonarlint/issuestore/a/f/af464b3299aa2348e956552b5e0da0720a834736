@@ -1,73 +1,73 @@
 
-Œ"squid:ClassVariableVisibilityCheck&"WMake salaryLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
-Š"squid:ClassVariableVisibilityCheck&"UMake subsLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
-†"squid:ClassVariableVisibilityCheck8"QMake goals a static final constant or non-public and provide accessors if needed.(‚“Š£8òÿ²üù,
-—"squid:ClassVariableVisibilityCheck6"]Make dues_one_time_map a static final constant or non-public and provide accessors if needed.(œã»œıÿÿÿÿ8òÿ²üù,
-‰"squid:ClassVariableVisibilityCheck&"TMake ageLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
-“"squid:ClassVariableVisibilityCheck-"^Make duesPeriodicAmount a static final constant or non-public and provide accessors if needed.(ŠÓ×¾8òÿ²üù,
-"squid:ClassVariableVisibilityCheck$"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8òÿ²üù,
-"squid:ClassVariableVisibilityCheck*"YMake goalTargetStr a static final constant or non-public and provide accessors if needed.(Ã­£8òÿ²üù,
-Œ"squid:ClassVariableVisibilityCheck0"RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œ·º øÿÿÿÿ8òÿ²üù,
-Gsquid:S1659<")Declare "temp_amount" on a separate line.(™éÒœ8òÿ²üù,
-ˆ"squid:ClassVariableVisibilityCheckD"SMake handler a static final constant or non-public and provide accessors if needed.(±œÙ§8òÿ²üù,
-Ksquid:S1659&"-Declare "occupationLabel" on a separate line.(’å›8òÿ²üù,
-Rsquid:S1659>"/Declare "duesPeriodicChart" on a separate line.(õøÙúÿÿÿÿ8òÿ²üù,
-•"squid:ClassVariableVisibilityCheck."[Make user_identifier a static final constant or non-public and provide accessors if needed.(¬šÓ¨ûÿÿÿÿ8òÿ²üù,
-‘"squid:ClassVariableVisibilityCheck-"\Make duesPeriodicName a static final constant or non-public and provide accessors if needed.(ŠÓ×¾8òÿ²üù,
-"squid:ClassVariableVisibilityCheck3"[Make duesPeriodicRef a static final constant or non-public and provide accessors if needed.(ÌƒãÀ8òÿ²üù,
-Š"squid:ClassVariableVisibilityCheck&"UMake typeLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
-~squid:S00116."ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬šÓ¨ûÿÿÿÿ8òÿ²üù,
-"squid:ClassVariableVisibilityCheck)"UMake salaryStr a static final constant or non-public and provide accessors if needed.(•©¯âÿÿÿÿÿ8òÿ²üù,
-”"squid:ClassVariableVisibilityCheck2"ZMake duesOneTimeRef a static final constant or non-public and provide accessors if needed.(ØŠ†•ûÿÿÿÿ8òÿ²üù,
-"squid:ClassVariableVisibilityCheck&"[Make occupationLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
-‰"squid:ClassVariableVisibilityCheck4"TMake goalsRef a static final constant or non-public and provide accessors if needed.(ıÍ—Ì8òÿ²üù,
-Esquid:S1659&"'Declare "subsLabel" on a separate line.(’å›8òÿ²üù,
-Zsquid:S2696"6Make the enclosing method "static" or remove this set.(’¢úüÿÿÿÿ8òÿ²üù,
-‹"squid:ClassVariableVisibilityCheckB"VMake pieEntries a static final constant or non-public and provide accessors if needed.(àÅ÷8òÿ²üù,
-qsquid:S00101""MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ğâÏÚıÿÿÿÿ8òÿ²üù,
-"squid:ClassVariableVisibilityCheck:"[Make goalListAdapter a static final constant or non-public and provide accessors if needed.(ôûó8òÿ²üù,
-Hsquid:S1659)"%Declare "subsStr" on a separate line.(•©¯âÿÿÿÿÿ8òÿ²üù,
-Œ"squid:ClassVariableVisibilityCheck)"RMake ageStr a static final constant or non-public and provide accessors if needed.(•©¯âÿÿÿÿÿ8òÿ²üù,
-Isquid:S1659*"+Declare "goalPeriodStr" on a separate line.(Ã­£8òÿ²üù,
-wsquid:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(‚“Š£8òÿ²üù,
-Gsquid:S1659)"$Declare "ageStr" on a separate line.(•©¯âÿÿÿÿÿ8òÿ²üù,
-"squid:ClassVariableVisibilityCheck)"SMake subsStr a static final constant or non-public and provide accessors if needed.(•©¯âÿÿÿÿÿ8òÿ²üù,
-ˆ"squid:ClassVariableVisibilityCheck-"SMake duesAmt a static final constant or non-public and provide accessors if needed.(ŠÓ×¾8òÿ²üù,
-"squid:ClassVariableVisibilityCheck1"ZMake userProfileRef a static final constant or non-public and provide accessors if needed.(ÛŞäÍ8òÿ²üù,
-"squid:ClassVariableVisibilityCheck)"SMake nameStr a static final constant or non-public and provide accessors if needed.(•©¯âÿÿÿÿÿ8òÿ²üù,
-"squid:ClassVariableVisibilityCheck<"XMake duesAmtFloat a static final constant or non-public and provide accessors if needed.(™éÒœ8òÿ²üù,
-Psquid:S1444+"-Make this "public static typeStr" field final(¿Ğ–§ûÿÿÿÿ8òÿ²üù,
-“"squid:ClassVariableVisibilityCheck)"YMake occupationStr a static final constant or non-public and provide accessors if needed.(•©¯âÿÿÿÿÿ8òÿ²üù,
-Csquid:S1659-"%Declare "duesAmt" on a separate line.(ŠÓ×¾8òÿ²üù,
-€squid:S001166"\Rename this field "dues_one_time_map" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œã»œıÿÿÿÿ8òÿ²üù,
-Osquid:S1659<"1Declare "duesOneTimeAmtFloat" on a separate line.(™éÒœ8òÿ²üù,
-tsquid:S1192„"PDefine a constant instead of duplicating this literal "user_identifier" 3 times.(½¤—Éùÿÿÿÿ8òÿ²üù,
-"squid:ClassVariableVisibilityCheck@"SMake dataSet a static final constant or non-public and provide accessors if needed.(Òÿ…ıÿÿÿÿ8òÿ²üù,
-Dsquid:S1659&"&Declare "ageLabel" on a separate line.(’å›8òÿ²üù,
-usquid:S00116<"VRename this field "temp_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™éÒœ8òÿ²üù,
-tsquid:S00116,"URename this field "user_id_fb" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãóÉÎ8òÿ²üù,
-Gsquid:S1659&")Declare "salaryLabel" on a separate line.(’å›8òÿ²üù,
-—"squid:ClassVariableVisibilityCheck>"]Make duesPeriodicChart a static final constant or non-public and provide accessors if needed.(õøÙúÿÿÿÿ8òÿ²üù,
-Isquid:S1659*"+Declare "goalTargetStr" on a separate line.(Ã­£8òÿ²üù,
-Lsquid:S1659-".Declare "duesPeriodicName" on a separate line.(ŠÓ×¾8òÿ²üù,
-Š"squid:ClassVariableVisibilityCheck?"PMake data a static final constant or non-public and provide accessors if needed.(¼ù„§üÿÿÿÿ8òÿ²üù,
-Esquid:S1659&"'Declare "typeLabel" on a separate line.(’å›8òÿ²üù,
-Jsquid:S1659)"'Declare "salaryStr" on a separate line.(•©¯âÿÿÿÿÿ8òÿ²üù,
-’"squid:ClassVariableVisibilityCheck7"]Make dues_periodic_map a static final constant or non-public and provide accessors if needed.( ·­ã8òÿ²üù,
-{squid:S001167"\Rename this field "dues_periodic_map" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ·­ã8òÿ²üù,
-“"squid:ClassVariableVisibilityCheck'"YMake goalsListView a static final constant or non-public and provide accessors if needed.(²†®©ÿÿÿÿÿ8òÿ²üù,
-‹"squid:ClassVariableVisibilityCheck*"VMake goalAmtStr a static final constant or non-public and provide accessors if needed.(Ã­£8òÿ²üù,
-Š"squid:ClassVariableVisibilityCheck&"UMake nameLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
-"squid:ClassVariableVisibilityCheck*"YMake goalPeriodStr a static final constant or non-public and provide accessors if needed.(Ã­£8òÿ²üù,
-‹"squid:ClassVariableVisibilityCheck,"VMake user_id_fb a static final constant or non-public and provide accessors if needed.(ãóÉÎ8òÿ²üù,
-”"squid:ClassVariableVisibilityCheck<"_Make duesOneTimeAmtFloat a static final constant or non-public and provide accessors if needed.(™éÒœ8òÿ²üù,
-Œ"squid:ClassVariableVisibilityCheck<"WMake temp_amount a static final constant or non-public and provide accessors if needed.(™éÒœ8òÿ²üù,
-–"squid:ClassVariableVisibilityCheck>"\Make duesOneTimeChart a static final constant or non-public and provide accessors if needed.(õøÙúÿÿÿÿ8òÿ²üù,
-Nsquid:S1659)"+Declare "occupationStr" on a separate line.(•©¯âÿÿÿÿÿ8òÿ²üù,
-Nsquid:S1659-"0Declare "duesPeriodicAmount" on a separate line.(ŠÓ×¾8òÿ²üù,
-"squid:ClassVariableVisibilityCheck+"SMake typeStr a static final constant or non-public and provide accessors if needed.(¿Ğ–§ûÿÿÿÿ8òÿ²üù,
-wsquid:S22937"YReplace the type specification in this constructor call with the diamond operator ("<>").( ·­ã8òÿ²üù,
-Š"squid:ClassVariableVisibilityCheck-"UMake duesEmail a static final constant or non-public and provide accessors if needed.(ŠÓ×¾8òÿ²üù,
-ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…‡…Ë8òÿ²üù,
-|squid:S22936"YReplace the type specification in this constructor call with the diamond operator ("<>").(œã»œıÿÿÿÿ8òÿ²üù,
-Zsquid:S2696–"6Make the enclosing method "static" or remove this set.(•ø„úÿÿÿÿ8òÿ²üù,
+"squid:ClassVariableVisibilityCheck"[Make occupationLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‚“Š£8òÿ²üù,
+“"squid:ClassVariableVisibilityCheck"[Make user_identifier a static final constant or non-public and provide accessors if needed.(¬šÓ¨ûÿÿÿÿ8òÿ²üù,
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").( ·­ã8òÿ²üù,
+”"squid:ClassVariableVisibilityCheck"\Make duesOneTimeChart a static final constant or non-public and provide accessors if needed.(õøÙúÿÿÿÿ8òÿ²üù,
+ˆ"squid:ClassVariableVisibilityCheck"UMake typeLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
+ˆ"squid:ClassVariableVisibilityCheck"PMake data a static final constant or non-public and provide accessors if needed.(¼ù„§üÿÿÿÿ8òÿ²üù,
+rsquid:S00116"URename this field "user_id_fb" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãóÉÎ8òÿ²üù,
+~squid:S00116"\Rename this field "dues_one_time_map" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œã»œıÿÿÿÿ8òÿ²üù,
+Esquid:S1659")Declare "salaryLabel" on a separate line.(’å›8òÿ²üù,
+Lsquid:S1659"+Declare "occupationStr" on a separate line.(•©¯âÿÿÿÿÿ8òÿ²üù,
+‘"squid:ClassVariableVisibilityCheck"YMake goalsListView a static final constant or non-public and provide accessors if needed.(²†®©ÿÿÿÿÿ8òÿ²üù,
+‰"squid:ClassVariableVisibilityCheck"VMake user_id_fb a static final constant or non-public and provide accessors if needed.(ãóÉÎ8òÿ²üù,
+’"squid:ClassVariableVisibilityCheck"_Make duesOneTimeAmtFloat a static final constant or non-public and provide accessors if needed.(™éÒœ8òÿ²üù,
+Msquid:S1659"1Declare "duesOneTimeAmtFloat" on a separate line.(™éÒœ8òÿ²üù,
+„"squid:ClassVariableVisibilityCheck"QMake goals a static final constant or non-public and provide accessors if needed.(‚“Š£8òÿ²üù,
+ˆ"squid:ClassVariableVisibilityCheck"UMake duesEmail a static final constant or non-public and provide accessors if needed.(ŠÓ×¾8òÿ²üù,
+"squid:ClassVariableVisibilityCheck"[Make duesPeriodicRef a static final constant or non-public and provide accessors if needed.(ÌƒãÀ8òÿ²üù,
+Esquid:S1659"$Declare "ageStr" on a separate line.(•©¯âÿÿÿÿÿ8òÿ²üù,
+zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(œã»œıÿÿÿÿ8òÿ²üù,
+‡"squid:ClassVariableVisibilityCheck"TMake ageLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
+‹"squid:ClassVariableVisibilityCheck"SMake dataSet a static final constant or non-public and provide accessors if needed.(Òÿ…ıÿÿÿÿ8òÿ²üù,
+Asquid:S1659"%Declare "duesAmt" on a separate line.(ŠÓ×¾8òÿ²üù,
+Lsquid:S1659"0Declare "duesPeriodicAmount" on a separate line.(ŠÓ×¾8òÿ²üù,
+"squid:ClassVariableVisibilityCheck"[Make goalListAdapter a static final constant or non-public and provide accessors if needed.(ôûó8òÿ²üù,
+Isquid:S1659"-Declare "occupationLabel" on a separate line.(’å›8òÿ²üù,
+Bsquid:S1659"&Declare "ageLabel" on a separate line.(’å›8òÿ²üù,
+Csquid:S1659"'Declare "typeLabel" on a separate line.(’å›8òÿ²üù,
+Š"squid:ClassVariableVisibilityCheck"RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œ·º øÿÿÿÿ8òÿ²üù,
+’"squid:ClassVariableVisibilityCheck"ZMake duesOneTimeRef a static final constant or non-public and provide accessors if needed.(ØŠ†•ûÿÿÿÿ8òÿ²üù,
+"squid:ClassVariableVisibilityCheck"]Make dues_periodic_map a static final constant or non-public and provide accessors if needed.( ·­ã8òÿ²üù,
+‰"squid:ClassVariableVisibilityCheck"VMake pieEntries a static final constant or non-public and provide accessors if needed.(àÅ÷8òÿ²üù,
+Š"squid:ClassVariableVisibilityCheck"WMake salaryLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
+Gsquid:S1659"+Declare "goalPeriodStr" on a separate line.(Ã­£8òÿ²üù,
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…‡…Ë8òÿ²üù,
+†"squid:ClassVariableVisibilityCheck"SMake handler a static final constant or non-public and provide accessors if needed.(±œÙ§8òÿ²üù,
+Fsquid:S1659"%Declare "subsStr" on a separate line.(•©¯âÿÿÿÿÿ8òÿ²üù,
+Wsquid:S2696"6Make the enclosing method "static" or remove this set.(•ø„úÿÿÿÿ8òÿ²üù,
+Csquid:S1659"'Declare "subsLabel" on a separate line.(’å›8òÿ²üù,
+‹"squid:ClassVariableVisibilityCheck"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8òÿ²üù,
+Jsquid:S1659".Declare "duesPeriodicName" on a separate line.(ŠÓ×¾8òÿ²üù,
+Psquid:S1659"/Declare "duesPeriodicChart" on a separate line.(õøÙúÿÿÿÿ8òÿ²üù,
+Hsquid:S1659"'Declare "salaryStr" on a separate line.(•©¯âÿÿÿÿÿ8òÿ²üù,
+‹"squid:ClassVariableVisibilityCheck"SMake nameStr a static final constant or non-public and provide accessors if needed.(•©¯âÿÿÿÿÿ8òÿ²üù,
+‹"squid:ClassVariableVisibilityCheck"SMake typeStr a static final constant or non-public and provide accessors if needed.(¿Ğ–§ûÿÿÿÿ8òÿ²üù,
+Š"squid:ClassVariableVisibilityCheck"WMake temp_amount a static final constant or non-public and provide accessors if needed.(™éÒœ8òÿ²üù,
+ˆ"squid:ClassVariableVisibilityCheck"UMake subsLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
+†"squid:ClassVariableVisibilityCheck"SMake duesAmt a static final constant or non-public and provide accessors if needed.(ŠÓ×¾8òÿ²üù,
+‡"squid:ClassVariableVisibilityCheck"TMake goalsRef a static final constant or non-public and provide accessors if needed.(ıÍ—Ì8òÿ²üù,
+‹"squid:ClassVariableVisibilityCheck"XMake duesAmtFloat a static final constant or non-public and provide accessors if needed.(™éÒœ8òÿ²üù,
+ssquid:S00116"VRename this field "temp_amount" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™éÒœ8òÿ²üù,
+•"squid:ClassVariableVisibilityCheck"]Make duesPeriodicChart a static final constant or non-public and provide accessors if needed.(õøÙúÿÿÿÿ8òÿ²üù,
+‘"squid:ClassVariableVisibilityCheck"YMake occupationStr a static final constant or non-public and provide accessors if needed.(•©¯âÿÿÿÿÿ8òÿ²üù,
+qsquid:S1192"PDefine a constant instead of duplicating this literal "user_identifier" 3 times.(½¤—Éùÿÿÿÿ8òÿ²üù,
+"squid:ClassVariableVisibilityCheck"UMake salaryStr a static final constant or non-public and provide accessors if needed.(•©¯âÿÿÿÿÿ8òÿ²üù,
+Œ"squid:ClassVariableVisibilityCheck"YMake goalTargetStr a static final constant or non-public and provide accessors if needed.(Ã­£8òÿ²üù,
+Š"squid:ClassVariableVisibilityCheck"RMake ageStr a static final constant or non-public and provide accessors if needed.(•©¯âÿÿÿÿÿ8òÿ²üù,
+‰"squid:ClassVariableVisibilityCheck"VMake goalAmtStr a static final constant or non-public and provide accessors if needed.(Ã­£8òÿ²üù,
+‹"squid:ClassVariableVisibilityCheck"SMake subsStr a static final constant or non-public and provide accessors if needed.(•©¯âÿÿÿÿÿ8òÿ²üù,
+Nsquid:S1444"-Make this "public static typeStr" field final(¿Ğ–§ûÿÿÿÿ8òÿ²üù,
+Gsquid:S1659"+Declare "goalTargetStr" on a separate line.(Ã­£8òÿ²üù,
+Wsquid:S2696"6Make the enclosing method "static" or remove this set.(’¢úüÿÿÿÿ8òÿ²üù,
+Esquid:S1659")Declare "temp_amount" on a separate line.(™éÒœ8òÿ²üù,
+‘"squid:ClassVariableVisibilityCheck"^Make duesPeriodicAmount a static final constant or non-public and provide accessors if needed.(ŠÓ×¾8òÿ²üù,
+osquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ğâÏÚıÿÿÿÿ8òÿ²üù,
+|squid:S00116"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬šÓ¨ûÿÿÿÿ8òÿ²üù,
+"squid:ClassVariableVisibilityCheck"ZMake userProfileRef a static final constant or non-public and provide accessors if needed.(ÛŞäÍ8òÿ²üù,
+ˆ"squid:ClassVariableVisibilityCheck"UMake nameLabel a static final constant or non-public and provide accessors if needed.(’å›8òÿ²üù,
+ysquid:S00116"\Rename this field "dues_periodic_map" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ·­ã8òÿ²üù,
+•"squid:ClassVariableVisibilityCheck"]Make dues_one_time_map a static final constant or non-public and provide accessors if needed.(œã»œıÿÿÿÿ8òÿ²üù,
+"squid:ClassVariableVisibilityCheck"\Make duesPeriodicName a static final constant or non-public and provide accessors if needed.(ŠÓ×¾8òÿ²üù,
+Œ"squid:ClassVariableVisibilityCheck"YMake goalPeriodStr a static final constant or non-public and provide accessors if needed.(Ã­£8òÿ²üù,

@@ -1,6 +1,6 @@
 package com.example.crimson.crimson.Controller.Interceptor;
 
-public interface UnmarshaledRequest
+public interface ContextObjectInterface
 {
     public String getHost();
     public void setHost(String host);

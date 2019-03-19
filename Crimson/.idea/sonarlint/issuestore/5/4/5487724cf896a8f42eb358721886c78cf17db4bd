@@ -1,21 +1,23 @@
 
-wsquid:S3008%"TRename this field "push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†Ú‰‡ûÿÿÿÿ8µÌØù,
-‹"squid:ClassVariableVisibilityCheck"QMake mAuth a static final constant or non-public and provide accessors if needed.(ä××şÿÿÿÿ8µÌØù,
-~squid:S00116!"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬šÓ¨ûÿÿÿÿ8µÌØù,
-"squid:ClassVariableVisibilityCheck"VMake creategoal a static final constant or non-public and provide accessors if needed.(ÉäÄËÿÿÿÿÿ8µÌØù,
-–"squid:ClassVariableVisibilityCheck$"\Make goalPeriodString a static final constant or non-public and provide accessors if needed.(ƒ—†äúÿÿÿÿ8µÌØù,
-ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…‡…Ë8µÌØù,
-Œ"squid:ClassVariableVisibilityCheck "RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œ·º øÿÿÿÿ8µÌØù,
-"squid:ClassVariableVisibilityCheck%"UMake push_task a static final constant or non-public and provide accessors if needed.(†Ú‰‡ûÿÿÿÿ8µÌØù,
-–"squid:ClassVariableVisibilityCheck#"\Make goalAmountString a static final constant or non-public and provide accessors if needed.(Ùßü¨ÿÿÿÿÿ8µÌØù,
-"squid:ClassVariableVisibilityCheck"VMake goalAmount a static final constant or non-public and provide accessors if needed.(¡œëôÿÿÿÿÿ8µÌØù,
-•"squid:ClassVariableVisibilityCheck!"[Make user_identifier a static final constant or non-public and provide accessors if needed.(¬šÓ¨ûÿÿÿÿ8µÌØù,
-"squid:ClassVariableVisibilityCheck"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8µÌØù,
-"squid:ClassVariableVisibilityCheck"VMake goalTarget a static final constant or non-public and provide accessors if needed.(ğ®Î—şÿÿÿÿ8µÌØù,
-Š"squid:ClassVariableVisibilityCheck"PMake goal a static final constant or non-public and provide accessors if needed.(®ÀÇşÿÿÿÿ8µÌØù,
-–"squid:ClassVariableVisibilityCheck""\Make goalTargetString a static final constant or non-public and provide accessors if needed.(ÙŸ¿Êıÿÿÿÿ8µÌØù,
-ˆ"squid:ClassVariableVisibilityCheck'"SMake handler a static final constant or non-public and provide accessors if needed.(Öı£8µÌØù,
-‹"squid:ClassVariableVisibilityCheck"VMake goalPeriod a static final constant or non-public and provide accessors if needed.(´ß‡¬8µÌØù,
-Rsquid:S1444%"/Make this "public static push_task" field final(†Ú‰‡ûÿÿÿÿ8µÌØù,
-qsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ÿ†›®øÿÿÿÿ8µÌØù,
-~squid:S00116"ZRename this field "task_successful" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã×‰Øùÿÿÿÿ8µÌØù,
+‰"squid:ClassVariableVisibilityCheck"QMake mAuth a static final constant or non-public and provide accessors if needed.(ä××şÿÿÿÿ8µÌØù,
+‰"squid:ClassVariableVisibilityCheck"VMake goalPeriod a static final constant or non-public and provide accessors if needed.(´ß‡¬8µÌØù,
+‚squid:UselessImportCheck"YRemove this unused import 'com.example.crimson.crimson.Controller.BuilderClasses.Sample'.(Œ¹°õ8œ§˜‹™-
+|squid:S00116"ZRename this field "task_successful" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã×‰Øùÿÿÿÿ8µÌØù,
+usquid:S3008"TRename this field "push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†Ú‰‡ûÿÿÿÿ8µÌØù,
+†"squid:ClassVariableVisibilityCheck"SMake handler a static final constant or non-public and provide accessors if needed.(Öı£8µÌØù,
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…‡…Ë8µÌØù,
+"squid:ClassVariableVisibilityCheck"VMake creategoal a static final constant or non-public and provide accessors if needed.(ÉäÄËÿÿÿÿÿ8µÌØù,
+|squid:S00116"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬šÓ¨ûÿÿÿÿ8µÌØù,
+‹"squid:ClassVariableVisibilityCheck"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8µÌØù,
+‰squid:UselessImportCheck"`Remove this unused import 'com.example.crimson.crimson.Controller.BuilderClasses.ObjectFactory'.(—Ò­Š8œ§˜‹™-
+“"squid:ClassVariableVisibilityCheck"[Make user_identifier a static final constant or non-public and provide accessors if needed.(¬šÓ¨ûÿÿÿÿ8µÌØù,
+"squid:ClassVariableVisibilityCheck"VMake goalAmount a static final constant or non-public and provide accessors if needed.(¡œëôÿÿÿÿÿ8µÌØù,
+”"squid:ClassVariableVisibilityCheck"\Make goalPeriodString a static final constant or non-public and provide accessors if needed.(ƒ—†äúÿÿÿÿ8µÌØù,
+osquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ÿ†›®øÿÿÿÿ8µÌØù,
+ˆ"squid:ClassVariableVisibilityCheck"PMake goal a static final constant or non-public and provide accessors if needed.(®ÀÇşÿÿÿÿ8µÌØù,
+"squid:ClassVariableVisibilityCheck"VMake goalTarget a static final constant or non-public and provide accessors if needed.(ğ®Î—şÿÿÿÿ8µÌØù,
+Psquid:S1444"/Make this "public static push_task" field final(†Ú‰‡ûÿÿÿÿ8µÌØù,
+Š"squid:ClassVariableVisibilityCheck"RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œ·º øÿÿÿÿ8µÌØù,
+”"squid:ClassVariableVisibilityCheck"\Make goalTargetString a static final constant or non-public and provide accessors if needed.(ÙŸ¿Êıÿÿÿÿ8µÌØù,
+”"squid:ClassVariableVisibilityCheck"\Make goalAmountString a static final constant or non-public and provide accessors if needed.(Ùßü¨ÿÿÿÿÿ8µÌØù,
+"squid:ClassVariableVisibilityCheck"UMake push_task a static final constant or non-public and provide accessors if needed.(†Ú‰‡ûÿÿÿÿ8µÌØù,

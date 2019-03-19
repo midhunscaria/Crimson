@@ -126,5 +126,11 @@ bapp/src/main/java/com/example/crimson/crimson/Controller/Interceptor/ClientRequ
 Zapp/src/main/java/com/example/crimson/crimson/Controller/Interceptor/MarshaledRequest.java,0\4\04dd539667dd2cac6a7a46f17bdd24c9c6ccd641
 å
 \app/src/main/java/com/example/crimson/crimson/Controller/Interceptor/RequestInterceptor.java,8\d\8d33968d955b4c3c8d7ed4b15fd10d47c0c5f1d9
-å
-\app/src/main/java/com/example/crimson/crimson/Controller/Interceptor/UnmarshaledRequest.java,1\0\10780163b1a1662dcecd1f4944023f0c036d5145
+ê
+`app/src/main/java/com/example/crimson/crimson/Controller/Interceptor/ContextObjectInterface.java,a\a\aac9d8d76cff76b88fa7681141c1481952d98252
+á
+Wapp/src/main/java/com/example/crimson/crimson/Controller/Interceptor/ContextObject.java,e\d\ed9990afe1f4e41c7ac3100124223439283f96b4
+ã
+[app/src/main/java/com/example/crimson/crimson/Controller/Interceptor/InterceptorDriver.java,0\c\0c22b26c62ead381174a4576b1c19bc95659699b
+Ñ
+Tapp/src/main/java/com/example/crimson/crimson/Controller/Interceptor/Dispatcher.java,7\d\7de8944576fdfcddab039d7f1f31ac6829b451e6
