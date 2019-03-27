@@ -1,10 +1,0 @@
-
-qsquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ºè¤îüÿÿÿÿ8îÛÏú,
-"squid:ClassVariableVisibilityCheck"XMake parentHolder a static final constant or non-public and provide accessors if needed.(ÖÃÁ8îÛÏú,
-"squid:ClassVariableVisibilityCheck""YMake benefitmDbRef a static final constant or non-public and provide accessors if needed.(¼ÔÓÚ8îÛÏú,
-˜"squid:ClassVariableVisibilityCheck$"^Make userDetails_object a static final constant or non-public and provide accessors if needed.(ÛŒÊ‹şÿÿÿÿ8îÛÏú,
-ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(…‡…Ë8îÛÏú,
-‹"squid:ClassVariableVisibilityCheck "QMake mAuth a static final constant or non-public and provide accessors if needed.(ä××şÿÿÿÿ8îÛÏú,
-ysquid:S001166"ZRename this field "user_identifier" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß‘¤Ì8îÛÏú,
-Œ"squid:ClassVariableVisibilityCheck!"RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œ·º øÿÿÿÿ8îÛÏú,
-squid:S00116$"]Rename this field "userDetails_object" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛŒÊ‹şÿÿÿÿ8îÛÏú,

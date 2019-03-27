@@ -1,8 +1,0 @@
-
-usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ƒˆ¹8èØå›™-
-•squid:S1319"yThe type of the "dispatcherList" object should be an interface such as "List" rather than the implementation "ArrayList".(ƒˆ¹8èØå›™-
-"squid:ClassVariableVisibilityCheck"ZMake dispatcherList a static final constant or non-public and provide accessors if needed.(ƒˆ¹8èØå›™-
-psquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î ˆ¡ûÿÿÿÿ8èØå›™-
-|squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àášÏşÿÿÿÿ8èØå›™-
-jsquid:UselessImportCheck"<Remove this unused import 'android.support.v4.app.Fragment'.(îñ«úÿÿÿÿ8èØå›™-
-[squid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8èØå›™-

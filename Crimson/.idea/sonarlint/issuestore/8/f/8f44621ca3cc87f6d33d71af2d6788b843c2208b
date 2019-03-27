@@ -1,11 +1,0 @@
-
-tsquid:UselessImportCheck	"IRemove this unused import 'com.android.volley.toolbox.JsonObjectRequest'.(√¶øæ8Û∞¶Ñí-
-ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Î¬îù8∆ªáÑí-
-csquid:UselessImportCheck"8Remove this unused import 'com.android.volley.Response'.(àÔÉ†8Û∞¶Ñí-
-fsquid:UselessImportCheck";Remove this unused import 'com.android.volley.VolleyError'.(≠∞—î8Û∞¶Ñí-
-gsquid:UselessImportCheck"<Remove this unused import 'com.android.volley.RequestQueue'.(π˛Ã◊8Û∞¶Ñí-
-`squid:UselessImportCheck"0Remove this unused import 'org.json.JSONObject'.(ú÷¥¸˛ˇˇˇˇ8Û∞¶Ñí-
-isquid:UselessImportCheck
-">Remove this unused import 'com.android.volley.toolbox.Volley'.(¢â“∂8Û∞¶Ñí-
-?squid:S1170"!Make this final field static too.(©µ≤Í8∆ªáÑí-
-bsquid:UselessImportCheck"7Remove this unused import 'com.android.volley.Request'.(ù≈Ω‰8Û∞¶Ñí-

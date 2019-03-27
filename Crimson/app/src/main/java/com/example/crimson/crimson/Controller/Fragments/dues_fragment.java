@@ -26,6 +26,8 @@ import com.example.crimson.crimson.Controller.Dues.DueBridge;
 import com.example.crimson.crimson.Controller.Dues.DueManager;
 import com.example.crimson.crimson.Controller.Dues.DueOneTime;
 import com.example.crimson.crimson.Controller.Dues.DuePeriodic;
+import com.example.crimson.crimson.Controller.ServiceLocator.Service;
+import com.example.crimson.crimson.Controller.ServiceLocator.ServiceLocator;
 import com.example.crimson.crimson.Interceptor.FilterManager;
 import com.example.crimson.crimson.Interceptor.InputIntegrityFilter;
 import com.example.crimson.crimson.Model.DAO;
@@ -36,6 +38,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.gson.Gson;
 
 public class dues_fragment extends Fragment
 {
@@ -68,6 +71,8 @@ public class dues_fragment extends Fragment
     public static Task<Void> due_push_task;
 
     public FilterManager filterManager;
+
+    public Gson gson;
 
     public void setFilterManager(FilterManager filterManager)
     {
@@ -135,14 +140,12 @@ public class dues_fragment extends Fragment
 //                            Util.makeToast(parentHolder.getContext(), "Receiver Email is compulsory for a One Time due!").show();
 //                        } else {
 
-
-
-
                         StrategyContext sc = new StrategyContext(new OneTimeStrategy());
 
                         DAO.pushDues(sc.executeStrategy(dueSingleton), mDbRef, duesCategorySpinnerString);
 
-
+                        Service notifyDueService = ServiceLocator.getService("notifyDueService");
+                        notifyDueService.service(sc.executeStrategy(dueSingleton), mDbRef);
 
 //                            filterManager.execute(dueReceiverEmailString);
 
@@ -159,18 +162,9 @@ public class dues_fragment extends Fragment
 
                     else if (duesCategorySpinnerString.equals("Periodic")) {
 
-
-
-
-
-
-
                         StrategyContext sc = new StrategyContext(new PeriodicStrategy());
 
                         DAO.pushDues(sc.executeStrategy(dueSingleton), mDbRef, duesCategorySpinnerString);
-
-
-
 
 
 //                        if (TextUtils.isEmpty(duePeriodString)) {

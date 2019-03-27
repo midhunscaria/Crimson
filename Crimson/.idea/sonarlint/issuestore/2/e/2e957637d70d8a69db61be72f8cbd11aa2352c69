@@ -1,0 +1,10 @@
+
+Ysquid:S2696"6Make the enclosing method "static" or remove this set.(“Ä£ıÿÿÿÿ8“’Æ…›-
+Usquid:S1444
+"2Make this "public static fb_push_task" field final(¥óöÃùÿÿÿÿ8“’Æ…›-
+’"squid:ClassVariableVisibilityCheck
+"XMake fb_push_task a static final constant or non-public and provide accessors if needed.(¥óöÃùÿÿÿÿ8“’Æ…›-
+~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(É˜ŸÅıÿÿÿÿ8“’Æ…›-
+zsquid:S3008
+"WRename this field "fb_push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥óöÃùÿÿÿÿ8“’Æ…›-
+Ssquid:S2696"6Make the enclosing method "static" or remove this set.(±èÀ.8“’Æ…›-

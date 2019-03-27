@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e024da40-7218-4c3e-91db-eb3d8810964b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Crimson/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Crimson/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Crimson/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/0/0/00beee396be67e30f02de06bb8bb5e6a37e0c94d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/0/2/02b9bf25a894986e8d2d55c1f10bbe3e39193aa9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/0/4/04dd539667dd2cac6a7a46f17bdd24c9c6ccd641" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/0/5/05efc8b1657769a27696d478ded1e95f38737233" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/0/7/0712df971a99ac4d2fccb8e0fb19f377f3374cca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/0/7/07f2d684aa315d8772ae763596e268cc77cd6691" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/0/c/0c22b26c62ead381174a4576b1c19bc95659699b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/1/9/194d8885b69f84d32bf426baf5f6966c5af07ef1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/1/d/1da115626f3a4bd6399393e47e2897722170d50d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/2/0/20c17ee91b2959bfb009cb32543d5f7b28ebfee7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/2/3/2322a573d21c758e5dc03def4a3ba1d460734e49" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/2/a/2a45a911a8f1836b0b6c5b758962572012d8f8c3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/2/a/2aa774dfd4da6b91f6d4eb900e0488f1a5b250d4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/2/f/2f12f93ab156fff6ad843b581325a4ebc9437d8a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/3/1/313a055d8dd8798f505dddfa575de4f504769b4f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/3/9/3906e63642856185edfec1851c13576522ca6138" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/3/9/39e2dfb5ba81e3a147cfc3f0611f70aad8ed84ee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/3/b/3bcea93e45e09a3f0b922c340def7187139d1275" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/3/b/3bf291bc91df2ba6b8ba63f2cb1a54388d21f298" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/3/d/3da85d530072e715f811536fce07612ff64d894b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/3/e/3e5a8672b0e832a562d5a5d4b4d8f5f4d6846e12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/4/5/4526f81bf2bba0f58b61c1541e242bbf24c53dc8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/4/7/4744d12ce7a3708baeb6a83ed28a9ca300cf25a6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/4/8/48be525bb6a75a81e6567b1090ff04b04ce45031" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/4/c/4c1a4570c57a46f4644f3c2079b58684e15b149d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/5/1/51e1c5d383dfaa35e0e7e5873a0a99355a86880f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/5/4/5487724cf896a8f42eb358721886c78cf17db4bd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/5/5/5560b2d27e1d6fcdbedc7f41bb53f9bf7da34fc6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/5/8/5836e2cebf062f3ce8e6effa2a96267246712666" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/5/b/5bbfa66edb4db3c7c33c5181f43510990d3307f9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/5/c/5c180b406b6ce1140767d2471c11e1ece2a02860" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/5/c/5ceb63dcc5e54dc0d0a4d1cc678770abcb61faa4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/6/4/6424dde2e3384f9916b08fea749477b641ca941f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/6/9/694ccdd643ad7bd37c2f02a36960059f3c1fb81f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/6/e/6e972a4631120e14fdbb4773a91c042b15db5726" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/7/4/7418416a3488ee106eada0fbdcea7218277ec27e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/7/b/7b70286a8160d4019c440814ff934a4f79a1c62f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/7/c/7cadbd36560e272b09c9baf521e938202b9a16b1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/7/d/7de8944576fdfcddab039d7f1f31ac6829b451e6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/8/5/8548a5a4c5e35c7186c1c60871aa92d87a1241a5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/8/6/8676fc882e90c88a436a66fd7c8d78aa170ac5f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/8/d/8d33968d955b4c3c8d7ed4b15fd10d47c0c5f1d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/8/f/8f44621ca3cc87f6d33d71af2d6788b843c2208b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/9/b/9ba198cafbdfc85601d70f2b9e7ca621497b3036" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/9/d/9d4646e0203730a791da399948ea57ddf4042051" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/9/e/9e08934d811afe28fbc77aaa3c0d747b94348db9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/9/e/9ea52914f223ef39d92b97704626e75e77f51ef1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/9/f/9f57b3d56348b59ee5e5adb329372fb4da668c5d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/a/a/aac9d8d76cff76b88fa7681141c1481952d98252" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/a/f/af464b3299aa2348e956552b5e0da0720a834736" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/c/3/c3e0cbaa495d03e282dec3536df7f5811033917b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/c/5/c51ab3037198055f6e874b5f20631949caec6634" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/c/c/ccbf0b51ec5c013fda82471398ae545b3c60426a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/d/d/dd77c17efd81c7dd0d8fdba1cdacfafff6f545b7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/e/6/e61554f3ac7f395d4a03ebfae44deac008a7b345" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/e/d/ed9990afe1f4e41c7ac3100124223439283f96b4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/f/0/f06c5e4504f7244774ba446c8e1700ee42621600" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/f/5/f5a7af9b17709d2e7d924e770585bef4673cd797" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/f/c/fc14c8330bd629df0644adc1b5800a806d0b8dfd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/f/d/fd8d34b142d02ec743a8efefefd2c097961666e9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/f/e/fe340b9d0e959114cb1fb3caffcc1c0283a957b4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crimson/.idea/vcs.xml" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-12" />
+    <option name="width" value="1401" />
+    <option name="height" value="981" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Crimson" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e024da40-7218-4c3e-91db-eb3d8810964b" name="Default" comment="" />
+      <created>1553437103430</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553437103430</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="0" width="934" height="654" extended-state="0" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info id="Image Layers" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info active="true" anchor="bottom" id="Event Log" side_tool="true" visible="true" weight="0.35496184" />
+      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="right" id="Flutter Outline" />
+      <window_info id="Capture Tool" />
+      <window_info id="Designer" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35240275" />
+      <window_info anchor="bottom" id="SonarLint" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="right" id="Flutter Inspector" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Captures" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

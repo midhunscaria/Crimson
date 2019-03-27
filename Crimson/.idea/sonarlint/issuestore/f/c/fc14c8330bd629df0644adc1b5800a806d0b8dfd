@@ -1,15 +1,0 @@
-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(“¨Ç¶8ÿ™â›™-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¼í«´8ÿ™â›™-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ø¶‚‚üÿÿÿÿ8ÿ™â›™-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¯ ªé8ÿ™â›™-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8ÿ™â›™-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ø®ÿÚúÿÿÿÿ8ÿ™â›™-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¥é“Ñÿÿÿÿÿ8ÿ™â›™-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÅÏøž8ÿ™â›™-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‡ƒ³Ûþÿÿÿÿ8ÿ™â›™-
-‡"squid:ClassVariableVisibilityCheck"OMake url a static final constant or non-public and provide accessors if needed.(˜§¤êÿÿÿÿÿ8ÿ™â›™-
-¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ªº¨Ëþÿÿÿÿ8ÿ™â›™-
-|squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àášÏþÿÿÿÿ8ÿ™â›™-
-zsquid:UselessImportCheck"LRemove this unused import 'com.example.crimson.crimson.Interfaces.Observer'.(¸‹Ö™ûÿÿÿÿ8ÿ™â›™-
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÿ™â›™-
