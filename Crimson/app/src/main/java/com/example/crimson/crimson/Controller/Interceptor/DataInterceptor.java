@@ -25,7 +25,7 @@ public class DataInterceptor implements ClientRequestInterceptor
 
     public DataInterceptor()
     {
-        Dispatcher.getInstance().register(this);
+//        Dispatcher.getInstance().register(this);
     }
 
 //    @Override
@@ -68,6 +68,8 @@ public class DataInterceptor implements ClientRequestInterceptor
 
         Request request = new Request.Builder().url(context.getHost()+":"+context.getPort()).build();
 
+        Log.i("Request Made To: ", context.getHost());
+
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Request request, IOException e) {
@@ -88,8 +90,9 @@ public class DataInterceptor implements ClientRequestInterceptor
     }
 
     @Override
-    public void onPostMarshaledRequest(final MarshaledRequest context) {
-        context.endTimer();
-        Log.i("Latency in seconds: ", context.calculateLatency());
+    public void onPostMarshaledRequest(final ContextObjectInterface context) {
+//        context.endTimer();
+        Log.i("Post Port Changed To: ", Integer.toString(context.getLoadBalancedPort()));
+//        Log.i("Latency in seconds: ", context.calculateLatency());
     }
 }

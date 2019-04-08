@@ -7,8 +7,8 @@ import com.google.firebase.database.DatabaseReference;
 
 public class notifyDueService implements Service {
     @Override
-    public void service(Object input, DatabaseReference mDbRef) {
-        Log.i("Sending Email: ", "Notifying "+((Dues)input).getEmail_id()+" that a new due was added!");
+    public void service(Object input, DatabaseReference mDbRef, String branchName) {
+        Log.i("Sending Email: ", "Notifying "+((Dues)input).getEmail_id()+" that a new "+branchName+" due was added!");
     }
 
     @Override

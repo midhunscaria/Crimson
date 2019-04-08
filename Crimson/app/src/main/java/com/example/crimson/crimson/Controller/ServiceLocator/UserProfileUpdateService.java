@@ -16,16 +16,16 @@ public class UserProfileUpdateService implements Service {
     public static Task<Void> fb_push_task;
 
     @Override
-    public void service(Object input, DatabaseReference databaseReference) {
-        Handler handler = new Handler();
-
-        fb_push_task = databaseReference.child("User_Details").push().setValue(input);
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                goals_fragment.push_task = fb_push_task.isSuccessful();
-            }
-        },1000);
+    public void service(Object input, DatabaseReference databaseReference, String branchName) {
+//        Handler handler = new Handler();
+//
+//        fb_push_task = databaseReference.child("User_Details").push().setValue(input);
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                goals_fragment.push_task = fb_push_task.isSuccessful();
+//            }
+//        },1000);
 
     }
 

@@ -10,8 +10,11 @@ public class InitialContext {
         else if (serviceName.equalsIgnoreCase("UserProfileUpdateService")){
             return new UserProfileUpdateService();
         }
-        if(serviceName.equals("notifyDueService")){
+        else if(serviceName.equals("notifyDueService")){
             return new notifyDueService();
+        }
+        else if(serviceName.equals("DBUpdateService")){
+            return new DBUpdateService();
         }
         return null;
     }

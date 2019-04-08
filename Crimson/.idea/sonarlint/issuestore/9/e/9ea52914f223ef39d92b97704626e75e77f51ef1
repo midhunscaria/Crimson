@@ -1,22 +1,23 @@
 
-zsquid:S3008 "WRename this field "fb_push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥óöÃùÿÿÿÿ8Ç«Ş…›-
-Jsquid:S1444",Make this "public static mDbRef" field final(Œö”ó8Ç«Ş…›-
-Rsquid:S1444"4Make this "public static userProfileRef" field final(Öğ¦›8Ç«Ş…›-
-Usquid:S1444 "2Make this "public static fb_push_task" field final(¥óöÃùÿÿÿÿ8Ç«Ş…›-
-Psquid:S1444#"-Make this "public static service" field final(æºì‘şÿÿÿÿ8Ç«Ş…›-
-‡"squid:ClassVariableVisibilityCheck"RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œö”ó8Ç«Ş…›-
-"squid:ClassVariableVisibilityCheck"ZMake userProfileRef a static final constant or non-public and provide accessors if needed.(Öğ¦›8Ç«Ş…›-
-’"squid:ClassVariableVisibilityCheck "XMake fb_push_task a static final constant or non-public and provide accessors if needed.(¥óöÃùÿÿÿÿ8Ç«Ş…›-
-‡"squid:ClassVariableVisibilityCheck""RMake push_t a static final constant or non-public and provide accessors if needed.(ÖØÔÆ8Ç«Ş…›-
-"squid:ClassVariableVisibilityCheck#"SMake service a static final constant or non-public and provide accessors if needed.(æºì‘şÿÿÿÿ8Ç«Ş…›-
 psquid:S00116""QRename this field "push_t" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖØÔÆ8Ç«Ş…›-
 ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(û«óê8Ç«Ş…›-
-‡squid:UselessImportCheck	"\Remove this unused import 'com.example.crimson.crimson.Controller.Fragments.goals_fragment'.(“ƒì8Ç«Ş…›-
-qsquid:UselessImportCheck"FRemove this unused import 'com.google.firebase.database.DataSnapshot'.(şÇŒ„8Ç«Ş…›-
 isquid:UselessImportCheck"?Remove this unused import 'android.support.annotation.NonNull'.(¼Åß8Ç«Ş…›-
-–squid:UselessImportCheck"kRemove this unused import 'com.example.crimson.crimson.Controller.ServiceLocator.UserProfileUpdateService'.(—Ä¥Ö8Ç«Ş…›-
+–squid:UselessImportCheck"kRemove this unused import 'com.example.crimson.crimson.Controller.ServiceLocator.UserProfileUpdateService'.(—Ä¥Ö8®Ö¢îŸ-
+’"squid:ClassVariableVisibilityCheck "XMake fb_push_task a static final constant or non-public and provide accessors if needed.(¥óöÃùÿÿÿÿ8Ç«Ş…›-
+"squid:ClassVariableVisibilityCheck#"SMake service a static final constant or non-public and provide accessors if needed.(æºì‘şÿÿÿÿ8Ç«Ş…›-
 |squid:UselessImportCheck"LRemove this unused import 'com.google.firebase.database.ValueEventListener'.(‹ŞÜ‹ıÿÿÿÿ8Ç«Ş…›-
 squid:UselessImportCheck
 "WRemove this unused import 'com.example.crimson.crimson.Controller.BuilderClasses.Dues'.(¿Œâ{8Ç«Ş…›-
-psquid:UselessImportCheck"ERemove this unused import 'com.example.crimson.crimson.Utility.Util'.(ŸÄ©8Ç«Ş…›-
 wsquid:UselessImportCheck"GRemove this unused import 'com.google.firebase.database.DatabaseError'.(ˆÔµıÿÿÿÿ8Ç«Ş…›-
+‡"squid:ClassVariableVisibilityCheck"RMake mDbRef a static final constant or non-public and provide accessors if needed.(Œö”ó8Ç«Ş…›-
+"squid:ClassVariableVisibilityCheck"ZMake userProfileRef a static final constant or non-public and provide accessors if needed.(Öğ¦›8Ç«Ş…›-
+‡"squid:ClassVariableVisibilityCheck""RMake push_t a static final constant or non-public and provide accessors if needed.(ÖØÔÆ8Ç«Ş…›-
+qsquid:UselessImportCheck"FRemove this unused import 'com.google.firebase.database.DataSnapshot'.(şÇŒ„8Ç«Ş…›-
+zsquid:S3008 "WRename this field "fb_push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥óöÃùÿÿÿÿ8Ç«Ş…›-
+Usquid:S1444 "2Make this "public static fb_push_task" field final(¥óöÃùÿÿÿÿ8Ç«Ş…›-
+psquid:UselessImportCheck"ERemove this unused import 'com.example.crimson.crimson.Utility.Util'.(ŸÄ©8Ç«Ş…›-
+Jsquid:S1444",Make this "public static mDbRef" field final(Œö”ó8Ç«Ş…›-
+Gsquid:S3010'"$Remove this assignment of "service".(áèÙúÿÿÿÿ8éğØÈ-
+Rsquid:S1444"4Make this "public static userProfileRef" field final(Öğ¦›8Ç«Ş…›-
+‡squid:UselessImportCheck	"\Remove this unused import 'com.example.crimson.crimson.Controller.Fragments.goals_fragment'.(“ƒì8Ç«Ş…›-
+Psquid:S1444#"-Make this "public static service" field final(æºì‘şÿÿÿÿ8Ç«Ş…›-

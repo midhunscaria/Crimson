@@ -16,6 +16,7 @@ import android.widget.Button;
 import com.example.crimson.crimson.Controller.Interceptor.ContextObject;
 import com.example.crimson.crimson.Controller.Interceptor.ContextObjectInterface;
 import com.example.crimson.crimson.Controller.Interceptor.DataInterceptor;
+import com.example.crimson.crimson.Controller.Interceptor.Dispatcher;
 import com.example.crimson.crimson.Controller.Interceptor.InterceptorDriver;
 import com.example.crimson.crimson.Controller.Interceptor.MarshaledRequest;
 import com.example.crimson.crimson.Controller.Interceptor.Timer;
@@ -90,38 +91,24 @@ public class expense_fragment extends Fragment implements Subject {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         parentHolder = inflater.inflate(R.layout.fragment_expense_fragment, container, false);
 
-        this.expenseContextObject = new ContextObject();
-
-        //Initial Context Object Configuration
-        this.expenseContextObject.setHost("http://10.52.242.169");
-        this.expenseContextObject.setMethod("GET");
-        this.expenseContextObject.setPort(8080);
-
-        timer = new Timer();
-
-        /**
-         * Observer Pattern
-         *
-         * Observer is registered with the Subject here.
-         */
+        //Registering Pie Chart Update function as an observer
 
         PieChartUpdate pieChartObserver = new PieChartUpdate(this, user_identifier);
         this.register(pieChartObserver);
 
-        InterceptorDriver interceptor = new InterceptorDriver(this.expenseContextObject, this.timer);
+        //Creating the Concrete Framework
+
+        InterceptorDriver interceptor = new InterceptorDriver();
         this.register(interceptor);
 
-        DataInterceptor dataInterceptor = new DataInterceptor();
+        //Concrete Framework is an observer of expense_fragment. An event triggers the concrete framework.
 
         amount = (EditText)parentHolder.findViewById(R.id.expense_amount);
         category_spinner = (Spinner)parentHolder.findViewById(R.id.expense_category_spinner);
         expense_place = (EditText)parentHolder.findViewById(R.id.expense_place);
         add_expense_button = (Button)parentHolder.findViewById(R.id.add_expense_button);
-
-        //This line ensures that the chart varialbe is linked to the chart in the view.
         chart = (PieChart)parentHolder.findViewById(R.id.expense_chart);
 
         drawPieChart(user_identifier);

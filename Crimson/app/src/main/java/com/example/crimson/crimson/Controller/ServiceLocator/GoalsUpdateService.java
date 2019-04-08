@@ -10,17 +10,17 @@ public class GoalsUpdateService implements Service {
     public static Task<Void> fb_push_task;
 
     @Override
-    public void service(Object input, DatabaseReference databaseReference) {
+    public void service(Object input, DatabaseReference databaseReference, String branchName) {
 
-        Handler handler = new Handler();
-
-        fb_push_task = databaseReference.child("Goals").push().setValue(input);
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                goals_fragment.push_task = fb_push_task.isSuccessful();
-            }
-        },1000);
+//        Handler handler = new Handler();
+//
+//        fb_push_task = databaseReference.child("Goals").push().setValue(input);
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                goals_fragment.push_task = fb_push_task.isSuccessful();
+//            }
+//        },1000);
 
     }
 

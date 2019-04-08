@@ -34,11 +34,13 @@ public class DAO {
     public Task<Void> push_t;
     public static Service service;
 
+    public DAO()
+    {
+        service = ServiceLocator.getService("DBUpdateService");
+    }
 
     public static void pushGoals(Goals goals, DatabaseReference databaseReference) {
-
-        service = ServiceLocator.getService("GoalsUpdateService");
-        service.service(goals, databaseReference);
+        service.service(goals, databaseReference, "Goals");
 
     }
 
@@ -68,9 +70,7 @@ public class DAO {
     }
 
     public static void pushUserProfile(UserDetails userDetails, DatabaseReference databaseReference) {
-
-        service = ServiceLocator.getService("UserProfileUpdateService");
-        service.service(userDetails, databaseReference);
+        service.service(userDetails, databaseReference, "User_Details");
 
     }
 

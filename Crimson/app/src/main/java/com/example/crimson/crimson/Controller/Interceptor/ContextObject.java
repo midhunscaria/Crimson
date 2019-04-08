@@ -5,7 +5,7 @@ import android.util.Log;
 public class ContextObject implements ContextObjectInterface
 {
 
-    public String url_wo_port = "http://10.52.242.169";
+    public String url_wo_port = "http://10.102.24.215";
     public int defaultPort = 8080;
 
     public String method = "GET";
@@ -34,9 +34,19 @@ public class ContextObject implements ContextObjectInterface
 
         if(port != this.defaultPort) {
             Log.i("LB: Port Changed From: ", "" + sendRequestToPort);
-            load_balanced_port = port;
+            setLoadBalancedPort(port);
             Log.i("LB: Port Changed To: ", "" + load_balanced_port);
         }
+    }
+
+    @Override
+    public int getLoadBalancedPort() {
+        return this.load_balanced_port;
+    }
+
+    @Override
+    public void setLoadBalancedPort(int port) {
+        this.load_balanced_port = port;
     }
 
     @Override

@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 
 import java.util.ArrayList;
+import android.os.Handler;
+import java.util.logging.LogRecord;
 
 public class Dispatcher
 {
@@ -36,12 +38,19 @@ public class Dispatcher
             dispatcherList.remove(interceptor);
     }
 
-    public void iterate_list(ContextObjectInterface contextObject, MarshaledRequest marshaledRequest)
+    public void iterate_list(final ContextObjectInterface contextObject, MarshaledRequest marshaledRequest)
     {
-        for(ClientRequestInterceptor interceptor : dispatcherList)
+        for(final ClientRequestInterceptor interceptor : dispatcherList)
         {
             interceptor.onPreMarshaledRequest(contextObject);
-            interceptor.onPostMarshaledRequest(marshaledRequest);
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    interceptor.onPostMarshaledRequest(contextObject);
+                }
+            }, 3000);
+
         }
     }
 }
