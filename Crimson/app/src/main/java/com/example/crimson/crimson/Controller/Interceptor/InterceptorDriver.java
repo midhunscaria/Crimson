@@ -1,9 +1,7 @@
 package com.example.crimson.crimson.Controller.Interceptor;
 
-import android.util.Log;
 
 import com.example.crimson.crimson.Interfaces.Observer;
-
 import java.io.IOException;
 
 public class InterceptorDriver implements Observer {
@@ -12,7 +10,6 @@ public class InterceptorDriver implements Observer {
 
     public Dispatcher dispatcher;
     public ContextObjectInterface expenseContextObject;
-    public MarshaledRequest timer;
 
     public InterceptorDriver()
     {
@@ -27,8 +24,6 @@ public class InterceptorDriver implements Observer {
         this.expenseContextObject.setMethod("GET");
         this.expenseContextObject.setPort(8080);
 
-        this.timer = new Timer();
-
         //Create Application
         InterceptorApplication application = new InterceptorApplication();
         application.attachInterceptor(new DataInterceptor());
@@ -39,7 +34,6 @@ public class InterceptorDriver implements Observer {
     public void update() throws IOException {
 
         //Event based. Triggers Interceptors
-        timer.startTimer();
-        dispatcher.iterate_list(this.expenseContextObject, this.timer);
+        dispatcher.iterate_list(this.expenseContextObject);
     }
 }

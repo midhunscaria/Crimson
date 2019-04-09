@@ -1,0 +1,8 @@
+
+Š"squid:ClassVariableVisibilityCheck"^Make singleReceiverName a static final constant or non-public and provide accessors if needed.(â…
+„"squid:ClassVariableVisibilityCheck"XMake singleAmount a static final constant or non-public and provide accessors if needed.(×¯ê„
+„"squid:ClassVariableVisibilityCheck"XMake singlePeriod a static final constant or non-public and provide accessors if needed.(í·Ğâ
+†"squid:ClassVariableVisibilityCheck"ZMake singleCategory a static final constant or non-public and provide accessors if needed.(×–ÊÂ
+ƒ"squid:ClassVariableVisibilityCheck"WMake singleEmail a static final constant or non-public and provide accessors if needed.(êÜî
+‰"squid:ClassVariableVisibilityCheck"XMake singleUserID a static final constant or non-public and provide accessors if needed.(…®ÌÌÿÿÿÿÿ
+psquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(«â¯

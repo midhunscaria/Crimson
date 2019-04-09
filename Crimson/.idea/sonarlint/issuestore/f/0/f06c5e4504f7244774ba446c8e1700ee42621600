@@ -1,0 +1,3 @@
+
+"squid:ClassVariableVisibilityCheck"_Make dueRecieverEmailStr a static final constant or non-public and provide accessors if needed.(ãåÔÓúÿÿÿÿ
+psquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥ÕÑ»

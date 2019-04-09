@@ -3,8 +3,6 @@ package com.example.crimson.crimson.Controller.Fragments;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,33 +10,21 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Button;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 import com.example.crimson.crimson.Controller.BuilderClasses.DueSingleton;
-import com.example.crimson.crimson.Controller.BuilderClasses.ObjectFactory;
+import com.example.crimson.crimson.Controller.BuilderClasses.Dues;
 import com.example.crimson.crimson.Controller.BuilderClasses.OneTimeStrategy;
 import com.example.crimson.crimson.Controller.BuilderClasses.PeriodicStrategy;
 import com.example.crimson.crimson.Controller.BuilderClasses.Sample;
 import com.example.crimson.crimson.Controller.BuilderClasses.StrategyContext;
-import com.example.crimson.crimson.Controller.Dues.DueBridge;
-import com.example.crimson.crimson.Controller.Dues.DueManager;
-import com.example.crimson.crimson.Controller.Dues.DueOneTime;
-import com.example.crimson.crimson.Controller.Dues.DuePeriodic;
 import com.example.crimson.crimson.Controller.ServiceLocator.Service;
 import com.example.crimson.crimson.Controller.ServiceLocator.ServiceLocator;
-import com.example.crimson.crimson.Interceptor.FilterManager;
-import com.example.crimson.crimson.Interceptor.InputIntegrityFilter;
 import com.example.crimson.crimson.Model.DAO;
-import com.example.crimson.crimson.Controller.BuilderClasses.Dues;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.gson.Gson;
 
 public class dues_fragment extends Fragment
 {
@@ -50,10 +36,9 @@ public class dues_fragment extends Fragment
     public EditText duesReceiverEmail;
     public Button dueSubmitButton;
 
-    public FirebaseAuth mAuth;
     public DatabaseReference mDbRef;
 
-    public String user_identifier =  FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
+    public String user_identifier =  FirebaseAuth.getInstance().getCurrentUser().getUid();
     public Boolean task_successful;
 
     public String duesCategorySpinnerString;
@@ -62,22 +47,10 @@ public class dues_fragment extends Fragment
     public String duePeriodString;
     public String dueReceiverEmailString;
 
-    public Task<Void> db_push_task;
     public Sample due;
-    public DueBridge generated_due_csv;
-    public List<String> due_information_from_csv = new ArrayList<>();
     public Handler handler;
     public static boolean due_push_task_flag=false;
     public static Task<Void> due_push_task;
-
-    public FilterManager filterManager;
-
-    public Gson gson;
-
-    public void setFilterManager(FilterManager filterManager)
-    {
-        this.filterManager = filterManager;
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -98,10 +71,6 @@ public class dues_fragment extends Fragment
         duesReceiverEmail = (EditText)parentHolder.findViewById(R.id.duesReceiverEmailID);
         dueSubmitButton = (Button)parentHolder.findViewById(R.id.createDueButton);
 
-        filterManager = new FilterManager();
-        filterManager.addFilter(new InputIntegrityFilter("Username Integrity Check"));
-        this.setFilterManager(filterManager);
-
         dueSubmitButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -121,18 +90,10 @@ public class dues_fragment extends Fragment
 
                     if (duesCategorySpinnerString.equals("One Time")) {
 
-                        /**
-                         * Bridge Pattern
-                         *
-                         * Used in this project in order to generate the different types of due objects
-                         * as per due category.
-                         *
-                         *The DueManager takes the required parameters as per due category and constructs
-                         * the required result string. The result string is generated using the generateResultString() method.
-//                         */
                         StrategyContext sc = new StrategyContext(new OneTimeStrategy());
 
                         DAO.pushDues(sc.executeStrategy(dueSingleton), mDbRef, duesCategorySpinnerString);
+
 
                     }
 

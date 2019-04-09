@@ -33,9 +33,11 @@ public class ContextObject implements ContextObjectInterface
     public void setPort(int port) {
 
         if(port != this.defaultPort) {
-            Log.i("LB: Port Changed From: ", "" + sendRequestToPort);
             setLoadBalancedPort(port);
-            Log.i("LB: Port Changed To: ", "" + load_balanced_port);
+        }
+        else
+        {
+            setLoadBalancedPort(this.defaultPort);
         }
     }
 

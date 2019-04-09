@@ -1,17 +1,12 @@
 package com.example.crimson.crimson.Utility;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.github.mikephil.charting.data.PieEntry;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Util {
 

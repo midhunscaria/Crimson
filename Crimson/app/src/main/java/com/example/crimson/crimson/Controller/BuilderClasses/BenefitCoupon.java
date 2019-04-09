@@ -14,8 +14,6 @@ public class BenefitCoupon
 
     public static class Builder
     {
-
-
         private String coupon;
         private String user_identifier;
 

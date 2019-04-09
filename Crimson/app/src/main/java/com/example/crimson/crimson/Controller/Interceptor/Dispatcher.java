@@ -1,11 +1,7 @@
 package com.example.crimson.crimson.Controller.Interceptor;
 
-import android.support.v4.app.Fragment;
-import android.util.Log;
-
 import java.util.ArrayList;
 import android.os.Handler;
-import java.util.logging.LogRecord;
 
 public class Dispatcher
 {
@@ -38,7 +34,7 @@ public class Dispatcher
             dispatcherList.remove(interceptor);
     }
 
-    public void iterate_list(final ContextObjectInterface contextObject, MarshaledRequest marshaledRequest)
+    public void iterate_list(final ContextObjectInterface contextObject)
     {
         for(final ClientRequestInterceptor interceptor : dispatcherList)
         {

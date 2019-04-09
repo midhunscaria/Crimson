@@ -1,47 +1,28 @@
 package com.example.crimson.crimson.Model;
 
 import android.os.Handler;
-import android.support.annotation.NonNull;
 
 import com.example.crimson.crimson.Controller.BuilderClasses.Sample;
 import com.example.crimson.crimson.Controller.Fragments.dues_fragment;
 import com.example.crimson.crimson.Controller.Fragments.expense_fragment;
-import com.example.crimson.crimson.Controller.Fragments.goals_fragment;
-import com.example.crimson.crimson.Controller.BuilderClasses.Dues;
 import com.example.crimson.crimson.Controller.BuilderClasses.Expense;
 import com.example.crimson.crimson.Controller.BuilderClasses.Goals;
 import com.example.crimson.crimson.Controller.BuilderClasses.UserDetails;
 
 import com.example.crimson.crimson.Controller.ServiceLocator.Service;
 import com.example.crimson.crimson.Controller.ServiceLocator.ServiceLocator;
-import com.example.crimson.crimson.Controller.ServiceLocator.UserProfileUpdateService;
-import com.example.crimson.crimson.Utility.Util;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 
 public class DAO {
 
-    public static DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
-    public static DatabaseReference userProfileRef = mDbRef.child("User_Details");
+    public static Service service = ServiceLocator.getService("DBUpdateService");
 
-    public static Task<Void> fb_push_task;
-
-    public Task<Void> push_t;
-    public static Service service;
-
-    public DAO()
-    {
-        service = ServiceLocator.getService("DBUpdateService");
-    }
 
     public static void pushGoals(Goals goals, DatabaseReference databaseReference) {
         service.service(goals, databaseReference, "Goals");
-
     }
 
     public static void pushExpenses(Expense expense, DatabaseReference databaseReference) {

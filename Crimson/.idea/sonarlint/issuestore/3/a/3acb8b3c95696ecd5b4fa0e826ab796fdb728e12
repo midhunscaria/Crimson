@@ -1,12 +1,0 @@
-
-hsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(—³8ÿûÛÈ-
-’"squid:ClassVariableVisibilityCheck"XMake fb_push_task a static final constant or non-public and provide accessors if needed.(¥óöÃùÿÿÿÿ8Ú¶Î…›-
-]squid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8ûßÌ…›-
-_squid:UselessImportCheck"4Remove this unused import 'android.content.Context'.(©Ê‰è8ûßÌ…›-
-_squid:UselessImportCheck"5Remove this unused import 'java.io.FileOutputStream'.(˜«ªg8ûßÌ…›-
-Usquid:S1444"2Make this "public static fb_push_task" field final(¥óöÃùÿÿÿÿ8Ú¶Î…›-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(áíüÈùÿÿÿÿ8ÿûÛÈ-
-zsquid:S3008"WRename this field "fb_push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥óöÃùÿÿÿÿ8Ú¶Î…›-
-~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(É˜ŸÅýÿÿÿÿ8ûßÌ…›-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(â¼„ˆþÿÿÿÿ8ÿûÛÈ-
-gsquid:UselessImportCheck"7Remove this unused import 'java.io.ObjectOutputStream'.(é»Óºûÿÿÿÿ8ûßÌ…›-

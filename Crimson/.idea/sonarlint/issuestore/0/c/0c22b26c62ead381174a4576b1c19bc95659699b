@@ -1,5 +1,4 @@
 
-Š"squid:ClassVariableVisibilityCheck"YMake contextObject a static final constant or non-public and provide accessors if needed.(–±Ðçúÿÿÿÿ
-}"squid:ClassVariableVisibilityCheck"QMake timer a static final constant or non-public and provide accessors if needed.(ÑË—¦
-usquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àášÏþÿÿÿÿ
-Tsquid:UselessImportCheck"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ
+|squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àášÏþÿÿÿÿ8òÈµŒ -
+˜"squid:ClassVariableVisibilityCheck"`Make expenseContextObject a static final constant or non-public and provide accessors if needed.(Ó£²Öúÿÿÿÿ8òÈµŒ -
+Ž"squid:ClassVariableVisibilityCheck"VMake dispatcher a static final constant or non-public and provide accessors if needed.(×ÄÆ‹ùÿÿÿÿ8òÈµŒ -

@@ -10,8 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.os.Handler;
 
-import com.example.crimson.crimson.Controller.BuilderClasses.ObjectFactory;
-import com.example.crimson.crimson.Controller.BuilderClasses.Sample;
 import com.example.crimson.crimson.Model.DAO;
 import com.example.crimson.crimson.Controller.BuilderClasses.Goals;
 import com.example.crimson.crimson.R;
@@ -30,7 +28,6 @@ public class goals_fragment extends Fragment {
     public Button creategoal;
     boolean task_successful;
     public Goals goal;
-    public FirebaseAuth mAuth;
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
     public String user_identifier = FirebaseAuth.getInstance().getUid();
     public String goalTargetString;
@@ -64,6 +61,7 @@ public class goals_fragment extends Fragment {
                     Util.makeToast(parentHolder.getContext(), "Enter All Details Correctly!").show();
                 } else {
                     goal = new Goals.Builder().setTarget(goalTargetString).setAmount(goalAmountString).setPeriod(goalPeriodString).setUserIdentifier(user_identifier).create();
+
 
                     DAO.pushGoals(goal,mDbRef);
 

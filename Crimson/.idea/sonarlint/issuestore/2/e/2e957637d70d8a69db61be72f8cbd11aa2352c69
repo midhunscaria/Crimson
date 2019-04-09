@@ -1,11 +1,0 @@
-
-~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(É˜ŸÅýÿÿÿÿ8“’Æ…›-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(â¼„ˆþÿÿÿÿ8éÒÛÈ-
-’"squid:ClassVariableVisibilityCheck
-"XMake fb_push_task a static final constant or non-public and provide accessors if needed.(¥óöÃùÿÿÿÿ8“’Æ…›-
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(áíüÈùÿÿÿÿ8éÒÛÈ-
-isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(…¢§8éÒÛÈ-
-zsquid:S3008
-"WRename this field "fb_push_task" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥óöÃùÿÿÿÿ8“’Æ…›-
-Usquid:S1444
-"2Make this "public static fb_push_task" field final(¥óöÃùÿÿÿÿ8“’Æ…›-

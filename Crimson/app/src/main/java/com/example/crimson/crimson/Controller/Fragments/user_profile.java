@@ -29,7 +29,6 @@ public class user_profile extends Fragment {
 
     public View parentHolder;
 
-    public FirebaseAuth mAuth;
     public DatabaseReference mDbRef = FirebaseDatabase.getInstance().getReference();
     public DatabaseReference benefitmDbRef = mDbRef.child("User_Details");
 

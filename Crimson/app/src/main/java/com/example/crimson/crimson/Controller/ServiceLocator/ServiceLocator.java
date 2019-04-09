@@ -17,8 +17,8 @@ public class ServiceLocator {
         }
 
         InitialContext context = new InitialContext();
-        Service service1 = (Service)context.lookup(serviceName);
-        cache.addService(service1);
-        return service1;
+        Service service_obj = (Service)context.lookup(serviceName);
+        cache.addService(service_obj);
+        return service_obj;
     }
 }

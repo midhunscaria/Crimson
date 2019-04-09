@@ -6,7 +6,7 @@ public abstract class Sample {
     public abstract String getPeriod();
     public abstract String getUserId();
     public abstract String getEmail_id();
-    //public Object obj;
+
     public void creator(){
         this.getName();
         this.getAmount();
