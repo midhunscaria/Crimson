@@ -86,7 +86,7 @@ public class expense_fragment extends Fragment implements Subject {
 
         //Registering Pie Chart Update function as an observer
 
-        PieChartUpdate pieChartObserver = new PieChartUpdate(this, user_identifier);
+        final PieChartUpdate pieChartObserver = new PieChartUpdate(this, user_identifier);
         this.register(pieChartObserver);
 
         //Creating the Concrete Framework

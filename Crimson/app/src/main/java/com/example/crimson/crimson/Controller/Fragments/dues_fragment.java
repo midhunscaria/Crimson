@@ -11,14 +11,12 @@ import android.widget.Spinner;
 import android.widget.Button;
 
 import com.example.crimson.crimson.Controller.BuilderClasses.DueSingleton;
-import com.example.crimson.crimson.Controller.BuilderClasses.Dues;
 import com.example.crimson.crimson.Controller.BuilderClasses.OneTimeStrategy;
 import com.example.crimson.crimson.Controller.BuilderClasses.PeriodicStrategy;
 import com.example.crimson.crimson.Controller.BuilderClasses.Sample;
 import com.example.crimson.crimson.Controller.BuilderClasses.StrategyContext;
-import com.example.crimson.crimson.Controller.ServiceLocator.Service;
-import com.example.crimson.crimson.Controller.ServiceLocator.ServiceLocator;
 import com.example.crimson.crimson.Model.DAO;
+import com.example.crimson.crimson.PluggableAdapter.PluggableAdapter;
 import com.example.crimson.crimson.R;
 import com.example.crimson.crimson.Utility.Util;
 import com.google.android.gms.tasks.Task;

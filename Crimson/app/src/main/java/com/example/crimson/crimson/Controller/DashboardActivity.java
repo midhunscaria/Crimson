@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.DialogInterface;
 
+import com.example.crimson.crimson.Controller.Fragments.Report;
 import com.example.crimson.crimson.Controller.Fragments.benefit_fragment;
 import com.example.crimson.crimson.Controller.Fragments.dash_fragment;
 import com.example.crimson.crimson.Controller.Fragments.dues_fragment;
@@ -124,6 +125,10 @@ public class DashboardActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_benefits) {
             fragment = new benefit_fragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
+        }
+        else if (id == R.id.nav_report) {
+            fragment = new Report();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentPanel, fragment).commit();
         }
         else if (id == R.id.nav_userProfile) {

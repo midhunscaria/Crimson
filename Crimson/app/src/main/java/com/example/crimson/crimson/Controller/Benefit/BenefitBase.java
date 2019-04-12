@@ -1,5 +1,7 @@
 package com.example.crimson.crimson.Controller.Benefit;
 
+import com.example.crimson.crimson.Controller.Interceptor.ClientRequestInterceptor;
+import com.example.crimson.crimson.Controller.Interceptor.ContextObject;
 import com.example.crimson.crimson.Interfaces.generateCouponAPI;
 
 public class BenefitBase implements generateCouponAPI {
