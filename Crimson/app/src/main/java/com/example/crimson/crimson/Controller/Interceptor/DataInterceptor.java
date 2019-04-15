@@ -45,6 +45,7 @@ public class DataInterceptor implements ClientRequestInterceptor
 
     @Override
     public void onPostMarshaledRequest(final ContextObjectInterface context) {
+        Log.i("Intitial Port Number: ", Integer.toString(context.getPort()));
         Log.i("Port Changed To: ", Integer.toString(context.getLoadBalancedPort()));
     }
 }

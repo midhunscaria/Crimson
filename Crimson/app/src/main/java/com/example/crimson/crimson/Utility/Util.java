@@ -22,5 +22,10 @@ public class Util {
         return Toast.makeText(context, ""+message, Toast.LENGTH_LONG);
     }
 
+    public static String getIp()
+    {
+        return "http://10.52.53.9";
+    }
+
 
 }

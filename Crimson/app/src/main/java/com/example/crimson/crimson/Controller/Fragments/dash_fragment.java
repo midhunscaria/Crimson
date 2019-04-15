@@ -201,7 +201,7 @@ public class dash_fragment extends Fragment{
 
                 for(DataSnapshot ds : dataSnapshot.getChildren())
                 {
-                    user_id_fb = ds.child("user_identifier").getValue(String.class);
+                    user_id_fb = ds.child("userId").getValue(String.class);
                     duesAmt = ds.child("amount").getValue(String.class);
                     duesEmail = ds.child("email_id").getValue(String.class);
 
@@ -221,6 +221,7 @@ public class dash_fragment extends Fragment{
                         }
                     }
                 }
+
 
             }
 
@@ -250,7 +251,7 @@ public class dash_fragment extends Fragment{
 
                 for(DataSnapshot ds : dataSnapshot.getChildren())
                 {
-                    user_id_fb = ds.child("user_identifier").getValue(String.class);
+                    user_id_fb = ds.child("userId").getValue(String.class);
                     duesPeriodicAmount = ds.child("amount").getValue(String.class);
                     duesPeriodicName = ds.child("name").getValue(String.class);
 

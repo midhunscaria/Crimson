@@ -1,7 +1,7 @@
 
-{squid:S1450"aRemove the "forgotPasswordText" field and declare it as a local variable in the relevant methods.(İ„£ùÿÿÿÿ
-osquid:S1450"ZRemove the "loginButton" field and declare it as a local variable in the relevant methods.(à…÷Ÿ
 vsquid:S1450"bRemove the "NotRegisteredButton" field and declare it as a local variable in the relevant methods.(…ÏÙt
-Š"squid:ClassVariableVisibilityCheck"YMake mAuthListener a static final constant or non-public and provide accessors if needed.(º¨ß‚ÿÿÿÿÿ
-ssquid:S00116"^Rename this field "NotRegisteredButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ÏÙt
 usquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(çÔ«¾úÿÿÿÿ
+Š"squid:ClassVariableVisibilityCheck"YMake mAuthListener a static final constant or non-public and provide accessors if needed.(º¨ß‚ÿÿÿÿÿ
+osquid:S1450"ZRemove the "loginButton" field and declare it as a local variable in the relevant methods.(à…÷Ÿ
+{squid:S1450"aRemove the "forgotPasswordText" field and declare it as a local variable in the relevant methods.(İ„£ùÿÿÿÿ
+ssquid:S00116"^Rename this field "NotRegisteredButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ÏÙt

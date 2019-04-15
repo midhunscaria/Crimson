@@ -1,11 +1,11 @@
 package com.example.crimson.crimson.Controller.Interceptor;
 
-import android.util.Log;
+import com.example.crimson.crimson.Utility.Util;
 
 public class ContextObject implements ContextObjectInterface
 {
 
-    public String url_wo_port = "http://10.102.24.215";
+    public String url_wo_port = Util.getIp();
     public int defaultPort = 8080;
 
     public String method = "GET";
@@ -28,6 +28,7 @@ public class ContextObject implements ContextObjectInterface
     public int getPort() {
         return this.sendRequestToPort;
     }
+
 
     @Override
     public void setPort(int port) {

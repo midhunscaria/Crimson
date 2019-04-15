@@ -1,4 +1,4 @@
 
-|squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(É˜ŸÅýÿÿÿÿ8ñá· -
-[squid:S1118":Add a private constructor to hide the implicit public one.(–ñõÃøÿÿÿÿ8ñá· -
-ssquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËìÚÍüÿÿÿÿ8ƒº -
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËìÚÍüÿÿÿÿ8ƒº -
+]squid:S1118":Add a private constructor to hide the implicit public one.(–ñõÃøÿÿÿÿ8ñá· -
+~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(É˜ŸÅýÿÿÿÿ8ñá· -
