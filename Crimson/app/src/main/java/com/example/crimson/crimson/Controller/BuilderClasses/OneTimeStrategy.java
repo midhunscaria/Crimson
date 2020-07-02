@@ -6,4 +6,11 @@ public class OneTimeStrategy implements Strategy{
         {
             return ObjectFactory.getObject(h);
         }
+
+        /*
+        public Object getObject(String inp)
+        {
+            return ObjectFactory.getObject("OneTimeObject");
+        }
+         */
 }

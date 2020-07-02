@@ -27,10 +27,11 @@ public class Caretaker {
 
     public void setRadioValue(RadioButton button)
     {
+        originatorWidget.setButton(button);
         mementoStack.push(originatorWidget.createMemento());
         originatorStack.push(originatorWidget);
 
-        originatorWidget.setButton(button);
+
     }
 
     public RadioButton getRadioValue()

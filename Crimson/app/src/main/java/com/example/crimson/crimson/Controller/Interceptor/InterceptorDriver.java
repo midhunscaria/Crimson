@@ -18,6 +18,13 @@ public class InterceptorDriver implements Observer {
         //Concrete Framework creates Dispatcher
         dispatcher = Dispatcher.getInstance();
 
+
+    }
+
+    @Override
+    public void update() throws IOException {
+
+
         //Concrete Framework creates Context Object
         this.expenseContextObject = new ContextObject();
 
@@ -25,15 +32,6 @@ public class InterceptorDriver implements Observer {
         this.expenseContextObject.setHost(Util.getIp());
         this.expenseContextObject.setMethod("GET");
         this.expenseContextObject.setPort(8080);
-
-        //Create Application
-        InterceptorApplication application = new InterceptorApplication();
-        application.attachInterceptor(new DataInterceptor());
-
-    }
-
-    @Override
-    public void update() throws IOException {
 
         //Event based. Triggers Interceptors
         dispatcher.iterate_list(this.expenseContextObject);

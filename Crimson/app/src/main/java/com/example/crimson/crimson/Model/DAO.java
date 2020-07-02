@@ -55,4 +55,20 @@ public class DAO {
 
     }
 
+    /*
+
+    @Override
+    public static void push(Object input, DatabaseReference mDbRef) {
+        Handler handler = new Handler();
+
+        fb_push_task = mDbRef.child(branchName).push().setValue(input);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                goals_fragment.push_task = fb_push_task.isSuccessful();
+            }
+        },1000);
+    }
+     */
+
 }

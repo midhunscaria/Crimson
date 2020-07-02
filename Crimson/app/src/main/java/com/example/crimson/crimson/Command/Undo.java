@@ -6,6 +6,7 @@ public class Undo
 {
     public void undoOperation(Caretaker caretaker)
     {
+
         caretaker.undoOperation();
     }
 }
